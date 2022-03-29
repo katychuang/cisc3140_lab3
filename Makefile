@@ -34,6 +34,15 @@ p2:
 	# run awk script to print top 3 cars based on engine total and save output to output6.csv
 	awk -f proj2/script6.awk proj2/output5.csv > proj2/output6.csv
 
+	# run awk script to calculate body frame total for each car and save output to output7.csv
+	awk -f proj2/script7.awk data/data.csv | sort -t, -k2rn > proj2/output7.csv
+
+	# run awk script to rank cars based on body frame total and save output to output8.csv
+	awk -f proj2/script8.awk proj2/output7.csv > proj2/output8.csv
+
+	# run awk script to print top 3 cars based on body frame total and save output to output9.csv
+	awk -f proj2/script9.awk proj2/output8.csv > proj2/output9.csv
+
 p3:
 	@echo "Running AWK Script proj3: "
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
