@@ -9,7 +9,21 @@ p1:
 
 p2:
 	@echo "Running AWK Script proj2: "
-	awk -f proj2/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	# awk -f proj2/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	
+	# run awk script and print output to report.csv
+	awk -f proj2/prog.awk data/data.csv > proj2/report.csv
+
+	# paste -d' ' <(cut -d' ' -f1-5 proj2/report.csv ) <(cut -d' ' -f6- proj2/report.csv |sort -n) > proj2/sortedreport.csv
+
+	# run awk script to calculate racer total for each car and save output to output1.csv
+	awk -f proj2/script1.awk data/data.csv | sort -t, -k2rn > proj2/output1.csv	
+
+	# run awk script to rank cars based on racer total and save output to output2.csv
+	awk -f proj2/script2.awk proj2/output1.csv > proj2/output2.csv
+	
+	# run awk script to print top 3 cars based on racer total and save output to output3.csv
+	awk -f proj2/script3.awk proj2/output2.csv > proj2/output3.csv
 
 p3:
 	@echo "Running AWK Script proj3: "
