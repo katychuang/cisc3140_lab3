@@ -19,5 +19,5 @@ if($7 != "Showcar") {
 }
 
 # reset the total to 0 to be used for the next row of data
-total = 0;
+racerTotal = 0;
 }
