@@ -12,7 +12,7 @@ print "Car_ID,Racer_Total,Ranking"
 {
 
 # print top 3 cars with highest racer totals
-if($3 == 1 || $3 == 2 || $3 == 3) {
+if($3 <=  numRanks) {
 	print $0
 }
 }
