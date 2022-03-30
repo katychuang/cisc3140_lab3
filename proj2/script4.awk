@@ -13,7 +13,7 @@ for(i=15; i<=19; i++) {
 	engineTotal += $i;
 }
 
-# print the car id and racer total for each car, ignoring showcars
+# print the car id and engine total for each car, ignoring showcars
 if($7 != "Showcar") {
 	print $7","engineTotal;
 }

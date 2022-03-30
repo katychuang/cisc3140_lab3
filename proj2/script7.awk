@@ -8,12 +8,12 @@ OFS = ","
 # iterate through the rows of the input file, skipping the header
 NR>1 {
 
-# calculate the sum of the engine scores in each row
+# calculate the sum of the body frame scores in each row
 for(i=20; i<=24; i++) {
 	bodyFrameTotal += $i;
 }
 
-# print the car id and racer total for each car, ignoring showcars
+# print the car id and body frame total for each car, ignoring showcars
 if($7 != "Showcar") {
 	print $7","bodyFrameTotal;
 }
