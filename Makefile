@@ -58,8 +58,17 @@ p2:
 	# run awk script to rank cars based on mods overall and save output to output14.csv
 	awk -f proj2/script14.awk proj2/output13.csv > proj2/output14.csv	
 
-	# run awk script to print top 3 cars basd on mods overall and save output to output15.csv
+	# run awk script to print top 3 cars based on mods overall and save output to output15.csv
 	awk -f proj2/script15.awk proj2/output14.csv > proj2/output15.csv
+
+	# run awk script to calculate car overall for each car and save output to output16.csv
+	awk -f proj2/script16.awk data/data.csv | sort -t, -k2rn > proj2/output16.csv	
+
+	# run awk script to rank cars based on mods overall and save output to output17.csv
+	awk -f proj2/script17.awk proj2/output16.csv > proj2/output17.csv	
+
+	# run awk script to print top 3 cars based on car overall and save output to outptu18.csv
+	awk -f proj2/script18.awk proj2/output17.csv > proj2/output18.csv
 
 p3:
 	@echo "Running AWK Script proj3: "
