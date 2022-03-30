@@ -38,9 +38,19 @@ p3:
 	#moved to proj3 directory
 	mv sorted_ranks proj3 
 	mv top_3 proj3
+	
+	#Group work:
+	awk -f proj3/TotalRacer.awk data/data.csv
+	sort -t, -k1 -r -n TotalRacer.csv > sorted_Racer.csv
+	awk -f proj3/RacerRanking.awk sorted_Racer.csv 
+	awk -f proj3/SelectTop3.awk RacerRank.csv > Top3RacerCar.csv
 
 	#Display the files
 	echo "\n\n"
-	cat proj3/sorted_ranks
+	#cat proj3/sorted_ranks
 	echo "\n\n"
-	cat proj3/top_3
+	#cat
+ 
+	#Group work:
+	#print result for Racer class
+	cat Top3RacerCar.csv
