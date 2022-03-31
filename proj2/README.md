@@ -14,7 +14,11 @@ git submodule add -f https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.gi
 
 2. Data analysis 
 	a. Run `make p2` from the root of the project repository which prints the Total, Car ID, year, make, model, and ranking header, copies all the Car IDs, years, makes, and models from the data file to the output file, fills in the total column using the cars' scores, and prints the results in descending order of total. 
-	b. Run `paste -d' ' <(cut -d' ' -f1-5 report.csv )  <(cut -d' ' -f6- report.csv |sort -n) >sortedreport.csv` to sort the rankings in numeric order and print to [sortedreport.csv](sortedreport.csv).
+	b. Run 
+```sh
+paste -d' ' <(cut -d' ' -f1-5 report.csv )  <(cut -d' ' -f6- report.csv |sort -n) >sortedreport.csv
+```
+to sort the rankings in numeric order and print to [sortedreport.csv](sortedreport.csv).
 
 ### Known bugs
 
