@@ -50,7 +50,7 @@ You must have the following installed. The linux commands to install necessary p
 - [6-Car_Overall](6-Car_Overall) contains [script16.awk](6-Car_Overall/script16.awk), [script17.awk](6-Car_Overall/script17.awk), and [script18.awk](6-Car_Overall/script18.awk). 
 	- [script16.awk](6-Car_Overall/script16.awk) parses the and prints each Car ID with that car's total racer score to [output16.csv](6-Car_Overall/output16.csv) in descending order of total racer score. The user can use the `y` variable in the [Makefile](../Makefile) to specify cars only from a specific year, or the user can set `y` to _all_ to get cars from all the years. The default value for `y` is _all_.
 	- [script17.awk](6-Car_Overall/script17.awk) parses [output16.csv](6-Car_Overall/output16.csv) and prints each Car ID with that car's total racer score and ranking to [output17.csv](6-Car_Overall/output17.csv) in ascending order of ranking.
-	- [script18.awk](6-Car_Overall/script15.awk) parses [output17.csv](6-Car_Overall/output17.csv) and prints the top `numRanks` Car IDs, total racer scores, and rankings to [output18.csv](6-Car_Overall/output18.csv), where `numRanks` is a variable that the user can set in the [Makefile](../Makefile). The default value for `numRanks` is _3_. 
+	- [script18.awk](6-Car_Overall/script18.awk) parses [output17.csv](6-Car_Overall/output17.csv) and prints the top `numRanks` Car IDs, total racer scores, and rankings to [output18.csv](6-Car_Overall/output18.csv), where `numRanks` is a variable that the user can set in the [Makefile](../Makefile). The default value for `numRanks` is _3_. 
 
 ### Run
 
