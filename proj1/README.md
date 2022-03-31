@@ -1,5 +1,6 @@
 ## proj1
 
+## Description
 This project parses structured data of CSV format using AWK, a scripting language commonly used to manipulate data and generate reports. 
 
 The scripts, described in more detail below, rank records based on scores provided in the dataset, and list the top 3 cars for certain categories.
@@ -20,6 +21,7 @@ You must have the following installed. The linux commands to install necessary p
   ```sh
   sudo apt-get install build-essential
   ```
+
 ### Project structure
 
 - [1-Racer](1-Racer) contains [script1.awk](1-Racer/script1.awk), [script2.awk](1-Racer/script2.awk), and [script3.awk](1-Racer/script3.awk). 
@@ -52,12 +54,18 @@ You must have the following installed. The linux commands to install necessary p
 	- [script17.awk](6-Car_Overall/script17.awk) parses [output16.csv](6-Car_Overall/output16.csv) and prints each Car ID with that car's total racer score and ranking to [output17.csv](6-Car_Overall/output17.csv) in ascending order of ranking.
 	- [script18.awk](6-Car_Overall/script18.awk) parses [output17.csv](6-Car_Overall/output17.csv) and prints the top `numRanks` Car IDs, total racer scores, and rankings to [output18.csv](6-Car_Overall/output18.csv), where `numRanks` is a variable that the user can set in the [Makefile](../Makefile). The default value for `numRanks` is _3_. 
 
-### Run
+### Executing Program
 
 To run proj1 make sure you are in the root of the project repository and run `make p1`. 
 
 ### Results
 
-Results are stored in a `.txt` document labeled `ranking.txt`, that lists cars by highest points earned to lowest points earned. 
+- [ranking.tx](ranking.tx) lists cars by highest points earned to lowest points earned. Each entry is ordered by (Car ID, Year, Car Make, Car Model, Total Score).
+- [output3.csv](1-Racer/output3.csv) lists the top `numRanks` Car IDs, total racer scores, and rankings.
+- [output6.csv](2-Engine/output6.csv) lists the top `numRanks` CarIDs, total engine scores, and rankings.
+- [output9.csv](3-Body_Frame/output9.csv) lists the top `numRanks` CarIDs, total body frame scores, and rankings. 
+- [output12.csv](4-Mods/output12.csv) lists the top `numRanks` CarIDs, total mods scores, and rankings.
+- [output15.csv](5-Mods_Overall/output15.csv) lists the top `numRanks` Car IDs, mods overall scores, and rankings.
+- [output18.csv](6-Car_Overall/output18.csv) lists the top `numRanks` Car IDs, car overall scores, and rankings.  
 
-Each entry is ordered by (Car ID, Year, Car Make, Car Model, Total Score).
+
