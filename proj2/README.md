@@ -1,48 +1,34 @@
 # proj2
 
-Step 1: Copy data to local machine. The repo contains a single file named `data.csv`
+## Description
+
+This project parses an input file and executes various awk scripts to provide a list of the top three cars overall, a list of the top three cars for each make, and a list of the top `numRanks` cars for the total racer scores, the total engine scores, the total body frame scores, the total mods scores, the mods overall scores, and the car overall scores.
+
+## Executing program
+
+1. Copy data to local machine. The repo contains a single file named `data.csv`
 
 ```sh
 git submodule add -f https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.git data
 ```
 
-Step 2: Data analysis 
+2. Data analysis 
+	a. Run `make p2` from the root of the project repository which prints the Total, Car ID, year, make, model, and ranking header, copies all the Car IDs, years, makes, and models from the data file to the output file, fills in the total column using the cars' scores, and prints the results in descending order of total. 
+	b. Run `paste -d' ' <(cut -d' ' -f1-5 report.csv )  <(cut -d' ' -f6- report.csv |sort -n) >sortedreport.csv` to sort the rankings in numeric order and print to [sortedreport.csv](sortedreport.csv).
 
-Description of prog.awk:
-Prints Total, car_ID, year, make, model, ranking, on the first row.
-Copies car_ID, year, make, model from data.csv to report.csv
-The data under Ranking will NOT be filled with the script.
-Creates a column called total that adds the results from column 8 to the last column of the file.
-The program will sort report.csv based on the total, in descending order.
+### Known bugs
 
-Known bugs with awk script:
-Data from data.csv that contain a space is read into two different columns.
-For example, if Car-make is "Hello world", "Hello" is read into column n and "world" is read into column n+1.
-Temp fix: The model name will be replaced with "Model". Now, ranking will sort properly except for the column that
-contains the Make: Civic coupe (the only string that contains an empty space inbetween).
+- Data from the input file that contains a whitespace character is read into two different columns. For example, if make is "Hello world", "Hello" is read into column n and "world" is read into column n+1. 
+	- Temp fix: All models names are replaced with the word "Model".
 
------------------------------------
-After running the script with: 
-`awk -f prog.awk data.csv  > report.csv`
+- The string "Ranking" would get sorted along with the values in the Ranking column, rather than remaining as the header. 
+	- Temp fix: Attached "--Ranking" to the same column as Model.
 
-To sort the rankings by numeric order:
-`paste -d' ' <(cut -d' ' -f1-5 report.csv )  <(cut -d' ' -f6- report.csv |sort -n) >sortedreport.csv`
-
-Typing this in the terminal will cut out columns 1 to 5 of report.csv and print it.
-
-Then it will take out column 6 (the Ranking column) of report.csv and sort it in numerical order then
-print to sortedreport.csv
-
-
-Known bugs: The string "Ranking" would get sorted along the with numbers and would not remain on top.
-Temp fix: Attached "--Ranking" in the same column as Model.
------------------------
-
-Now, to create a new script that will search for unique name (by adding total string value we can get an unique ID)
+- Now, to create a new script that will search for unique name (by adding total string value we can get an unique ID)
 For each make with a unique name, print top three. Total is already sorted, so the program just needs to
 print the first three cars that matched the name. (Using a counter=0, when counter=3 move on next unique name. Use next;)
 
- touch topCarMakes.awk
+`touch topCarMakes.awk`
 
 Looks at column 1. Takes carmake and set as string(To use for comparison later)
 Prints ranking, car_id, year, car make, car model, total score to new File.
@@ -51,7 +37,9 @@ Counter++; // This counter will move on to next car make on 3.
 Now "skip" all car makes with the unique ID and restart until there is no more data in the .CSV.
 
 
-### Project structure
+## Project structure
+
+- [prog.awk](prog.awk) copies all the Car IDs, years, makes, and models from the data file to the output file, fills in the total column using the cars' scores, and prints the results in descending order of total.
 
 - [1-Racer](1-Racer) contains [script1.awk](1-Racer/script1.awk), [script2.awk](1-Racer/script2.awk), and [script3.awk](1-Racer/script3.awk). 
 	- [script1.awk](1-Racer/script1.awk) parses the and prints each Car ID with that car's total racer score to [output1.csv](1-Racer/output1.csv) in descending order of total racer score. The user can use the `y` variable in the [Makefile](../Makefile) to specify cars only from a specific year, or the user can set `y` to _all_ to get cars from all the years. The default value for `y` is _all_.
@@ -82,4 +70,9 @@ Now "skip" all car makes with the unique ID and restart until there is no more d
 	- [script16.awk](6-Car_Overall/script16.awk) parses the and prints each Car ID with that car's total racer score to [output16.csv](6-Car_Overall/output16.csv) in descending order of total racer score. The user can use the `y` variable in the [Makefile](../Makefile) to specify cars only from a specific year, or the user can set `y` to _all_ to get cars from all the years. The default value for `y` is _all_.
 	- [script17.awk](6-Car_Overall/script17.awk) parses [output16.csv](6-Car_Overall/output16.csv) and prints each Car ID with that car's total racer score and ranking to [output17.csv](6-Car_Overall/output17.csv) in ascending order of ranking.
 	- [script18.awk](6-Car_Overall/script18.awk) parses [output17.csv](6-Car_Overall/output17.csv) and prints the top `numRanks` Car IDs, total racer scores, and rankings to [output18.csv](6-Car_Overall/output18.csv), where `numRanks` is a variable that the user can set in the [Makefile](../Makefile). The default value for `numRanks` is _3_. 
+
+## Dependencies
+
+GNU Awk and GNU Make must be installed
+
 
