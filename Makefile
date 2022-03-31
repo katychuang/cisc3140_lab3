@@ -41,7 +41,8 @@ p3:
 
 	#Display the files
 	echo "\n\n"
+	#Display cars sorted by score in Descending order
 	cat proj3/sorted_ranks
 	echo "\n\n"
-	cat proj3/top_3
-	grep -m 3 "Volkswagen" proj3/top_3 
+	#Displays only the top 3 cars for each Maker
+	awk -f proj3/prog2.awk proj3/top_3

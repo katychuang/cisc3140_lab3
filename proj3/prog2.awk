@@ -1,8 +1,27 @@
-BEGIN{FS = "|"}
+BEGIN{	
+#Sets global variables
+	#userInput by default is 3
+	#Can be changed via command line menu
+	userInput = 3;
+	count=1; 
+	word="Make"
+}
 #BODY
 {
-	if ($3==$prev) {
-		print $1 "|" $2 "|" $3 "|" $4 "|" $5 > "top_3"
-	} 
+	#Checks if theres a new word in current row
+	if(word!=$4){
+		count=1;
+		word=$4;
+		print $0;
+	}
+	#If the count is equal or greater than 3, skips to the next line
+	else if(count >= userInput){
+		false;
+	}
+	#Prints rows and increments count
+	else{
+		print $0;
+		count++;
+	}
 }
 END{}
