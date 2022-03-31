@@ -5,16 +5,6 @@
 
 This project parses an input file and executes various awk scripts to provide a list of the top three cars overall, a list of the top three cars for each make, and a list of the top numRanks cars for the total racer scores, the total engine scores, the total body frame scores, the total mods scores, the mods overall scores, and the car overall scores.
 
-`data.csv` file contains information of cars and owners
-
-* Using the provided `data.csv` file, extract relevant fields.
-* Sum up the relevant fields to get a score used to rank each car.
-* Sort in descending order using scores and set in a seperate file (sorted_ranks)
-* To get the top three cars of each maker, sort by maker first then ranking
-* At the end, will display the original set of data
-* Followed by the sorted ranks in descending order
-* Followed by the top three cars of each maker
-
 **Files and Directory:**
 
 ```.
@@ -71,12 +61,12 @@ This project parses an input file and executes various awk scripts to provide a 
 
 ## Executing program
 
-`make p3` from root directory
+Run `make p3` from root directory.
 
 
 ## Project structure
 
-- [prog1.awk](proj1.awk) and [prog2.awk](prog2.awk) produce [ranks](ranks) which contains information on each car and its rank based on its total score, [sorted_ranks](sorted_ranks) which contains information on each car and its rank based on its total score, and [top_3](top_3) which contains information on the top 3 cars for each make. 
+- [prog1.awk](prog1.awk) and [prog2.awk](prog2.awk) produce [ranks](ranks) which contains information on each car and its rank based on its total score, [sorted_ranks](sorted_ranks) which contains information on each car and its rank based on its total score, and [top_3](top_3) which contains information on the top 3 cars for each make. 
 
 - [1-Racer](1-Racer) contains [script1.awk](1-Racer/script1.awk), [script2.awk](1-Racer/script2.awk), and [script3.awk](1-Racer/script3.awk). 
 	- [script1.awk](1-Racer/script1.awk) parses the and prints each Car ID with that car's total racer score to [output1.csv](1-Racer/output1.csv) in descending order of total racer score. The user can use the `y` variable in the [Makefile](../Makefile) to specify cars only from a specific year, or the user can set `y` to _all_ to get cars from all the years. The default value for `y` is _all_.
