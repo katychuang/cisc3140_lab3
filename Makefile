@@ -23,8 +23,8 @@ p3:
 
 	#sorts ranks in descending order via scores and placed in a 
 	#new file: sorted_ranks. Sorts top_3 via maker first then ranks
-	sort -k5,5rn -t '|' proj3/ranks > "sorted_ranks"
-	sort -k3,3 -k5,5rn -t '|' proj3/top_3 > "top_3"
+	sort -k1,1rn proj3/ranks > "sorted_ranks"
+	sort -k4,4 -k1,1rn proj3/top_3 > "top_3"
 
 	#moved to proj3 directory
 	mv sorted_ranks proj3 
@@ -44,3 +44,4 @@ p3:
 	cat proj3/sorted_ranks
 	echo "\n\n"
 	cat proj3/top_3
+	grep -m 3 "Volkswagen" proj3/top_3 
