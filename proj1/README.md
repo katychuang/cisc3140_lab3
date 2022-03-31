@@ -34,7 +34,7 @@ You must have the following installed. The linux commands to install necessary p
 
 - [3-Body_Frame](3-Body_Frame) contains [script7.awk](3-Body_Frame/script7.awk), [script8.awk](3-Body_Frame/script8.awk), and [script9.awk](3-Body_Frame/script9.awk). 
 	- [script7.awk](3-Body_Frame/script7.awk) parses the and prints each Car ID with that car's total racer score to [output7.csv](3-Body_Frame/output7.csv) in descending order of total racer score. The user can use the `y` variable in the [Makefile](../Makefile) to specify cars only from a specific year, or the user can set `y` to _all_ to get cars from all the years. The default value for `y` is _all_.
-	- [script8.awk](3-Body_Frame/script8.awk) parses [output7.csv](3-Body_Frame/output7.csv) and prints each Car ID with that car's total racer score and ranking to [output8.csv](3-Body_Frame/output2.csv) in ascending order of ranking.
+	- [script8.awk](3-Body_Frame/script8.awk) parses [output7.csv](3-Body_Frame/output7.csv) and prints each Car ID with that car's total racer score and ranking to [output8.csv](3-Body_Frame/output8.csv) in ascending order of ranking.
 	- [script9.awk](3-Body_Frame/script9.awk) parses [output8.csv](3-Body_Frame/output8.csv) and prints the top `numRanks` Car IDs, total racer scores, and rankings to [output9.csv](3-Body_Frame/output9.csv), where `numRanks` is a variable that the user can set in the [Makefile](../Makefile). The default value for `numRanks` is _3_. 
 
 - [4-Mods](4-Mods) contains [script10.awk](4-Mods/script10.awk), [script11.awk](4-Mods/script11.awk), and [script12.awk](4-Mods/script12.awk). 
