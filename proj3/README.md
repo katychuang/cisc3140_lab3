@@ -1,5 +1,10 @@
 # proj3
 
+
+## Description
+
+This project parses an input file and executes various awk scripts to provide a list of the top three cars overall, a list of the top three cars for each make, and a list of the top numRanks cars for the total racer scores, the total engine scores, the total body frame scores, the total mods scores, the mods overall scores, and the car overall scores.
+
 `data.csv` file contains information of cars and owners
 
 * Using the provided `data.csv` file, extract relevant fields.
@@ -12,26 +17,66 @@
 
 **Files and Directory:**
 
+```.
+├── 1-Racer
+│   ├── output1.csv
+│   ├── output2.csv
+│   ├── output3.csv
+│   ├── script1.awk
+│   ├── script2.awk
+│   └── script3.awk
+├── 2-Engine
+│   ├── output4.csv
+│   ├── output5.csv
+│   ├── output6.csv
+│   ├── script4.awk
+│   ├── script5.awk
+│   └── script6.awk
+├── 3-Body_Frame
+│   ├── output7.csv
+│   ├── output8.csv
+│   ├── output9.csv
+│   ├── script7.awk
+│   ├── script8.awk
+│   └── script9.awk
+├── 4-Mods
+│   ├── output10.csv
+│   ├── output11.csv
+│   ├── output12.csv
+│   ├── script10.awk
+│   ├── script11.awk
+│   └── script12.awk
+├── 5-Mods_Overall
+│   ├── output13.csv
+│   ├── output14.csv
+│   ├── output15.csv
+│   ├── script13.awk
+│   ├── script14.awk
+│   └── script15.awk
+├── 6-Car_Overall
+│   ├── output16.csv
+│   ├── output17.csv
+│   ├── output18.csv
+│   ├── script16.awk
+│   ├── script17.awk
+│   └── script18.awk
+├── headers
+├── prog1.awk
+├── prog2.awk
+├── ranks
+├── README.md
+├── sorted_ranks
+└── top_3
 ```
-.
-|-- Makefile
-|-- README.md
-|-- data/
-|   `-- data.csv
-|-- proj1/
-|-- proj2/
-`-- proj3/
-    |-- README.md
-    |-- prog1.awk
-    `-- prog2.awk
 
-4 directories, 10 files
-```
+## Executing program
 
-Instructions: run comand `make proj3` from root directory
+`make p3` from root directory
 
 
-### Project structure
+## Project structure
+
+- [prog1.awk](proj1.awk) and [prog2.awk](prog2.awk) produce [ranks](ranks) which contains information on each car and its rank based on its total score, [sorted_ranks](sorted_ranks) which contains information on each car and its rank based on its total score, and [top_3](top_3) which contains information on the top 3 cars for each make. 
 
 - [1-Racer](1-Racer) contains [script1.awk](1-Racer/script1.awk), [script2.awk](1-Racer/script2.awk), and [script3.awk](1-Racer/script3.awk). 
 	- [script1.awk](1-Racer/script1.awk) parses the and prints each Car ID with that car's total racer score to [output1.csv](1-Racer/output1.csv) in descending order of total racer score. The user can use the `y` variable in the [Makefile](../Makefile) to specify cars only from a specific year, or the user can set `y` to _all_ to get cars from all the years. The default value for `y` is _all_.
@@ -62,4 +107,10 @@ Instructions: run comand `make proj3` from root directory
 	- [script16.awk](6-Car_Overall/script16.awk) parses the and prints each Car ID with that car's total racer score to [output16.csv](6-Car_Overall/output16.csv) in descending order of total racer score. The user can use the `y` variable in the [Makefile](../Makefile) to specify cars only from a specific year, or the user can set `y` to _all_ to get cars from all the years. The default value for `y` is _all_.
 	- [script17.awk](6-Car_Overall/script17.awk) parses [output16.csv](6-Car_Overall/output16.csv) and prints each Car ID with that car's total racer score and ranking to [output17.csv](6-Car_Overall/output17.csv) in ascending order of ranking.
 	- [script18.awk](6-Car_Overall/script18.awk) parses [output17.csv](6-Car_Overall/output17.csv) and prints the top `numRanks` Car IDs, total racer scores, and rankings to [output18.csv](6-Car_Overall/output18.csv), where `numRanks` is a variable that the user can set in the [Makefile](../Makefile). The default value for `numRanks` is _3_. 
+
+- [headers](headers) contains the headers used in [sorted_ranks](sorted_ranks) and in [top_3](top_3). 
+
+## Dependencies
+
+GNU Awk and GNU Make must be installed.
 
