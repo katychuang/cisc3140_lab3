@@ -1,4 +1,4 @@
-## proj1
+# proj1
 
 ## Description
 This project parses structured data of CSV format using AWK, a scripting language commonly used to manipulate data and generate reports. 
