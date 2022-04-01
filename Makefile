@@ -43,6 +43,7 @@ p3:
 	echo "\n\n"
 	#Display cars sorted by score in Descending order
 	cat proj3/sorted_ranks
+	#grep -A3 "Make" proj3/sorted_ranks
 	echo "\n\n"
 	#Displays only the top 3 cars for each Maker
 	awk -f proj3/prog2.awk proj3/top_3
