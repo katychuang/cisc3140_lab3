@@ -13,6 +13,7 @@ p2:
 
 p3:
 	@echo "Running AWK Script proj3: "
+	#Makefile needs to be cleaned up
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
 	awk -f proj3/prog1.awk data/data.csv
 
@@ -47,3 +48,12 @@ p3:
 	echo "\n\n"
 	#Displays only the top 3 cars for each Maker
 	awk -f proj3/prog2.awk proj3/top_3
+	
+############################################################################
+	#Lab3 
+	awk -f proj3/prog3.awk data/data.csv
+	mv classScore proj3 | mv headers2 proj3
+	sort -k2,2rn proj3/classScore > proj3/tmpS
+	cat proj3/headers2 proj3/tmpS > proj3/classScore
+	rm proj3/tmpS
+	grep -A3 "Score" proj3/classScore
