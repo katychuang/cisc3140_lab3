@@ -14,7 +14,8 @@ p2:
 	awk -f proj2/Engine.awk data/data.csv > proj2/rankEngine.csv
 	awk -f proj2/Body_Frame.awk data/data.csv > proj2/rankBody_Frame.csv
 	awk -f proj2/top3Mods_Overall.awk data/data.csv > proj2/top3Mods_Overall.csv
-
+	awk -f proj2/Mods.awk data/data.csv > proj2/rankMods.csv
+	awk -f proj2/Car_Overall.awk data/data.csv > proj2/rankCar_Overall.csv
 p3:
 	@echo "Running AWK Script proj3: "
 	#Makefile needs to be cleaned up
