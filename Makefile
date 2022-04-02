@@ -10,6 +10,7 @@ p1:
 p2:
 	@echo "Running AWK Script proj2: "
 	awk -f proj2/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
+	awk -f proj2/Racer.awk data/data.csv > proj2/rankRacer.csv
 	awk -f proj2/top3Mods_Overall.awk data/data.csv > proj2/top3Mods_Overall.csv
 
 p3:
