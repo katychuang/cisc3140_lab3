@@ -1,7 +1,7 @@
 BEGIN{FS = ","
 #Creates custom Header file.
-	printf "%-6s %-6s %-8s %-12s %-15s\n", \
-	"Score", "Car_ID", "Year", "Make", "Model" > "headers"
+	printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \
+	"Place", "Score", "CarID#", "Year", "Maker", "Model" > "headers"
 }
 #BODY
 {
@@ -18,10 +18,8 @@ BEGIN{FS = ","
 			total = total + $i
 		}
 		#Prints data to two seperate files
-        	printf "%-6s %-6s %-8s %-12s %-15s\n",	\
-		total, $7, $4, $5, $6 > "ranks"
-                printf "%-6s %-6s %-8s %-12s %-15s\n",	\
-		total, $7, $4, $5, $6 > "top_3"
+        	printf "%-6s %-6s %-6s %-8s %-12s %-15s\n",	\
+		"Unf", total, $7, $4, $5, $6 > "ranks"
 	}
 }
 END{}
