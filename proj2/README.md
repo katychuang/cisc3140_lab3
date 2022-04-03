@@ -4,8 +4,27 @@ The report show aggregate values that are computed from the CSV file provided by
 ```sh
 git submodule add -f https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.git data
 ```
+## Dependencies 
+
+* Sample Data: https://gist.github.com/katychuang/d66a59b6db4e59c16efd4c42ad411f8e
+* BC Linux machines
+
+You must have the following installed. The linux commands to install necessary packages shown below: 
+
+* GNU Make
+  ```sh
+  sudo apt-get install build-essential
+  ```
+  
 # Installation
-Run using the command ```make p2```
+Copy repo to local machine. The repo contains a single file named `data.csv`
+
+```sh
+$ git clone git@github.com:ArmandoPerez09/cisc3140_lab3.git
+$ git submodule init
+$ git submodule update
+$ make p2
+```
 
 ## Requirements
 1. Description of [prog.awk](prog.awk):
@@ -49,10 +68,6 @@ Run using the command ```make p2```
 - Copies Car_ID from data.csv to [rankCar_Overall.csv](rankCar_Overall.csv)
 - Then print out the top three Car_Overall with 1 2 3 ranks.
 
-## Dependencies
-
-* Sample Data: https://gist.github.com/katychuang/d66a59b6db4e59c16efd4c42ad411f8e
-* BC Linux machines
 
 ## Known bugs
 Known bugs with awk script:
