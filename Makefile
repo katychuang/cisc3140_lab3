@@ -40,17 +40,17 @@ p3:
 	mv top_3 proj3
 	
 	#Group work:
-	awk -f proj3/TotalRacer.awk data/data.csv
-	sort -t, -k1 -r -n TotalRacer.csv > sorted_Racer.csv
-	awk -f proj3/RacerRanking.awk sorted_Racer.csv 
-	awk -f proj3/SelectTop3.awk RacerRank.csv > Top3RacerCar.csv
+	awk -f proj3/option.awk data/data.csv
+	sort -t, -k1 -r -n option.csv > sorted_option.csv
+	awk -f proj3/Ranking.awk sorted_option.csv 
+	awk -f proj3/SelectTop.awk Ranked_option.csv 
+	#print result for user define seach
+	cat result.csv
 
-	#Display the files
+	#Display the files 
 	echo "\n\n"
 	#cat proj3/sorted_ranks
 	echo "\n\n"
-	#cat
+	
  
-	#Group work:
-	#print result for Racer class
-	cat Top3RacerCar.csv
+	

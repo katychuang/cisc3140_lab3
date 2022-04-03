@@ -3,7 +3,7 @@ BEGIN{FS = ",";OFS=","
 }
 #BODY
 {
-	print ranking, $0 > "RacerRank.csv"
+	print ranking, $0 > "Ranked_option.csv"
 	ranking ++
 }
 END{}
