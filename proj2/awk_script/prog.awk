@@ -1,7 +1,7 @@
 #1/bin/awk -f
 BEGIN{
 FS=","
-print "Total","Car_ID","Year","Make","Model","Ranking";
+print "Total","Car_ID","Year","Make","Model";
 }
 {
 if(NR>1){
