@@ -1,0 +1,4 @@
+make.exe -f c:\Users\zbbxh\cisc3140_lab3\makefile --dry-run --always-make --keep-going --print-directory
+'make.exe' is not recognized as an internal or external command,
+operable program or batch file.
+

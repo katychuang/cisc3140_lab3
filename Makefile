@@ -9,13 +9,13 @@ p1:
 
 p2:
 	@echo "Running AWK Script proj2: "
-	awk -f proj2/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
-	awk -f proj2/Racer.awk data/data.csv > proj2/rankRacer.csv
-	awk -f proj2/Engine.awk data/data.csv > proj2/rankEngine.csv
-	awk -f proj2/Body_Frame.awk data/data.csv > proj2/rankBody_Frame.csv
-	awk -f proj2/top3Mods_Overall.awk data/data.csv > proj2/top3Mods_Overall.csv
-	awk -f proj2/Mods.awk data/data.csv > proj2/rankMods.csv
-	awk -f proj2/Car_Overall.awk data/data.csv > proj2/rankCar_Overall.csv
+	awk -f proj2/awk_script/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
+	awk -f proj2/awk_script/Racer.awk data/data.csv > proj2/output_file/rankRacer.csv
+	awk -f proj2/wk_script/Engine.awk data/data.csv > proj2/output_file/rankEngine.csv
+	awk -f proj2/wk_script/Body_Frame.awk data/data.csv > proj2/output_file/rankBody_Frame.csv
+	awk -f proj2/wk_script/top3Mods_Overall.awk data/data.csv > proj2/output_file/top3Mods_Overall.csv
+	awk -f proj2/wk_script/Mods.awk data/data.csv > proj2/output_file/rankMods.csv
+	awk -f proj2/wk_script/Car_Overall.awk data/data.csv > proj2/routput_file/ankCar_Overall.csv
 p3:
 	@echo "Running AWK Script proj3: "
 	bash menu.sh

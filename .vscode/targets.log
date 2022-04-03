@@ -1,0 +1,4 @@
+make.exe all -f c:\Users\zbbxh\cisc3140_lab3\makefile --print-data-base --no-builtin-variables --no-builtin-rules --question
+'make.exe' is not recognized as an internal or external command,
+operable program or batch file.
+
