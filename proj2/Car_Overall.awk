@@ -1,13 +1,13 @@
 BEGIN {
         FS = ","
         OFS = ","
-        printf("%s,%s,%s,%s,%s\n", "Car_ID", "Email", "Name","Mods_Overall", "Rank")
+        printf("%s,%s,%s\n", "Car_ID","Total","Rank")
 	rank = 1
 }
 {
         if(NR>1) {
-        key = sprintf("%s,%s,%s", $7, $2, $3)
-        value = $34
+        key = sprintf("%s", $7)
+        value = $14
 
 	for(i=1; i<=3; i++) {
 		if(top3[i] == "" || top3[i] < value) {
