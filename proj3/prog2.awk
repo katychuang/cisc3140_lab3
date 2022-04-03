@@ -9,9 +9,9 @@ BEGIN{
 #BODY
 {
 	#Checks if theres a new word in current row
-	if(word!=$4){
+	if(word!=$5){
 		count=1;
-		word=$4;
+		word=$5;
 		print $0;
 	}
 	#If the count is equal or greater than 3, skips to the next line
