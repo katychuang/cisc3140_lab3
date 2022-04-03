@@ -76,20 +76,44 @@ do
 		#Displays top three cars based on chosen class
 		d) 	classMenuDisplay
 		   	read query
+			#Clears previous menu to display selected table
 			clear
-			#userInput will be used in prog3.awk file as variable
-			#prog3.awk sums class specific scores
-			awk -v userInput="$query" -f proj3/prog3.awk \
-				data/data.csv > classRanks
-        	   	sort -k2,2rn classRanks > classRankTmp
-			awk -f proj3/prog4.awk classRankTmp > classRanks
-			#In order to utilize grep function, cat header 
-			#and classRank into ClassRankTmp
-			cat headers classRanks > classRankTmp
-       		   	#Displays the three rows after the keyword 
-			#Score is matched
-			grep -A3 "Score" classRankTmp
-			rm classRanks | rm classRankTmp;;
+			#If input matches a displayed value, continue
+			if [ "$query" == 1 ] || [ "$query" == 2 ] \
+			|| [ "$query" == 3 ] || [ "$query" == 4 ] \
+			|| [ "$query" == 5 ] || [ "$query" == 6 ]; then
+				#Displays the class for table
+				if [ "$query" == 1 ]; then
+					echo "Top Three Cars For Racer"
+				elif [ "$query" == 2 ]; then
+					echo "Top Three Cars For Engine"
+                                elif [ "$query" == 3 ]; then
+                                        echo "Top Three Cars For Body Frame"
+                                elif [ "$query" == 4 ]; then
+                                        echo "Top Three Cars For Mods"
+                                elif [ "$query" == 5 ]; then
+                                        echo "Top Three Cars For Mods Overall"
+                                elif [ "$query" == 6 ]; then
+                                        echo "Top Three Cars For Car overall"
+				fi
+				#userInput will be used in prog3.awk file 
+				#as variable
+				#prog3.awk sums class specific scores
+				awk -v userInput="$query" -f proj3/prog3.awk \
+					data/data.csv > classRanks
+        	   		sort -k2,2rn classRanks > classRankTmp
+				awk -f proj3/prog4.awk classRankTmp > classRanks
+				#In order to utilize grep function, cat header 
+				#and classRank into ClassRankTmp
+				cat headers classRanks > classRankTmp
+       		   		#Displays the three rows after the keyword 
+				#Score is matched
+				grep -A3 "Score" classRankTmp
+				rm classRanks | rm classRankTmp
+			#Else displays error message
+			else
+				echo "Invalid Input"
+			fi;;
 		#Add data entry to data.csv
 		w)	echo "Not Available";;
 		#Delete data entry from data.csv
@@ -98,6 +122,8 @@ do
 		q) 	#Removes headers and ranks file for a clean directory
 			rm headers ranks
 			exit;;
+		*)
+			echo "Invalid input"
 	esac
 	#Waits for input to return to main menu
 	echo -e "\nEnter any key to continue: \c"
