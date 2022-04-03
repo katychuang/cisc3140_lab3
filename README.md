@@ -1,5 +1,5 @@
 # cisc3140_lab3
-Group Members: Huimin, Jiao Jiao, Naldy, Jinwei, Armando, Jiayi, Kamille
+Group3 Members: Huimin, Jiao Jiao, Naldy, Jinwei, Armando, Jiayi, Kamille
 
 ## Overview:
 
