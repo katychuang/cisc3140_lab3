@@ -10,12 +10,11 @@ if(NR>1){
       total+=$i #add everything from column 8 to end of file
    }
 }
-if (NR!=1) 
-print total,$7,$4,$5,$6  | "sort -nrk1" #rank will be unsorted, then sorted using termianl commands
 
-if (NR!=1)
-print total,$7,$4,$5,$6,NR-1
+if (NR!=1) 
+   print total,$7,$4,$5,$6|"sort -nrk1"
 }
+
 END{
 
 }
