@@ -73,8 +73,7 @@ $ make p2
 Known bugs with awk script:
 - Data from data.csv that contain a space is read into two different columns.
 - For example, if Car-make is "Hello world", "Hello" is read into column n and "world" is read into column n+1.
-- Temp fix: The model name will be replaced with "Model". Now, ranking will sort properly except for the column that
-- contains the Make: Civic coupe (the only string that contains an empty space inbetween).
+- Temp fix: The model name will be replaced with "Model". Now, ranking will sort properly except for the column that contains the Make: Civic coupe (the only string that contains an empty space inbetween).
 
 -----------------------------------
 After running the script with: 
