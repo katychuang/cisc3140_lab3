@@ -9,10 +9,16 @@ p1:
 
 p2:
 	@echo "Running AWK Script proj2: "
-	awk -f proj2/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
-
+	awk -f proj2/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
+	awk -f proj2/Racer.awk data/data.csv > proj2/rankRacer.csv
+	awk -f proj2/Engine.awk data/data.csv > proj2/rankEngine.csv
+	awk -f proj2/Body_Frame.awk data/data.csv > proj2/rankBody_Frame.csv
+	awk -f proj2/top3Mods_Overall.awk data/data.csv > proj2/top3Mods_Overall.csv
+	awk -f proj2/Mods.awk data/data.csv > proj2/rankMods.csv
+	awk -f proj2/Car_Overall.awk data/data.csv > proj2/rankCar_Overall.csv
 p3:
 	@echo "Running AWK Script proj3: "
+	#Makefile needs to be cleaned up
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
 	awk -f proj3/prog1.awk data/data.csv
 
@@ -41,7 +47,18 @@ p3:
 
 	#Display the files
 	echo "\n\n"
+	#Display cars sorted by score in Descending order
 	cat proj3/sorted_ranks
+	#grep -A3 "Make" proj3/sorted_ranks
 	echo "\n\n"
-	cat proj3/top_3
-	grep -m 3 "Volkswagen" proj3/top_3 
+	#Displays only the top 3 cars for each Maker
+	awk -f proj3/prog2.awk proj3/top_3
+	
+############################################################################
+	#Lab3 
+	awk -f proj3/prog3.awk data/data.csv
+	mv classScore proj3 | mv headers2 proj3
+	sort -k2,2rn proj3/classScore > proj3/tmpS
+	cat proj3/headers2 proj3/tmpS > proj3/classScore
+	rm proj3/tmpS
+	grep -A3 "Score" proj3/classScore
