@@ -9,7 +9,9 @@ p1:
 
 p2:
 	@echo "Running AWK Script proj2: "
-	awk -f proj2/awk_script/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
+#	awk -f proj2/awk_script/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
+	awk -f proj2/awk_script/prog.awk data/data.csv > proj2/output_file/report.csv
+	awk -f proj2/awk_script/ranking.awk proj2/output_file/report.csv > proj2/output_file/sortedreport.csv
 	awk -f proj2/awk_script/Racer.awk data/data.csv > proj2/output_file/rankRacer.csv
 	awk -f proj2/awk_script/Engine.awk data/data.csv > proj2/output_file/rankEngine.csv
 	awk -f proj2/awk_script/Body_Frame.awk data/data.csv > proj2/output_file/rankBody_Frame.csv
