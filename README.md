@@ -1,6 +1,6 @@
 # CISC 3140 - Lab 3
 
-Authors: Group #1 - Shakhram, Hassan, Haseeb, Adina, Tian Long, Adnaan, Andrew C.
+Authors: Group 1 - Shakhram, Hassan, Haseeb, Adina, Tian Long, Adnaan, Andrew C.
 
 ## Problem Description
 
@@ -12,7 +12,7 @@ The [proj1](proj1) folder contains all scripts and output files for project 1. I
 
 The [proj2](proj2) folder contains all scripts and output files for project 2. Inside the folder, there is a [README](proj2/README.md) file with a description of the project, instructions on how to execute the program, a list of the known bugs and their temporary fixes, an outline of the project structure, and a list of the project's dependencies. 
 
-The [proj3](proj3) folder contains all scripts and output files for project 3. Inside the folder, there is a [README] (proj3/README.md) file with a description of the project including a tree diagram of the file and directory structure, instructions for how to execute the program, an outline of the project structure, and a list of the project's dependencies. 
+The [proj3](proj3) folder contains all scripts and output files for project 3. Inside the folder, there is a [README](proj3/README.md) file with a description of the project including a tree diagram of the file and directory structure, instructions for how to execute the program, an outline of the project structure, and a list of the project's dependencies. 
 
 ## Dependencies
 
