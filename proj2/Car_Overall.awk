@@ -1,7 +1,7 @@
 BEGIN {
         FS = ","
         OFS = ","
-        printf("%s,%s,%s\n", "Car_ID","Total","Rank")
+        printf("%s,%s,%s\n", "Car_ID","Car_Overall","Rank")
 	rank = 1
 }
 {
