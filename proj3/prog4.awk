@@ -3,7 +3,7 @@ BEGIN{
 }
 #BODY
 {
-	#Adds Placement value to Place column
+	#Adds Placement value to Place column to unsorted files
 	printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \
 	count, $2, $3, $4, $5, $6;
 	count++;

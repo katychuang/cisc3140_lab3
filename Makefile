@@ -19,4 +19,5 @@ p2:
 
 p3:
 	@echo "Running AWK Script proj3: "
+	#Runs shell script of menu
 	bash menu.sh
