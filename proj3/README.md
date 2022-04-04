@@ -1,7 +1,7 @@
-# proj3
+## proj3
 
 
-#Lab One - Description#
+# Lab One - Description
 
 `data.csv` file contains information of cars and owners
 
@@ -13,7 +13,7 @@
 * Followed by the sorted ranks in descending order
 * Followed by the top three cars of each maker
 
-#Lab Three - New Features#
+# Lab Three - New Features
 
 * User Interface is now formatted as a shell script menu to run all operations
 * Seperate aggregate scores for specific classes (Racer, Engine, Body Frame, Mods, Mods Overall, Car Overall)
@@ -21,15 +21,15 @@
 * Gives user ability to customize the number of cars displayed (1-10)
 * Gives user ability to customize which car maker to display in Third option
 
-#Installation#
+# Installation
 * Used on Linux System
 * AWK - sudo apt-get install gawk
 * Make - sudo apt-get install build-essential
 
-#Usage#
+# Usage
 * Intended as a car show program that runs basic queries
 
-#Files and Directory#
+# Files and Directory
 
 ```
 .
@@ -51,10 +51,10 @@
 4 directories, 13 files
 ```
 
-#Instructions#
+# Instructions
 * From Terminal, Run command `make p3` or `bash menu.sh` in root directory of program
 
-#Authors and Acknowledgement
+# Authors and Acknowledgement
 * Members of the group that contributed to the lab exercise
 * *Huimin*
 * *Jiao Jiao*
@@ -63,5 +63,4 @@
 * *Armando*
 * *Jiayi*
 * *Kamille*
-
 
