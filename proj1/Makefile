@@ -34,3 +34,4 @@ lab1:
 	@sort -V -r -t"," -k11 -o info.csv info.csv
 	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > output.csv
 	@head -3 output.csv
+	@rm info.csv
