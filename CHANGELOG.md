@@ -20,5 +20,5 @@ We try to adhere to [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.h
 
 [Unreleased]: https://github.com/ogre2/cisc3140_lab3/compare/v1.0.0...HEAD
 [v1.0.0]: https://github.com/ogre2/cisc3140_lab3/compare/main...v1.0.0
-[v1.0.01]: https://github.com/ogre2/csic3140_lab3/compare/v1.0.0...v1.0.1
+[v1.0.1]: https://github.com/ogre2/csic3140_lab3/compare/v1.0.0...v1.0.1
 
