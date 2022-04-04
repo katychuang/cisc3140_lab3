@@ -18,6 +18,7 @@ p2:
 	awk -f proj2/awk_script/top3Mods_Overall.awk data/data.csv > proj2/output_file/top3Mods_Overall.csv
 	awk -f proj2/awk_script/Mods.awk data/data.csv > proj2/output_file/rankMods.csv
 	awk -f proj2/awk_script/Car_Overall.awk data/data.csv > proj2/output_file/rankCar_Overall.csv
+	awk -f proj2/awk_script/option.awk data/data.csv
 
 p3:
 	@echo "Running AWK Script proj3: "
