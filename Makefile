@@ -18,17 +18,17 @@ p3:
 
 	#moved to proj3 directory
 	mv top_3 proj3
-	mv ranks proj3 
+	mv ranks proj3
 	mv headers proj3
 
-	#sorts ranks in descending order via scores and placed in a 
+	#sorts ranks in descending order via scores and placed in a
 	#new file: sorted_ranks. Sorts top_3 via maker first then ranks
 	sort -k5,5rn -t '|' proj3/ranks > "sorted_ranks"
 	sort -k3,3 -k5,5rn -t '|' proj3/top_3 > "top_3"
 
 	#moved to proj3 directory
-	mv sorted_ranks proj3 
-	mv top_3 proj3 
+	mv sorted_ranks proj3
+	mv top_3 proj3
 	#awk file to only take top three cars for each maker
  #	awk -f proj3/top_3.awk proj3/top_3
 
@@ -36,7 +36,7 @@ p3:
 	cat proj3/headers proj3/sorted_ranks > "sorted_ranks"
 	cat proj3/headers proj3/top_3 > "top_3"
 	#moved to proj3 directory
-	mv sorted_ranks proj3 
+	mv sorted_ranks proj3
 	mv top_3 proj3
 
 	#Display the files
@@ -44,3 +44,6 @@ p3:
 	cat proj3/sorted_ranks
 	echo "\n\n"
 	cat proj3/top_3
+
+first:
+	awk -f awk.awk data/data.csv |sort
