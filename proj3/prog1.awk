@@ -1,3 +1,9 @@
+# prog1.awk 
+# Description: prog1.awk extracts relevant fields from the provided data.csv 
+# file. Creates a custom `header` file to be applied to each consequent 
+# file created. Proceeds to summing the score value of each scoring column
+# which is then output to a `ranks` file along with other extracted values
+
 BEGIN{FS = ","
 #Creates custom Header file.
 	printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \

@@ -1,3 +1,9 @@
+# prog2.awk
+# Description: prog2.awk processes a sorted rank file and displays the 
+# top cars. The number of cars displayed depends on user input. Placement 
+# value is allocated to each processed car
+
+
 BEGIN{	
 #Sets global variables
 	count=1; 

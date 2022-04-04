@@ -1,3 +1,8 @@
+# prog3.awk
+# Description: prog3.awk extracts the value of a selected class and sums 
+# all scores. With the new scoring system created, reevaluate each car's 
+# score. Data is unsorted, therefore, placement value is "Unf" by default
+
 BEGIN{FS = ",";
 	#UserInput will take command line input
 	#Array with Predefined strings of classes 

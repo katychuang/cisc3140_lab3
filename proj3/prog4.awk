@@ -1,3 +1,7 @@
+# prog4.awk
+# Description: prog4.awk processes a sorted rank file and adds placement 
+# values based on number of records processed
+
 BEGIN{
 	count = 1
 }
