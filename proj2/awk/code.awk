@@ -33,10 +33,10 @@ END {
 	ranking;
 
 	PROCINFO["sorted_in"] = "@ind_str_asc"
-	for (m in rows) {
-		n = asorti(rows[m], t, "@ind_num_desc");
+	for (make in rows) {
+		n = asorti(rows[make], cTotal, "@ind_num_desc");
 		n = (n>3) ? 3 : n
-		for(i = 1; i <= n; i++) for(s in rows[m][t[i]]) {
+		for(i = 1; i <= n; i++) for(s in rows[make][cTotal[i]]) {
 			$0 = s;
 			$1 = ++r;
 			
