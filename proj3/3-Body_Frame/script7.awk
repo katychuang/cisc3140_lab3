@@ -1,3 +1,6 @@
+# This scipt prints each Car ID with that car's total racer score in descending order of total racer score
+# Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
+
 BEGIN {
 
 # specify comma as the field separator

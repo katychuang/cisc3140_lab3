@@ -1,5 +1,7 @@
 # proj2
 
+Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
+
 ## Description
 
 This project parses an input file and executes various awk scripts to provide a list of the top three cars overall, a list of the top three cars for each make, and a list of the top `numRanks` cars for the total racer scores, the total engine scores, the total body frame scores, the total mods scores, the mods overall scores, and the car overall scores.

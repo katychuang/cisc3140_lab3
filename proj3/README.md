@@ -1,5 +1,6 @@
 # proj3
 
+Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
 
 ## Description
 

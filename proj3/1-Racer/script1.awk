@@ -1,3 +1,6 @@
+# This script prints each Car ID with that car's total racer score in descending order of total racer score
+# Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
+
 BEGIN {
 
 # specify comma as the field separator
@@ -30,3 +33,4 @@ if($7 != "Showcar") {
 # reset the total to 0 to be used for the next row of data
 racerTotal = 0;
 }
+

@@ -1,3 +1,6 @@
+# This script prints each Car ID with that car's total racer score and ranking in ascending order of ranking
+# Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
+
 BEGIN {
 
 # specify comma as the field separator

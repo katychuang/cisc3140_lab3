@@ -1,3 +1,6 @@
+# Makefile for CISC 3140 lab 3
+# Authors Adina Scheinfeld and Hassan Akbar (Github: @AdinaScheinfeld, @HA-work)
+
 .HONY: all
 SCREEN ?=1
 NUMRANKS ?=3
