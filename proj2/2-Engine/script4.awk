@@ -1,4 +1,4 @@
-# This script prints each Car ID with that car's total racer score in descending order of total racer score
+# This script prints information on each car with that car's total engine score in descending order of total engine score
 # Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
 
 BEGIN {
@@ -16,20 +16,21 @@ for(i=15; i<=19; i++) {
 	engineTotal += $i;
 }
 
-# print the car id and engine total for each car, ignoring showcars
+# print the car id, make, model, year, and engine total for each car, ignoring showcars
 if($7 != "Showcar") {
 
 	# if the user passes in y=all, print cars from all years
 	if(y == "all") {
-		print $7","engineTotal;
+		print $7 FS $5 FS $6 FS $4 FS engineTotal;
 	}
 
 	# if the user specified a year, print only cars from that year
 	else if($4 == y) {
-		print $7 FS engineTotal;
+		print $7 FS $5 FS $6 FS $4 FS engineTotal;
 	}
 }
 
 # reset the total to 0 to be used for the next row of data
 engineTotal = 0;
 }
+
