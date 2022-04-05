@@ -1,0 +1,43 @@
+File for the top cars of each category 
+
+Overall 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2010              , Infiniti          , G37               , 128               , 128               , 18                ,26                , 26                , 48                , 6                 , 4                 , 1                  
+2                 , 2015              , Jeep              , Wrangler          , 124               , 124               , 12                ,24                , 30                , 48                , 6                 , 4                 , 2                  
+3                 , 2014              , Audi              , S4                , 15                , 120               , 12                ,26                , 28                , 46                , 6                 , 2                 , 3                  
+
+Racer 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2010              , Infiniti          , G37               , 128               , 128               , 18                ,26                , 26                , 48                , 6                 , 4                 , 1                  
+2                 , 2007              , Chrystler         , 300               , 216               , 96                , 16                ,20                , 20                , 32                , 4                 , 4                 , 11                 
+3                 , 2011              , Nissan            , 370               , 3                 , 84                , 16                ,16                , 20                , 24                , 4                 , 4                 , 19                 
+
+Engine 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2012              , Acura             , Tsx sportwagon    , 113               , 116               , 6                 ,30                , 30                , 42                , 6                 , 2                 , 4                  
+2                 , 2008              , Acura             , TL                , 112               , 110               , 4                 ,28                , 28                , 42                , 6                 , 2                 , 6                  
+3                 , 2010              , Infiniti          , G37               , 128               , 128               , 18                ,26                , 26                , 48                , 6                 , 4                 , 1                  
+
+Body_Frame 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2012              , Acura             , Tsx sportwagon    , 113               , 116               , 6                 ,30                , 30                , 42                , 6                 , 2                 , 4                  
+2                 , 2015              , Jeep              , Wrangler          , 124               , 124               , 12                ,24                , 30                , 48                , 6                 , 4                 , 2                  
+3                 , 2008              , Acura             , TL                , 112               , 110               , 4                 ,28                , 28                , 42                , 6                 , 2                 , 6                  
+
+Mods 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2015              , Jeep              , Wrangler          , 124               , 124               , 12                ,24                , 30                , 48                , 6                 , 4                 , 2                  
+2                 , 2010              , Infiniti          , G37               , 128               , 128               , 18                ,26                , 26                , 48                , 6                 , 4                 , 1                  
+3                 , 2014              , Audi              , S4                , 15                , 120               , 12                ,26                , 28                , 46                , 6                 , 2                 , 3                  
+
+Mods_Overall 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2015              , Jeep              , Wrangler          , 124               , 124               , 12                ,24                , 30                , 48                , 6                 , 4                 , 2                  
+2                 , 2010              , Infiniti          , G37               , 128               , 128               , 18                ,26                , 26                , 48                , 6                 , 4                 , 1                  
+3                 , 2014              , Audi              , S4                , 15                , 120               , 12                ,26                , 28                , 46                , 6                 , 2                 , 3                  
+
+Car_Overall 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2014              , Honda             , Accord            , 83                , 112               , 12                ,24                , 28                , 36                , 6                 , 6                 , 5                  
+2                 , 2012              , Volkswagen        , Gli               , 186               , 14                , 0                 ,2                 , 2                 , 4                 , 0                 , 6                 , 131                
+3                 , 2014              , Bmw               , 4                 , 172               , 22                , 4                 ,6                 , 4                 , 2                 , 0                 , 6                 , 116                
