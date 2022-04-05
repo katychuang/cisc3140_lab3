@@ -1,12 +1,24 @@
-BEGIN {
-    FS = "," 
+BEGIN { FS=",";
+	OFS=",";
+	sum = 0;
+  racerSum = 0;
+  engineSum = 0;
+  bodyFrameSum = 0;
+  modsSum = 0; }
+NR==1 {next}
+{ 
+  for(i = 10; i <= NF; i++) { sum = sum + $i };
+for(i = 10; i < 14; i++) { racerSum = racerSsum + $i };
+for(i = 15; i < 20; i++) { engineSum = engineSsum + $i };
+for(i = 20; i < 25; i++) { bodyFrameSum = bodyFrameSum + $i };
+for(i = 25; i <= NF; i++) { modsSum = modsSum + $i };
+  print $7, $4, $5, $6, sum, racerSum, engineSum, bodyFrameSum, modsSum, $14, $NF;
+  sum = 0;
+  racerSum = 0;
+  engineSum = 0;
+  bodyFrameSum = 0;
+  modsSum = 0;
+} 
+END {
 }
 
-{
-    # sum of total score for each car
-    ovScore = $8 + $9 + $10 + $11 + $12 + $13 + $14 + $15 + $16 + $17 + $18 + $19 + $20 + $21 + $22 + $23 + $24 + $25 + $26 + $27 + $28 + $29 + $30 + $31 + $32;
-    if(NR==1)
-        printf ""
-    else
-        printf "%-10s %-7s %-15s %-15s %-5d\n", $7, $4, $5, $6, ovScore
-}
