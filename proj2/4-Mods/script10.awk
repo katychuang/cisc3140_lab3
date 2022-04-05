@@ -1,4 +1,4 @@
-# This script prints each Car ID with that car's total racer score in descending order of total racer score
+# This script prints information on each car with that car's total mods score in descending order of total mods score
 # Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
 
 BEGIN {
@@ -16,20 +16,21 @@ for(i=25; i<=33; i++) {
 	modsTotal += $i;
 }
 
-# print the car id and mods total for each car, ignoring showcars
+# print the car id, make, model, year, and mods total for each car, ignoring showcars
 if($7 != "Showcar") {
 
 	# if the user passes in y=all, print cars from all years
 	if(y == "all") {
-		print $7","modsTotal;
+		print $7 FS $5 FS $6 FS $4 FS modsTotal;
 	}
 
 	# if the user specified a year, print only cars from that year
 	else if($4 == y) {
-		print $7 FS modsTotal;
+		print $7 FS $5 FS $6 FS $4 FS modsTotal;
 	}
 }
 
 # reset the total to 0 to be used for the next row of data
 modsTotal = 0;
 }
+
