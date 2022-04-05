@@ -39,7 +39,13 @@ END {
 		for(i = 1; i <= n; i++) for(s in rows[m][t[i]]) {
 			$0 = s;
 			$1 = ++r;
-			print ++ranking, $7, $4, $5, $6, total;
+			
+			for(i = 8; i < NF; i++) {
+                        # Incremenet the total counter for each car by values in the judged categories
+                        total += $i;
+                }
+		print ++ranking, $7, $4, $5, $6, total;
+		total=0;
 		}
 	}	
 }
