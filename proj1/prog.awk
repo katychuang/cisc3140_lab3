@@ -1,16 +1,11 @@
-BEGIN {
-    FS = ","
-    print "CarID" "|" "Year" "|" "Make" "|" "Model" "|"  > "title" 
-}
-
+BEGIN{FS=",";}
 {
-    # summing up each category for the cars to create the rankings
-    if(NR !=1){
-       totalScore = 0;
-	for(n = 8; n <= NF; n++){
-	   totalScore = totalScore + $n
-	}
-	print $7 "|" $4 "|" $5 "|" $6 "|" totalScore > "ranking.txt"     
-}
-
+  if(NR==1) printf("%-15s%-9s%-15s%-15s%-15s", $7,$4,$5,$6,"Total")
+  else if($7 == "Showcar"){
+	false}
+	else{
+  sum=0
+  for(i=8;i<=NF;i++) sum+= $i
+  printf "%-15s%-9s%-15s%-15s%-15s", total
+  }
 }
