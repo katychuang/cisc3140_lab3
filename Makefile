@@ -29,8 +29,9 @@ p2:
 	# paste -d' ' <(cut -d' ' -f1-5 proj2/report.csv ) <(cut -d' ' -f6- proj2/report.csv |sort -n) > proj2/sortedreport.csv
 
 	# run awk script to calculate racer total for each car and save output to output1.csv
+	# output is printed sorted in descending order of racer total then in order of Car IDs
 	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"
-	awk -v y=all -f proj2/1-Racer/script1.awk data/data.csv | sort -t, -k2rn > proj2/1-Racer/output1.csv	
+	awk -v y=all -f proj2/1-Racer/script1.awk data/data.csv | sort -t, -k5,5rn -k1n > proj2/1-Racer/output1.csv	
 
 	# run awk script to rank cars based on racer total and save output to output2.csv
 	awk -f proj2/1-Racer/script2.awk proj2/1-Racer/output1.csv > proj2/1-Racer/output2.csv
