@@ -12,7 +12,7 @@ print "Car_ID,Make,Model,Year,Racer_Total,Ranking"
 }
 
 # iterate through the rows of the input file skipping the header
-NR>1 {
+{
 
 # assign a rank to each row based on the racer total scores
 # if the sum of scores for two rows is equal, assign to them the same rank
