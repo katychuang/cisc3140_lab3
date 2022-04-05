@@ -3,6 +3,7 @@
 * [Description](#description)
 * [New Features](#new-features)
 * [Technology](#techology)
+* [Dependencies](#dependencies)
 * [Setup](#setup)
 ## Description
 This project is created to evaluate each of the three project's documentation and source code.
@@ -20,7 +21,8 @@ Modify each of the project with the proposed changes. All three project will sha
 Project is created with:
 * Awk Program
 * Makefile
-## Setup
+## Dependencies
+The linux commands to install the following in order the run the project are shown below:
 * GNU AWK
   ```sh
   sudo apt-get update
@@ -30,3 +32,8 @@ Project is created with:
   ```sh
   sudo apt-get install build-essential
   ```
+## Setup
+The linux commands to run this project are shown below: 
+```
+$ makefile
+```
