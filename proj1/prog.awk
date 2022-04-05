@@ -4,14 +4,13 @@ BEGIN {
 }
 
 {
-    # sum of total score for each car
+    # summing up each category for the cars to create the rankings
     if(NR !=1){
        totalScore = 0;
 	for(n = 8; n <= NF; n++){
 	   totalScore = totalScore + $n
 	}
-	print $7 "|" $4 "|" $5 "|" $6 "|" total > "ranking.txt"
-	
+	print $7 "|" $4 "|" $5 "|" $6 "|" totalScore > "ranking.txt"     
+}
 
-     
 }
