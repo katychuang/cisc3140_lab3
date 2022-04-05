@@ -9,7 +9,15 @@ p1:
 
 p2:
 	@echo "Running AWK Script proj2: "
-	awk -f proj2/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	awk -f proj2/prog2.awk data/data.csv
+
+	# user options to rank cars
+	awk -f proj2/useroption.awk data/data.csv
+	sort -t, -k1 -r -n useroption.csv > sorted_option.csv
+	awk -f proj3/Ranking.awk sorted_option.csv 
+	awk -f proj2/top.awk Ranked_option.csv
+	# print result for user defined seach
+	cat result.csv
 
 p3:
 	@echo "Running AWK Script proj3: "
@@ -51,6 +59,3 @@ p3:
 	echo "\n\n"
 	#cat proj3/sorted_ranks
 	echo "\n\n"
-	
- 
-	

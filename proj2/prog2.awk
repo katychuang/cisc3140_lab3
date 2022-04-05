@@ -12,7 +12,7 @@ BEGIN{
     }
 
     if (NR!=1)
-        print total,$7,$4,$5,"Model",rank++ | "sort -nrk1"
+        print total,$7,$4,$5,"Model",rank++ > "report.csv"
         # rank will be unsorted, then sorted using termianl commands
 }
 
