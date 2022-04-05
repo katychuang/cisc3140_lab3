@@ -1,4 +1,4 @@
-.PHONY: all
+.HONY: all
 SCREEN ?=1
 NUMRANKS ?=3
 
@@ -6,6 +6,9 @@ NUMRANKS ?=3
 all: p1 p2 p3
 
 p1:
+	
+	@echo "Running AWK Script proj1: "
+	awk -f proj1/prog.awk data/data.csv | sort -nrk5 | tee proj1/ranking.tx
 	@echo "Running Project 1 Revisions: "
 	@echo "To not print output to screen change the variable SCREEN in the Makefile to 0 "
 	@echo "To display a different number of top cars change the variable NUMRANKS in the Makefile to the desired value "
