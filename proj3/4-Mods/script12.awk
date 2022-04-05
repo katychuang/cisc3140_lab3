@@ -1,4 +1,4 @@
-# This script prints the top numRanks Car IDs, total racer scores, and rankings
+# This script prints information on the top numRanks cars, their total mods scores, and rankings
 # Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
 
 BEGIN {
@@ -8,14 +8,15 @@ FS = ","
 OFS = ","
 
 # print header
-print "Car_ID,Mods_Total,Ranking"
+print "Car_ID,Make,Model,Year,Mods_Total,Ranking"
 }
 
-# iterate through the rows of the input file
-{
+# iterate through the rows of the input file skipping the header row
+NR>1 {
 
 # print top numRanks cars with highest mods totals
-if($3 <= numRanks) {
+if($6 <= numRanks) {
 	print $0
 }
 }
+

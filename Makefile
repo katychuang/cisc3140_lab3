@@ -136,8 +136,9 @@ p3:
 	cat proj3/top_3
 
 	# run awk script to calculate racer total for each car and save output to output1.csv
-	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"	
-	awk -v y=all -f proj3/1-Racer/script1.awk data/data.csv | sort -t, -k2rn > proj3/1-Racer/output1.csv	
+	# output is printed sorted in descending order of racer total then in order of Car IDs
+	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"
+	awk -v y=all -f proj3/1-Racer/script1.awk data/data.csv | sort -t, -k5,5rn -k1,1n > proj3/1-Racer/output1.csv	
 
 	# run awk script to rank cars based on racer total and save output to output2.csv
 	awk -f proj3/1-Racer/script2.awk proj3/1-Racer/output1.csv > proj3/1-Racer/output2.csv
@@ -147,8 +148,9 @@ p3:
 	awk -v numRanks=3 -f proj3/1-Racer/script3.awk proj3/1-Racer/output2.csv > proj3/1-Racer/output3.csv
 
 	# run awk script to calculate engine total for each car and save output to output4.csv
+	# output is printed in descending order of engine total then in order of Car IDs
 	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"
-	awk -v y=all -f proj3/2-Engine/script4.awk data/data.csv | sort -t, -k2rn > proj3/2-Engine/output4.csv
+	awk -v y=all -f proj3/2-Engine/script4.awk data/data.csv | sort -t, -k5,5rn -k1,1n > proj3/2-Engine/output4.csv
 
 	# run awk script to rank cars based on engine total and save output to output5.csv
 	awk -f proj3/2-Engine/script5.awk proj3/2-Engine/output4.csv > proj3/2-Engine/output5.csv
@@ -158,8 +160,9 @@ p3:
 	awk -v numRanks=3 -f proj3/2-Engine/script6.awk proj3/2-Engine/output5.csv > proj3/2-Engine/output6.csv
 
 	# run awk script to calculate body frame total for each car and save output to output7.csv
+	# output is printed in descending order of body frame total then in order of Car IDs
 	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"
-	awk -v y=all -f proj3/3-Body_Frame/script7.awk data/data.csv | sort -t, -k2rn > proj3/3-Body_Frame/output7.csv
+	awk -v y=all -f proj3/3-Body_Frame/script7.awk data/data.csv | sort -t, -k5,5rn -k1,1 > proj3/3-Body_Frame/output7.csv
 
 	# run awk script to rank cars based on body frame total and save output to output8.csv
 	awk -f proj3/3-Body_Frame/script8.awk proj3/3-Body_Frame/output7.csv > proj3/3-Body_Frame/output8.csv
@@ -169,8 +172,9 @@ p3:
 	awk -v numRanks=3 -f proj3/3-Body_Frame/script9.awk proj3/3-Body_Frame/output8.csv > proj3/3-Body_Frame/output9.csv
 
 	# run awk script to calculate mods total for each car and save output to output10.csv
+	# output is printed in descending order of mods total then in order of Car IDs
 	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"
-	awk -v y=all -f proj3/4-Mods/script10.awk data/data.csv | sort -t, -k2rn > proj3/4-Mods/output10.csv
+	awk -v y=all -f proj3/4-Mods/script10.awk data/data.csv | sort -t, -k5,5rn -k1,1 > proj3/4-Mods/output10.csv
 
 	# run awk script to rank cars based on mods total and save output to output11.csv
 	awk -f proj3/4-Mods/script11.awk proj3/4-Mods/output10.csv > proj3/4-Mods/output11.csv
@@ -180,8 +184,9 @@ p3:
 	awk -v numRanks=3 -f proj3/4-Mods/script12.awk proj3/4-Mods/output11.csv > proj3/4-Mods/output12.csv
 
 	# run awk script to calculate mods overall for each car and save output to output13.csv
+	# output is printed in descending order of mods overall then in order of Car IDs
 	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"
-	awk -v y=all -f proj3/5-Mods_Overall/script13.awk data/data.csv | sort -t, -k2rn > proj3/5-Mods_Overall/output13.csv
+	awk -v y=all  -f proj3/5-Mods_Overall/script13.awk data/data.csv | sort -t, -k5,5rn -k1,1 > proj3/5-Mods_Overall/output13.csv
 
 	# run awk script to rank cars based on mods overall and save output to output14.csv
 	awk -f proj3/5-Mods_Overall/script14.awk proj3/5-Mods_Overall/output13.csv > proj3/5-Mods_Overall/output14.csv	
@@ -191,14 +196,14 @@ p3:
 	awk -v numRanks=3 -f proj3/5-Mods_Overall/script15.awk proj3/5-Mods_Overall/output14.csv > proj3/5-Mods_Overall/output15.csv
 
 	# run awk script to calculate car overall for each car and save output to output16.csv
+	# output is printed in descending order or car overall score then in order of Car IDs
 	@echo "Set y to a specific year to get cars only from that year, set y to all to get cars from all years"
-	awk -v y=all -f proj3/6-Car_Overall/script16.awk data/data.csv | sort -t, -k2rn > proj3/6-Car_Overall/output16.csv	
-	
+	awk -v y=all -f proj3/6-Car_Overall/script16.awk data/data.csv | sort -t, -k5,5rn -k1,1 > proj3/6-Car_Overall/output16.csv	
+
 	# run awk script to rank cars based on mods overall and save output to output17.csv
 	awk -f proj3/6-Car_Overall/script17.awk proj3/6-Car_Overall/output16.csv > proj3/6-Car_Overall/output17.csv	
 
 	# run awk script to print top 3 cars based on car overall and save output to output18.csv
 	@echo "Set the numRanks variable to the number of ranks to be printed"
 	awk -v numRanks=3 -f proj3/6-Car_Overall/script18.awk proj3/6-Car_Overall/output17.csv > proj3/6-Car_Overall/output18.csv
-
 
