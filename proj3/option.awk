@@ -6,7 +6,8 @@ BEGIN	{
     getline year < "-"
     print "Enter aspect of car: (all for total score)"
     print "options: racer  caroverall  engine  bodyframe  mods "
-    getline aspect < "-"
+    getline aspect < "-" 
+    #set range of the fields
     if(aspect == "all"){
         start = 10
         end = 34

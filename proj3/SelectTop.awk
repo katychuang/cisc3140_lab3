@@ -2,7 +2,7 @@ BEGIN{FS = ",";OFS=","
 	
 	print "Top _ cars for rank result"
 	getline top < "-"
-	print "Ranking,score,year,make,model"
+	print "Ranking,score,CarId,year,make,model"
 }
 #BODY
 {
