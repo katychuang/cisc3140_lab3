@@ -166,3 +166,63 @@ Ranking	Car_ID	Year	Make	Model	Total
 165	113	2012	Acura	Tsx sportwagon	110
 166	13	2016	Honda	Civic 1.5t	86
 167	237	1987	Volkswagen	Jetta	10
+
+
+Ranking	Car_ID	Year	Make	Model	Total
+1	113	2012	Acura	Tsx sportwagon	10
+2	112	2008	Acura	TL	10
+3	50	2015	Acura	TLX	10
+4	15	2014	Audi	S4	10
+5	18	2015	Audi	S3	10
+6	116	2008	Audi	A4	10
+7	2	2016	Bmw	M2	10
+8	172	2014	Bmw	4	10
+9	28	1995	Bmw	318xi	10
+10	111	2007	Bmw	328i	10
+11	218	2010	Chevy	Camaro	10
+12	170	2014	Chevy	Cruze	10
+13	0	2015	Chevy	Camaro	10
+14	216	2007	Chrystler	300	10
+15	42	2001	Dodge	Viper	10
+16	137	2017	Ford	Focus rs	10
+17	120	2014	Ford	Focus st	10
+18	219	2016	Ford	Focus rs	10
+19	83	2014	Honda	Accord	10
+20	65	2009	Honda	Fit	10
+21	31	2007	Honda	Fit	10
+22	38	2017	Hyundai	Elantra sport	10
+23	30	2012	Hyundai	Celoster	10
+24	92	2017	Hyundai	Elantra sport	10
+25	159	2013	Hyundai	Gen coupe	10
+26	128	2010	Infiniti	G37	10
+27	122	2011	Infiniti	M37s	10
+28	20	2009	Infiniti	G37	10
+29	124	2015	Jeep	Wrangler	10
+30	123	2006	Lexus	Sc430	10
+31	222	2015	Lexus	Is250	10
+32	190	1995	Lexus	Sc300	10
+33	Car_ID	Year	Make	Model	10
+34	52	2007	Mazda	Speed 3	10
+35	78	2015	Mazda	6	10
+36	141	1993	Mazda	Miata	10
+37	25	2012	Mercedes	C250	10
+38	84	2012	Mercedes	Cl63amg	10
+39	17	2016	Mercedes	C43	10
+40	91	2010	Mitsu	Lancer	10
+41	140	1995	Mitsu	Evo8	10
+42	19	2001	Mitsu	Evo7	10
+43	228	2010	Nissan	370	10
+44	3	2011	Nissan	370	10
+45	161	2012	Nissan	370z	10
+46	57	2015	Scion	Frs	10
+47	235	2013	Scion	Frs	10
+48	36	2016	Subaru	WRX	10
+49	33	2015	Subaru	Sti	10
+50	21	2009	Subaru	WRX	10
+51	110	2011	Toyota	Camry	10
+52	142	1993	Toyota	Supra	10
+53	43	2011	Toyota	4 Runner	10
+54	126	2010	Volkswagen	Eos	10
+55	180	2011	Volkswagen	Gti	10
+56	156	2014	Volkswagen	Gli	10
+57	100	2006	Volvo	S60r	10
