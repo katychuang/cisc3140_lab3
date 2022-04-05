@@ -1,3 +1,6 @@
+# This script prints the top numRanks Car IDs, total racer scores, and rankings
+# Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
+
 BEGIN {
 
 # specify comma as the field separator
@@ -16,3 +19,4 @@ if($3 <= numRanks) {
 	print $0
 }
 }
+

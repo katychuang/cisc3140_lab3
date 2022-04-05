@@ -1,3 +1,6 @@
+# This script prints each Car ID with that car's total racer score and ranking in ascending order of ranking
+# Author: Adina Scheinfeld (Github: @AdinaScheinfeld)
+
 BEGIN {
 
 # specify comma as the field separator
@@ -15,3 +18,4 @@ if(x != $2) {i++}{x = $2}
 # print each row of data with its assigned rank
 print $0 FS i
 }
+
