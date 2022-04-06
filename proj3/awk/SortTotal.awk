@@ -9,8 +9,8 @@ BEGIN{
 	if (prev != $4) 
 		count = 0; 
 	
-	# Display up to only 3 cars per Make
-	if (count < 3){ 
+	# Display up to only var cars per Make
+	if (count < var){ 
 		# Sets the ranking values
 		$1 = count+1; 
 		prev = $4; 

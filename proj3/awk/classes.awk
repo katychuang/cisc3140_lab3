@@ -2,7 +2,7 @@
 BEGIN {
 	# Set the input field separator to comma
 	FS = ",";
-	# Set the output field separator to tab-space
+	# Set the output field separator to ,
 	OFS = ",";
 }
 # Logic to calculate total for each class
@@ -117,7 +117,7 @@ END {
 		# Sorting it by numerically descending
 		top3 = asorti(rttl[rTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
-		top3 = (top3 > 3) ? 3 : top3
+		top3 = (top3 > var) ? var : top3
 		
 		# Looping through the top three results
 		for(i = 1; i <= top3; i++) {
@@ -148,7 +148,7 @@ END {
 		# Sorting it by numerically descending
 		top3 = asorti(ettl[eTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
-		top3 = (top3 > 3) ? 3 : top3
+		top3 = (top3 > var) ? var : top3
 
 		# Looping through the top three results
 		for(i = 1; i <= top3; i++) {
@@ -179,7 +179,7 @@ END {
 		# Sorting it by numerically descending
 		top3 = asorti(bttl[bTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
-		top3 = (top3 > 3) ? 3 : top3
+		top3 = (top3 > var) ? var : top3
 		
 		# Looping through the top three results
 		for(i = 1; i <= top3; i++) {
@@ -210,7 +210,7 @@ END {
 		# Sorting it by numerically descending
 		top3 = asorti(mttl[mTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
-		top3 = (top3 > 3) ? 3 : top3
+		top3 = (top3 > var) ? var : top3
 
 		# Looping through the top three results
 		for(i = 1; i <= top3; i++) {
@@ -241,7 +241,7 @@ END {
 		# Sorting it by numerically descending
 		top3 = asorti(mottl[moTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
-		top3 = (top3 > 3) ? 3 : top3
+		top3 = (top3 > var) ? var : top3
 
 		# Looping through the top three results
 		for(i = 1; i <= top3; i++) {
@@ -272,7 +272,7 @@ END {
 		# Sorting it by numerically descending
 		top3 = asorti(cottl[coTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
-		top3 = (top3 > 3) ? 3 : top3
+		top3 = (top3 > var) ? var : top3
 
 		# Looping through the top three results
 		for(i = 1; i <= top3; i++) {
