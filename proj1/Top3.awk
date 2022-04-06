@@ -1,13 +1,13 @@
-BEGIN{FS = ","	
+BEGIN{	
     cnt=1; 
-    match="Year"
+    phrase="Year"
 }
 
 {
 	#Checks if theres a new word in current row
-	if(match!=$4){
+	if(phrase!=$4){
 		cnt=1;
-		match=$5;
+		phrase=$4;
                 printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \ 
                 cnt, $2, $3, $4, $5, $6;
 	}
