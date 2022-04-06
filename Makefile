@@ -6,7 +6,7 @@ all: p1 p2 p3
 
 p1:
 	@echo "Running AWK Script proj1: "
-	awk -f proj1/awk/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	awk -f proj1/awk/code.awk data/data.csv > proj1/output/p1.csv
 
 p2:
 	@echo "Running AWK Script proj2: "
@@ -15,7 +15,7 @@ p2:
 p3:
 	@echo "Running AWK Script proj3: "
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
-	awk -f proj3/awk/prog1.awk data/data2.csv
+	awk -f proj3/awk/prog1.awk data/data.csv
 
 	#moved to proj3 directory
 	mv top_3 proj3
