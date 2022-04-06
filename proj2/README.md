@@ -51,6 +51,10 @@ cd proj2/output/
 ## Explaining results
 Below, we will define the results of the data found in the output folder.
 
+- The **newf.csv**, is the primary resulting output for the new feature after parsing the input dataset. We start by adding all values for the categories and hold the scores in respective ov__ arrays. We then store cars details in the **lines** array to use when we print the category rankings.
+
+- After executing the body of the program, the END segment specifies that the arrays should be traversed in descending order. The caterogires are then placed into three new arrays, **sorted(categoty)[]**, which tracks the respective rank of the category, **sortedL[]**, which holds the car details for that category, and **sortedO[]** which holds the score for that car entry. After all of the cars categories have been ranked, the top 3 rankings for each category are printed, along with headings specifying the values. 
+
 ## Known bugs
 Current bugs that we're trying to fix are:
 - Grouping the sorted output into threes, and ranking from each group results from 1 to 3 (top to bottom)
