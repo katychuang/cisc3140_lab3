@@ -25,9 +25,9 @@ You must have the following installed. The linux commands to install necessary p
   ```
 * Installation & Requirements
   ```sh
-  ```Must be on a Linux System
-  ```AWK scripting language must be installed
-  ```data.csv must be available in the submodule data	
+  Must be on a Linux System
+  AWK scripting language must be installed
+  data.csv must be available in the submodule data	
   ```
 
 ### Run
