@@ -33,13 +33,13 @@ FNR > 1{
 
   n = split($36, array)
 
-  for (i = 1; i <= n; i++) {
-    print array[i]
-  }
+  # for (i = 1; i <= n; i++) {
+  #   print array[i]
+  # }
 
   w = asort(array, dest)
   for (i = 1; i <= n; i++) {
-    print array[i]
+    print dest[i], array[i]
   }
 
   # asort(array, dest)
