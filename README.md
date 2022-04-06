@@ -33,7 +33,8 @@ The linux commands to install the following in order the run the project are sho
   sudo apt-get install build-essential
   ```
 ## Setup
-The linux commands to run this project are shown below: 
+The linux commands to run this project are shown below:
+<br>It would run all three projects
 ```
-$ makefile
+$ make
 ```
