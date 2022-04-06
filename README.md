@@ -34,7 +34,7 @@ The linux commands to install the following in order the run the project are sho
   ```
 ## Setup
 The linux commands to run this project are shown below:
-It would run all three projects
+<br>It would run all three projects
 ```
 $ make
 ```
