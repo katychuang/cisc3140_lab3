@@ -36,7 +36,7 @@ You must have the following installed. The linux commands to install necessary p
   Six Awk scripts should be present and accounted for the newest features 
   before running the program.
 
-###Run
+### Run
 
 To run proj1 enter root of the project repository and run `make proj1`. 
 
