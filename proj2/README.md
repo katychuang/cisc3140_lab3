@@ -42,7 +42,7 @@ Takes the top three rows (excluding the header) from sortedreport.csv and then p
 How to Run Each Class:
 
 
-[Racer folder:](/racer)
+[Racer folder:](../racer)
 
 - `awk -f racer/prog.awk data/data.csv > racer/report.csv `     
 - `paste -d' ' <(cut -d' ' -f1-5 racer/report.csv )  <(cut -d' ' -f6- racer/report.csv |sort -n) > racer/sortedreport.csv`
