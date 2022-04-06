@@ -45,7 +45,7 @@ To run the project scripts, follow these steps:
 When the GNU Make command is ran, you will be prompted with these messages in the terminal/CLI indicating that scripts have successfully executed and compiled our results.
 ```
 Running AWK Program script proj1:
-awk -f proj1/awk/program.awk data/data.csv > proj1/output/output.csv
+awk -f proj1/awk/prog.awk data/data.csv > proj1/output/output.csv
 Running AWK Sort script proj1:
 awk -f proj1/awk/sort.awk proj1/output/output.csv > proj1/output.sorted.csv
 Running AWK Classes script proj1:
@@ -62,8 +62,8 @@ cd proj1/output/
 ## Explaining results
 Below, we will define the results of the data found in the output folder.
 
-- The **output.csv**, is the primary resulting output from parsing the input dataset. The **program.awk** script sifts through the input data and grabs several columns found within <br>the dataset including but not limited to: Car_ID, Year, Make, and Model. These are printed directly into the **output.csv** file without manipulation or changes. An additional two columns are created, one titled Ranking, and the other Total. Ranking will precede the aforementioned columns, whilst Total will succeed them. The ranking column will display a numerical value to signify where the vehicle ranks in the overall dataset based on the sum of the values from the judged categories now identified by the calculated total.
-- When combing through the data, the **program.awk** will scan each vehicle row, and it will tally up the scores earned in each judge category to calculate a total. <br> These categories start from column 10 to column 34. The total is then printed along side the aforementioned fields like so:
+- The **output.csv**, is the primary resulting output from parsing the input dataset. The **prog.awk** script sifts through the input data and grabs several columns found within <br>the dataset including but not limited to: Car_ID, Year, Make, and Model. These are printed directly into the **output.csv** file without manipulation or changes. An additional two columns are created, one titled Ranking, and the other Total. Ranking will precede the aforementioned columns, whilst Total will succeed them. The ranking column will display a numerical value to signify where the vehicle ranks in the overall dataset based on the sum of the values from the judged categories now identified by the calculated total.
+- When combing through the data, the **prog.awk** will scan each vehicle row, and it will tally up the scores earned in each judge category to calculate a total. <br> These categories start from column 10 to column 34. The total is then printed along side the aforementioned fields like so:
 ```
 Ranking	Car_ID	Year	Make	Model	Total
 1	128	2010	Infiniti	G37	128

@@ -6,7 +6,7 @@ all: p1 p2 p3
 
 p1:
 	@echo "Running AWK Program script proj1: "
-	awk -f proj1/awk/code.awk data/data.csv > proj1/output/output.csv
+	awk -f proj1/awk/prog.awk data/data.csv > proj1/output/output.csv
 	@echo "Running AWK Sort script proj1: "
 	awk -f proj1/awk/sort.awk proj1/output/output.csv > proj1/output/sorted.csv
 	@echo "Running AWK Classes script proj1: "
