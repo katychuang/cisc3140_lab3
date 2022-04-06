@@ -31,4 +31,6 @@ BEGIN{
 		count, $2, $3, $4, $5, $6;
 	}
 }
-END{}
+END{
+	print "The total number of entries processed here is " NR
+}

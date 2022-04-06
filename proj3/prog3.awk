@@ -48,4 +48,6 @@ BEGIN{FS = ",";
         printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \
 	"Unf", total, $7, $4, $5, $6;
 }
-END{}
+END{
+	print "The total number of entries processed here is " NR
+}

@@ -29,4 +29,6 @@ BEGIN{FS = ","
 		"Unf", total, $7, $4, $5, $6 > "ranks"
 	}
 }
-END{}
+END{
+	print "The total number of entries processed here is " NR
+}
