@@ -16,7 +16,7 @@ p1:
 	sort -k2,2rn Temp > Temp2
 	awk -f proj1/Sorted.awk Temp2 > Temp
 	cat proj1/title Temp > Temp2
-	echo "Top Three For Car Overall" | cat Temp 
+	echo "Top Three For Car Overall" | grep -A3 "Make" Temp2 
 	awk -f proj1/EngineProg.awk data/data.csv > Temp
 	sort -k2,2rn Temp > Temp2
 	awk -f proj1/Sorted.awk Temp2 > Temp
