@@ -49,5 +49,12 @@ Prints ranking, car_id, year, car make, car model, total score to new File.
 Counter++; // This counter will move on to next car make on 3.
 
 Now "skip" all car makes with the unique ID and restart until there is no more data in the .CSV.
+-------------------
+
+**proj2 summary and explaination:**
+
+code.awk will first the Ranking, Car_ID, Year, Make, Model, Total from the data.csv file, then the program will find the top 3 makes and list them based on their total's descending order. The output is located in proj2.csv. Use the makefile to run the code.awk on the output. (Use command "make run" when inside proj2 folder.)
+
+
 
 
