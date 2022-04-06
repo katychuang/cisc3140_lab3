@@ -49,5 +49,14 @@ Prints ranking, car_id, year, car make, car model, total score to new File.
 Counter++; // This counter will move on to next car make on 3.
 
 Now "skip" all car makes with the unique ID and restart until there is no more data in the .CSV.
+-------------------
+
+Project 2, summary and explaination.
+
+AWK and Makefile explaination:
+1)code.awk is used on data.csv and prints to proj2.csv, to find the total of each row and print.
+2)codeTwo.awk is used on proj2.csv the to find the top 3 rankings of each make. It will print to top3.csv. Then, sort all rows by total in descending order. As a result, the rankings number will be incorrect. This will be corrected in the next step.
+3)Using linux terminal sort command, sort only the first row (Ranking) in ascending order, without affecting any of the other rows. This can also be done with the paste/cut feature.
+
 
 
