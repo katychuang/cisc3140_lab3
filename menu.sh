@@ -57,6 +57,7 @@ classHeaderDisplay(){
 	fi;
 }
 
+
 ###Main Shell Script Body###
 
 #Ignores ctrl+c as exit

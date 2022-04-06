@@ -6,7 +6,8 @@
 
 BEGIN{	
 #Sets global variables
-	count=1; 
+	recordCounter = 0
+	count=1 
 	word="Maker"
 }
 #BODY
@@ -17,6 +18,7 @@ BEGIN{
 		word=$5;
                 printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", 
                 count, $2, $3, $4, $5, $6;
+		recordCounter++;
 	}
 	#If the count is equal or greater than numCars, skips to the next line
 	#numCars variable passed from command line
@@ -29,8 +31,9 @@ BEGIN{
 		count++;
 		printf "%-6s %-6s %-6s %-8s %-12s %-15s\n",
 		count, $2, $3, $4, $5, $6;
+		recordCounter++;
 	}
 }
 END{
-	print "The total number of entries processed here is " NR
+	print "The number of records processed here is ", recordCounter
 }
