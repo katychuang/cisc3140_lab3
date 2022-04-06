@@ -1,36 +1,38 @@
 # cisc3140_lab3
-Group3 Members: Huimin, Jiao Jiao, Naldy, Jinwei, Armando, Jiayi, Kamille
 
 ## Overview:
+For this lab, our team was tasked with implementing new features onto the provided previous three labs. These initial labs correspond to the proj1, proj2, and proj3 sub-directories.
+We were also tasked with reviewing the initial code in various forms, including but not limited to: organization, readability, and implementation. 
 
-- Each group will be provided projects to evaluate. Projects can be found at the link provided. URL: https://github.com/katychuang/cisc3140_lab3
+## QuickStart:
+Run the first project:
 
-- Evaluate each project’s documentation, and source code. See following pages as example criteria to deepen your analysis/evaluation process.
+```
+$ make p1
+```
 
-- Modify each project with the proposed changes (see ‘New Features’ listed below). Each ‘new feature’ should apply to each sub project (proj1, proj2, etc).
+Run the second project:
 
-- Prepare group presentation on your experience. Groups will present on 4/6, 4/11, 4/13 (in ascending order of the group numbers)
+```
+$ make p2
+```
+Run the third project:
 
-  - Suggested presentation length is 5 minutes per member in the group (i.e., roughly half hour per group)
+```
+$ make p3
+```
 
-## New features:
+Running make by itself will default to run all programs:
 
-- In addition to providing a list of top three cars overall and also top three per make, find the top 3 ranked for new classes.
+```
+$ make
+```
 
-  - The new classes: Racer, Engine, Body_Frame, Mods, Mods_Overall, Car_Overall.
+## Authors and Acknowledements
 
-  - List any of the top 3 ranks with rank numbers: 1, 2, 3.
+Huimin, Jiao Jiao, Naldy, Jinwei, Armando, Jiayi, Kamille
 
-  - Ignore show cars.
+## License:
 
-- Enable options during execution that would allow customize the report when running the provided scripts.
+This project is licensed under the MIT license.
 
-  - Your team should come up with appropriate and/or useful options. For example, this may be file format output, parsing configurations, customization of fields presented in the output(s), and other information.
-
-- Clean up the repository before submitting
-
-  - Update the build provisions (i.e., makefile) in the root folder of the repository and ensure that instructions are provided somewhere. If your team votes to use shell scripts instead, that is fine.
-
-  - Prepare a README file for the entire repository.
-
-  - Update each of the individual READMEs inside each subfolder as appropriate. Please use proper markdown formatting for markdown files.
