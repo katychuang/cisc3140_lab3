@@ -50,4 +50,6 @@ Counter++; // This counter will move on to next car make on 3.
 
 Now "skip" all car makes with the unique ID and restart until there is no more data in the .CSV.
 
+### Additional Feature
 
+The new feature allows the report.csv file in which the parsed data gets exported to be modified and improved. The scripts added sorts the data further in the report.csv file and allows for the fields and output to be customized.

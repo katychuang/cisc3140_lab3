@@ -1,17 +1,27 @@
 .PHONY: all
 
 # As default 'make' target, run all targets
-all: p1 p2 p3
+# This would mean that all proj1, proj2, and proj3 will be run in the three projects.
 
-p1:
+all: proj1 proj2 proj3
+
+# Each targets will allow for the activation of the AWK scripts in every project subfolders as well as the additional feature scripts.
+
+# In proj1 target using 'make proj1', it allows for the scripts to run which then outputs the parsed data into a .txt document named ranking. 
+
+proj1:
 	@echo "Running AWK Script proj1: "
-	awk -f proj1/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	awk -f proj1/prog.awk data/data.csv | sort -nrk5 | tee ranking.txt
 
-p2:
+# This target allows for 'make proj2' to activate which runs each script from the subfolder proj2 and outputs it into a .txt document as well. 
+
+proj2:
 	@echo "Running AWK Script proj2: "
-	awk -f proj2/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	awk -f proj2/prog.awk data/data.csv | sort -nrk5 | tee ranking.txt
 
-p3:
+# proj3 target allows for 'make proj3' to activate. This will allow for the two AWK programs within the subfolder to activate and sorts the data from the data.csv table.
+
+proj3:
 	@echo "Running AWK Script proj3: "
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
 	awk -f proj3/prog1.awk data/data.csv
