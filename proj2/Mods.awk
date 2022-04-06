@@ -5,7 +5,7 @@ BEGIN {
 	rank = 1
 }
 {
-        if(NR>1) {
+        if(NR>1 && $7 != "Showcar") {
         key = sprintf("%s", $7)
 	total = 0
 	for(i = 25; i < 33; i++){
