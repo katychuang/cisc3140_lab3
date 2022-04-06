@@ -1,5 +1,5 @@
 BEGIN{FS=",";
-   printf "%-9s %-15s %-9s %-15s %-15s %-15s\n", \
+   printf "%-6s %-6s %-6s %-6s %-12s %-12s\n", \
  "Place", "Total", "CarID", "Year", "Make", "Model" > "proj1/title"
 }
 {
