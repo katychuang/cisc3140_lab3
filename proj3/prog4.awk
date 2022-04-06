@@ -3,6 +3,7 @@
 # values based on number of records processed
 
 BEGIN{
+	recordCount = 0
 	count = 1
 }
 #BODY
@@ -11,7 +12,8 @@ BEGIN{
 	printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \
 	count, $2, $3, $4, $5, $6;
 	count++;
+	recordCount++
 }
 END{
-	print "The total number of entries processed here is " NR
+	print "The total number of entries processed here is " recordCount
 }

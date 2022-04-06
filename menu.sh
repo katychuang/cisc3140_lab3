@@ -86,7 +86,6 @@ do
 			#cat ranksTmp
 			#Removes temp files to avoid cluttered directory
 			rm ranksTmp;;
-	
 		#Displays Top cars overall, number displayed based on user 
 		#Input
 		2)	#Displays selected menu option

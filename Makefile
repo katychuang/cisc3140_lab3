@@ -47,12 +47,12 @@ p1:
 	cat proj1/title Temp > Temp2
 	grep -A3 "Make" Temp2 > Temp
 	echo "Top Three For Mods_Overall" | cat Temp
-	mv displayCarOverall.txt proj1
+	#mv displayCarOverall.txt proj1
 	mv displayRanks.txt proj1
 	mv Temp proj1
 	mv Temp2 proj1
 	mv tmp proj1
-	mv tmp2 proj1
+	#mv tmp2 proj1
 
 
 p2:
