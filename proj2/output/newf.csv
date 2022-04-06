@@ -1,0 +1,41 @@
+Class: Racer
+
+Ranking	Car_ID	Year	Make	Model	Racer_Score
+1	128	2010	Infiniti	G37	18
+2	3	2011	Nissan	370	16
+3	216	2007	Chrystler	300	16
+
+Class: Engine
+
+Ranking	Car_ID	Year	Make	Model	Engine_Score
+1	113	2012	Acura	Tsx sportwagon	30
+2	112	2008	Acura	TL	28
+3	65	2009	Honda	Fit	26
+
+Class: Body_Frame
+
+Ranking	Car_ID	Year	Make	Model	Body_Frame_Score
+1	124	2015	Jeep	Wrangler	30
+2	113	2012	Acura	Tsx sportwagon	30
+3	50	2015	Acura	TLX	28
+
+Class: Mods
+
+Ranking	Car_ID	Year	Make	Model	Mods_Score
+1	124	2015	Jeep	Wrangler	48
+2	128	2010	Infiniti	G37	48
+3	15	2014	Audi	S4	46
+
+Class: Mods_Overall
+
+Ranking	Car_ID	Year	Make	Model	Mods_Overall_Score
+1	91	2010	Mitsu	Lancer	6
+2	158	2007	Nissan	350z	6
+3	142	1993	Toyota	Supra	6
+
+Class: Car_Overall
+
+Ranking	Car_ID	Year	Make	Model	Car_Overall_Score
+1	172	2014	Bmw	4	6
+2	186	2012	Volkswagen	Gli	6
+3	83	2014	Honda	Accord	6
