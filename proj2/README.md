@@ -38,36 +38,48 @@ $ make p2
 - Prints ranking on the last column.
 - Copies car_ID, year, make, model from data.csv to [sortedreport.csv](output_file/sortedreport.csv)
 
-3. Description of [Racer.awk](awk_script/Racer.awk):
+3. Description of [top3.awk](awk_script/top3.awk):
+- Prints a list of top three cars overall.
+- Copies car_ID, year, make, model from data.csv to [top3.csv](output_file/top3.csv)
+
+4. Description of [rankingAndMake.awk](awk_script/rankingAndMake.awk)
+- According sortedreport.csv to sort the cars by make, then each makes sorted by total score.
+- Then Copy this description command line to the termenal. 
+```
+awk 'word!=$4{count=1;word=$4} count<=3{print; count++}' proj2/output_file/rankingAndMake.csv > proj2/output_file/topThreeEachMake.csv
+```
+- Prints a list of top three cars per make to [topThreeEachMake.csv](output_file/topThreeEachMake.csv).
+
+5. Description of [Racer.awk](awk_script/Racer.awk):
 - Prints Car_ID, total for Racer class, and rank, on the first row. 
 - Copies Car_ID from data.csv to [rankRacer.csv](output_file/rankRacer.csv)
 - Add a colum called total that adds the results from column 10 to column 14 of the file.
 - Then print out the top three racer with 1 2 3 ranks.
 
-4. Description of [Engine.awk](awk_script/Engine.awk):
+6. Description of [Engine.awk](awk_script/Engine.awk):
 - Prints Car_ID, total for Racer class, and rank, on the first row.
 - Copies Car_ID from data.csv to [rankEngine.csv](output_file/rankEngine.csv)
 - Add a colum called total that adds the results from column 15 to column 19 of the file.
 - Then print out the top three engine with 1 2 3 ranks. 
 
-5. Description of [Body_Frame.awk](awk_script/Body_Frame.awk):
+7. Description of [Body_Frame.awk](awk_script/Body_Frame.awk):
 - Prints Car_ID, total for Racer class, and rank, on the first row.
 - Copies Car_ID from data.csv to [rankBody_Frame.csv](output_file/rankBody_Frame.csv)
 - Add a colum called total that adds the results from column 20 to column 24 of the file.
 - Then print out the top three Body_Frame with 1 2 3 ranks.
 
-6. Description of [Mods.awk](awk_script/Mods.awk):
+8. Description of [Mods.awk](awk_script/Mods.awk):
 - Prints Car_ID, total for Racer class, and rank, on the first row.
 - Copies Car_ID from data.csv to [rankMods.csv](output_file/rankMods.csv)
 - Add a colum called total that adds the results from column 25 to column 33 of the file.
 - Then print out the top three mods with 1 2 3 ranks.
 
-7. Description of [top3Mods_Overall.awk](awk_script/top3Mods_Overall.awk):
+9. Description of [top3Mods_Overall.awk](awk_script/top3Mods_Overall.awk):
 - Prints Car_ID, Email, Name, Mods_Overall,and rank, on the first row.
 - Copies Car_ID,Email,Name,Mods_Overall from data.csv to [top3Mods_Overall.csv](output_file/top3Mods_Overall.csv)
 - Then print out the top three Mods_Overall with 1 2 3 ranks.
 
-8. Description of [Car_Overall.awk](awk_script/Car_Overall.awk):
+10. Description of [Car_Overall.awk](awk_script/Car_Overall.awk):
 - Prints Car_ID, total for Racer class, and rank, on the first row.
 - Copies Car_ID from data.csv to [rankCar_Overall.csv](output_file/rankCar_Overall.csv)
 - Then print out the top three Car_Overall with 1 2 3 ranks.
