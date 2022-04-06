@@ -5,6 +5,8 @@ The GNU AWK scripts rank records of vehicles based on score values found in the 
 
 This project explores the first iteration of the overall project objectives which can be found/read in the main **[README file](https://github.com/ogre2/cisc3140_lab3/blob/main/README.md)** document, located in the root of this repository.
 
+Our revisions for this project attempted to continue off the base that was established from the original code. We tried to maintain similar naming conventions throughout, and interpret how the project could've continued.
+
 ## Files and directory structure
 ```
 .
