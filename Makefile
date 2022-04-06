@@ -20,11 +20,6 @@ p3:
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
 	awk -f proj3/awk/prog1.awk data/data.csv
 
-	#moved to proj3 directory
-	mv top_3 proj3
-	mv ranks proj3 
-	mv headers proj3
-
 	#sorts ranks in descending order via scores and placed in a 
 	#new file: sorted_ranks.
 	sort -k5,5rn -t ',' proj3/ranks.csv > "proj3/Output/sorted_ranks.csv"
@@ -33,12 +28,21 @@ p3:
 	sort -k3,3 -k5,5rn -t ',' proj3/top_3.csv | awk -f proj3/awk/AddRanking.awk | \
 	awk -f proj3/awk/SortTotal.awk > "proj3/Output/top_3_by_make.csv" 
 
+	# Gets top 3 of each category
+	awk -f proj3/awk/classes.awk data/data.csv > proj3/Output/classes.csv
+
 	#Adding headers to final files
 	cat proj3/headers.csv proj3/Output/sorted_ranks.csv > "sorted_ranks.csv"
 	cat proj3/headers.csv proj3/Output/top_3_by_make.csv > "top_3_by_make.csv"
-	#moved to proj3 directory
+
+	#move to proj3 directory
 	mv sorted_ranks.csv proj3/Output
 	mv top_3_by_make.csv proj3/Output
+
+	# Remove temp files
+	rm proj3/headers.csv
+	rm proj3/ranks.csv
+	rm proj3/top_3.csv
 
 	#Display the files
 	echo "\nSorted Ranks\n"

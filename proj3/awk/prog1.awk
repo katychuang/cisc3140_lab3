@@ -7,6 +7,7 @@ BEGIN{FS = ","
 		false
 	}
 	else {
+		# Get the cumulative value of each category
 		total = 0
 		Racer = 0
 		Engine = 0
@@ -26,8 +27,10 @@ BEGIN{FS = ","
 				Body += $i
 		}
 
+	# Create a temp csv file to sort by Total
     print $7 "," $4 "," $5 "," $6 "," total "," Racer "," Engine "," Body "," Mods "," ModsOA "," CarOA > "proj3/ranks.csv"
 
+	# Create a temp csv file without Showcar to display top 3 cars
 	if ($7 != "Showcar")
     print $7 "," $4 "," $5 "," $6 "," total "," Racer "," Engine "," Body "," Mods "," ModsOA "," CarOA > "proj3/top_3.csv"
 	}
