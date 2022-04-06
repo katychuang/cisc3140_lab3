@@ -1,7 +1,7 @@
 #1/bin/awk -f
 BEGIN {
     FS=","
-    print "Total","Car_ID","Year","Make","Model--Ranking";
+    print "Mods_Total","Car_ID","Year","Make","Ranking";
     rank=1
 }
 {
