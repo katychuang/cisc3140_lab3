@@ -58,6 +58,8 @@ p3:
 	echo Top 3 Racer cars:
 	echo Ranking,Score,CarId,Year,Make,Model
 	head -3 newClass.csv
+	rm TotalRacer.csv
+	rm sorted_Racer.csv
 	echo "\n"
 
 	#caroverall class
@@ -68,6 +70,8 @@ p3:
 	echo Top 3 Caroverall cars:
 	echo Ranking,Score,CarId,Year,Make,Model
 	head -3 newClass.csv
+	rm TotalCaroverall.csv
+	rm sorted_Caroverall.csv
 	echo "\n"
 
 	#Engine class
@@ -78,6 +82,8 @@ p3:
 	echo Top 3 Engine cars:
 	echo Ranking,Score,CarId,Year,Make,Model
 	head -3 newClass.csv
+	rm TotalEngine.csv
+	rm sorted_Engine.csv
 	echo "\n"
 
 	#Bodyframe class
@@ -88,6 +94,8 @@ p3:
 	echo Top 3 Bodyframe cars:
 	echo Ranking,Score,CarId,Year,Make,Model
 	head -3 newClass.csv
+	rm TotalBodyframe.csv
+	rm sorted_Bodyframe.csv
 	echo "\n"
 
 	#Mods class
@@ -98,6 +106,8 @@ p3:
 	echo Top 3 Mods cars:
 	echo Ranking,Score,CarId,Year,Make,Model
 	head -3 newClass.csv
+	rm TotalMods.csv
+	rm sorted_Mods.csv
 	echo "\n"
 
 
@@ -111,12 +121,12 @@ p3:
 	awk -f proj3/SelectTop.awk Ranked_option.csv 
 	#print result for user define seach
 	cat result.csv
+	rm option.csv
+	rm Ranked_option.csv
+	rm sorted_option.csv
+	mv result.csv proj3
 
 	#Display the files 
 	echo "\n\n"
 	#cat proj3/sorted_ranks
-	echo "\n\n"
-	
- 
-	
 	echo "\n\n"
