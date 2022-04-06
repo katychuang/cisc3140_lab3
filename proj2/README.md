@@ -42,33 +42,33 @@ Takes the top three rows (excluding the header) from sortedreport.csv and then p
 How to Run Each Class:
 
 
-[Racer folder:](../racer)
+[Racer folder:](https://github.com/AndrewLee-Ace/cisc3140_lab3/tree/Kristy/proj2/racer)
 
 - `awk -f racer/prog.awk data/data.csv > racer/report.csv `     
 - `paste -d' ' <(cut -d' ' -f1-5 racer/report.csv )  <(cut -d' ' -f6- racer/report.csv |sort -n) > racer/sortedreport.csv`
 - `awk '{if ($6 <= 3) {print}}' racer/sortedreport.csv > racer/output.csv`
 
-Engine Folder:
+[Engine folder:](https://github.com/AndrewLee-Ace/cisc3140_lab3/tree/Kristy/proj2/engine)
 - `awk -f engine/prog1.awk data/data.csv > engine/report.csv`      
 - `paste -d' ' <(cut -d' ' -f1-5 engine/report.csv )  <(cut -d' ' -f6- engine/report.csv |sort -n) > engine/sortedreport.csv`
 - `awk '{if ($6 <= 3) {print}}' engine/sortedreport.csv > engine/output.csv`
 
-Body_Frame Folder:
+[Body_Frame Folder:](https://github.com/AndrewLee-Ace/cisc3140_lab3/tree/Kristy/proj2/body_frame)
 - `awk -f body_frame/prog2.awk data/data.csv > body_frame/report.csv`      
 - `paste -d' ' <(cut -d' ' -f1-5 body_frame/report.csv )  <(cut -d' ' -f6- body_frame/report.csv |sort -n) > body_frame/sortedreport.csv`
 - `awk '{if ($6 <= 3) {print}}' body_frame/sortedreport.csv > body_frame/output.csv`
 
-Mods Overall Folder:
+[Mods Overall Folder:](https://github.com/AndrewLee-Ace/cisc3140_lab3/tree/Kristy/proj2/mods_overall)
 - `awk -f mods_overall/mods_overall.awk data/data.csv > mods_overall/report.csv`     
 - `paste -d' ' <(cut -d' ' -f1-5 mods_overall/report.csv )  <(cut -d' ' -f6- mods_overall/report.csv |sort -n) > mods_overall/sortedreport.csv`
 - `awk '{if ($6 <= 3) {print}}' mods_overall/sortedreport.csv > mods_overall/output.csv`
 
-Mods:
+[Mods:](https://github.com/AndrewLee-Ace/cisc3140_lab3/tree/Kristy/proj2/mods)
 - `awk -f mods/mods.awk data/data.csv > mods/report.csv`      
 - `paste -d' ' <(cut -d' ' -f1-5 mods/report.csv )  <(cut -d' ' -f6- mods/report.csv |sort -n) > mods/sortedreport.csv`
 - `awk '{if ($6 <= 3) {print}}' mods/sortedreport.csv > mods/output.csv`
 
-Car Overall:
+[Car Overall:](https://github.com/AndrewLee-Ace/cisc3140_lab3/tree/Kristy/proj2/car_overall)
 - `awk -f car_overall/car_overall.awk data/data.csv > car_overall/report.csv`      
 - `paste -d' ' <(cut -d' ' -f1-5 car_overall/report.csv )  <(cut -d' ' -f6- car_overall/report.csv |sort -n) > car_overall/sortedreport.csv`
 - `awk '{if ($6 <= 3) {print}}' car_overall/sortedreport.csv > car_overall/output.csv`
