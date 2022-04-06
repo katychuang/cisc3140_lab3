@@ -30,10 +30,17 @@ To run proj1 make sure you are in the proper repository and run `make_(Insert Us
 
 ### Results
 info.csv sorts through the data and gets removed at the end of each user option.
-*[output.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/output.csv)* sorts and ranks the data.
-*[RankBodyFrame.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankBodyFrame.csv)* outputs the cars ranked by Body Frames.
-*[RankCarOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankCarOverall.csv)* outputs the cars ranked by Highest Overall Car.
-*[RankEngine.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankEngine.csv)* outputs the cars ranked by Engine.
-*[RankMods.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankMods.csv)* outputs the cars ranked by Mods.
-*[RankModsOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankModsOverall.csv)* outputs the cars ranked by the Mods Overall.
-*[RankRacer.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankRacer.csv)* outputs the cars ranked by the Racer.
+
+**[output.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/output.csv)** sorts and ranks the data.
+
+**[RankBodyFrame.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankBodyFrame.csv)** outputs the cars ranked by Body Frames.
+
+**[RankCarOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankCarOverall.csv)** outputs the cars ranked by Highest Overall Car.
+
+**[RankEngine.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankEngine.csv)** outputs the cars ranked by Engine.
+
+**[RankMods.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankMods.csv)** outputs the cars ranked by Mods.
+
+**[RankModsOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankModsOverall.csv)** outputs the cars ranked by the Mods Overall.
+
+**[RankRacer.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankRacer.csv)** outputs the cars ranked by the Racer.
