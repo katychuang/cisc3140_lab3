@@ -16,6 +16,7 @@ p1:
 p2:
 	@echo "Running AWK Program script proj2: "
 	awk -f proj2/awk/prog.awk data/data.csv > proj2/output/output.csv
+	awk -f proj2/awk/newf.awk data/data.csv > proj2/output/newf.csv
 
 p3:
 	@echo "Running AWK Script proj3: "

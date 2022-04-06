@@ -109,9 +109,10 @@ END {
 	# ID tracker for all the cars in the output
 	id;
 
-	# Setting the sorting method of the 2D array for racer total
+	# Setting the sorting method of all 2D arrays
 	PROCINFO["sorted_in"] = "@ind_str_asc"
-	# Looping through the array
+
+	# Looping through the racer array
 	for(ttl in rttl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
@@ -140,9 +141,7 @@ END {
 	# Resetting the rank tracker for next output set
 	ranking = 0;
 	
-	# Setting the sorting method for the 2D array for engine total
-	PROCINFO["sorted_in"] = "@ind_str_asc"
-	# Looping through the array  	
+	# Looping through the array engine array
 	for(ttl in ettl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
@@ -171,9 +170,7 @@ END {
 	# Resetting the rank tracker for next output set
 	ranking = 0;
 	
-	# Setting the sorting method for the 2D array for body_frame total
-	PROCINFO["sorted_in"] = "@ind_str_asc"
-	# Looping through the array
+	# Looping through the array body_frame array
 	for(ttl in bttl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
@@ -202,9 +199,7 @@ END {
 	# Resetting the rank tracker for next output set
 	ranking = 0;
 	
-	# Setting the sorting method for the 2D array for mods total
-	PROCINFO["sorted_in"] = "@ind_str_asc"
-	# Looping through the array
+	# Looping through the mods array
 	for(ttl in mttl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
@@ -232,10 +227,8 @@ END {
 
 	# Resetting the rank tracker for next output set
 	ranking = 0;
-	
-	# Setting the sorting method for the 2D array for mods_overall total
-	PROCINFO["sorted_in"] = "@ind_str_asc"
-	# Looping through the array
+
+	# Looping through the mods_overall array
 	for(ttl in mottl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
@@ -264,9 +257,7 @@ END {
 	# Resetting the rank tracker for next output set
 	ranking = 0;
 
-	# Setting the sorting method for the 2D array for car_overall total
-	PROCINFO["sorted_in"] = "@ind_str_asc"
-	# Looping through the array
+	# Looping through the car_overall array
 	for(ttl in cottl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
