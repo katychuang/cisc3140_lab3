@@ -1,0 +1,167 @@
+48|2015|Acura|TLX|62
+124|2015|Jeep|Wrangler|124
+222|2015|Lexus|Is250|40
+207|1993|Honda|Civic eG|40
+167|2016|Ford|Mystang|20
+159|2013|Hyundai|Gen coupe|14
+20|2009|Infinity|G37|38
+178|2009|Honda|Oddesy|72
+30|2012|Hyundai|Celoster|66
+134|2012|Subaru|WRX|6
+51|2015|Subaru|WRX|50
+183|2005|Volkswagen|Jetta|16
+177|2005|Volkswagen|Jetta gli|12
+5|2003|Acura|Rsx|50
+218|2010|Chevy|Camaro|64
+39|2011|Honda|Civic|72
+68|2013|Nissan|Altima|10
+10|2001|Nissan|S15|34
+67|2015|Subaru|Sti|14
+43|2011|Toyota|4 Runner|54
+170|2014|Chevy|Cruze|50
+216|2007|Chrystler|300|96
+99|2014|Civic|Si|38
+89|2014|Honda|Civic si|16
+95|2004|Infiniti|G35|12
+228|2010|Nissan|370|92
+7|2014|Nissan|Sentra|30
+14|1990|Nissan|Skyline|26
+8|1991|Nissan|Skyline|44
+145|1990|Volkswagen|Gti|38
+102|2015|Honda|Accord|10
+36|2016|Subaru|WRX|74
+189|2012|Toyota|Fj cruiser|50
+111|2007|Bmw|328i|10
+140|1995|Mitsu|Evo8|44
+161|2012|Nissan|370z|84
+37|2015|Subaru|Sti|54
+243|2008|Toyota|Matrix|10
+184|2010|Volkswagen|Cc|8
+66|2010|Volkswagen|Gti|4
+101|2014|Honda|Civic|0
+21|2009|Subaru|WRX|62
+200|2016|Subaru|WRX|36
+2|2016|Bmw|M2|24
+23|1998|Subaru|Legacy|62
+59|2012|Volkswagen|Golf|28
+42|2001|Dodge|Viper|8
+83|2014|Honda|Accord|112
+16|2008|Nissan|350z|10
+181|2003|Volkswagen|Gti|30
+0|2015|Chevy|Camaro|0
+88|2008|Honda|Accord|48
+25|2012|Mercedes|C250|78
+176|2014|Mitsu|Lancer|40
+134|2013|Subaru|WRX|52
+127|2013|Acura|Tsx|86
+104|2014|Civic coupe|Si|48
+120|2014|Ford|Focus st|30
+85|2017|Honda|Accord|42
+Showcar|2014|Nissan|Gtr|44
+108|2013|Audi|S4|14
+98|2012|Benz|C63|26
+130|2016|Honda|Civic si|24
+12|1990|Nissan|240|62
+232|2018|Subaru|WRX|46
+Vip|2008|Volkswagen|Gli|16
+96|2017|Volkswagen|Gti|10
+15|2014|Audi|S4|120
+65|2009|Honda|Fit|106
+92|2017|Hyundai|Elantra sport|30
+179|2004|Volkswagen|R32|38
+63|2010|Honda|Civic|86
+35|2016|Honda|Civic|60
+79|1993|Mazda|Miata|18
+4341|1992|Nissan|Rps13|32
+156|2014|Volkswagen|Gli|56
+220|2004|Audi|A4|14
+44|2018|Honda|Civic si|40
+19|2001|Mitsub|Evo7|40
+123|2006|Lexus|Sc430|66
+57|2015|Scion|Frs|80
+230|2004|Acura|Tsx|20
+33|2015|Subaru|Sti|68
+75|2012|Subaru|WRX|6
+175|2006|Honda|Civic|92
+115|2001|Honda|Crv|56
+153|2017|Subaru|Brz|42
+76|2005|Subaru|Sti|12
+56|2009|Volkswagen|Jetta|42
+114|2015|Acura|TLX|102
+163|2013|Mitsu|Ralliart|22
+53|2013|Subaru|WRX|60
+241|2007|Toyota|Camry|24
+114|2010|Volkswagen|Gti|26
+41|2012|Acura|Tsx|64
+116|2008|Audi|A4|28
+137|2017|Ford|Focus rs|54
+212|2001|Lexus|Is300|6
+52|2007|Mazda|Speed 3|48
+93|2005|Acura|TL|22
+226|2008|Honda|Accord|18
+22|2007|Honda|Civic|24
+70|2014|Honda|Civic|0
+128|2010|Infiniti|G37|128
+187|2007|Subaru|Legacy|6
+238|1982|Volkswagen|Rabbit|28
+31|2007|Honda|Fit|102
+71|2008|Acura|TL|6
+18|2015|Audi|S3|38
+38|2017|Hyundai|Elantra sport|62
+46|2008|Volkswagen|R32|32
+49|1997|Acura|Integra|42
+28|1995|Bmw|318xi|8
+219|2016|Ford|Focus rs|26
+185|2013|Volkswagen|Jett|8
+162|2014|Nissan|370z|36
+180|2011|Volkswagen|Gti|82
+103|2010|Acura|Tsx|72
+197|2010|Audi|A4|2
+74|2015|Honda|Accord|8
+150|2006|Nissan|350z|22
+78|2015|Mazda|6|36
+141|1993|Mazda|Miata|26
+17|2016|Mercedes|C43|34
+187|2007|Subaru|Legacy|26
+69|2018|Subaru|WRX|8
+100|2006|Volvo|S60r|22
+112|2008|Acura|TL|110
+172|2014|Bmw|4|22
+91|2010|Mitsu|Lancer|102
+158|2007|Nissan|350z|64
+182|2012|Volkswagen|Cc|20
+225|2016|Acura|TLX|52
+81|2016|Volkswagen|GTI|24
+6|2016|Volkswagen|Golf r|54
+121|2012|Acura|TL|44
+211|2004|Acura|Tsx|48
+186|2012|Volkswagen|Gli|14
+59|2007|Honda|Civic|14
+72|2016|Civic|Si|4
+45|2006|Acura|TL|42
+1051|2006|Acura|Tsx|66
+84|2012|Mercedes|Cl63amg|70
+118|1993|Honda|Civic|44
+174|2006|Acura|Rsx|4
+138|1990|Mazda|Miata|10
+242|2014|Nissan|Maxima|26
+153|2011|Nissan|370|84
+193|2014|Nissan|Ssntra|14
+94|2004|Volkswagen|Gti|10
+11|1991|Nissan|Skyline|30
+86|1996|Volkswagen|Jetta|8
+9|1996|Nissan|240|44
+142|1993|Toyota|Supra|58
+126|2010|Volkswagen|Eos|92
+144|2016|Volkswagen|Gti|28
+110|2011|Toyota|Camry|58
+34|2010|Honda|Fit|18
+190|1995|Lexus|Sc300|10
+235|2013|Scion|Frs|20
+24|2013|Subaru|BRZ|32
+64|2004|Subaru|Forester|6
+122|2011|Infinity|M37s|44
+106|2007|Acura|Tl type s|78
+113|2012|Acura|Tsx sportwagon|116
+37|2016|Honda|Civic 1.5t|92
+237|1987|Volkswagen|Jetta|10
