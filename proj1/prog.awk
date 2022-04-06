@@ -1,6 +1,6 @@
 BEGIN{FS=",";
    printf "%-9s %-15s %-9s %-15s %-15s %-15s\n", \
- "Placement", "Total", "CarID", "Year", "Make", "Model" > "proj1/title"
+ "Place", "Total", "CarID", "Year", "Make", "Model" > "proj1/title"
 }
 {
     if(NR==1){next}            
@@ -10,6 +10,6 @@ BEGIN{FS=",";
            for(i=10;i<=NF;i++)
 	   sum= sum + $i
         }
-      printf "%-9s  -15s %-9s %-15s %-15s %-15s\n", "tmp", sum, $7, $4, $5, $6 
+      printf "%-9s %-15s %-9s %-15s %-15s %-15s\n", "tmp", sum, $7, $4, $5, $6 
   }
 
