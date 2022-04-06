@@ -5,11 +5,12 @@ all: p1 p2 p3
 
 
 p1:
-	@echo "Running AWK Script proj1: "
+	@echo "Running AWK Program script proj1: "
 	awk -f proj1/awk/code.awk data/data.csv > proj1/output/output.csv
-	
 	@echo "Running AWK Sort script proj1: "
 	awk -f proj1/awk/sort.awk proj1/output/output.csv > proj1/output/sorted.csv
+	@echo "Running AWK Classes script proj1: "
+	awk -f proj1/awk/classes.awk data/data.csv > proj1/output/classes.csv
 p2:
 	@echo "Running AWK Script proj2: "
 	awk -f proj2/awk/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
