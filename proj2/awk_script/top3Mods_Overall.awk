@@ -1,7 +1,7 @@
 BEGIN {
         FS = ","
         OFS = ","
-        printf("%s,%s,%s,%s,%s\n", "Car_ID", "Email", "Name","Mods_Overall", "Rank")
+        printf("%s,%s,%s,%s,%s\n", "Rank", "Car_ID", "Email", "Name","Mods_Overall")
 	rank = 1
 }
 {
@@ -26,5 +26,5 @@ BEGIN {
 }
 END {
  	for(i in top3)
- 		printf("%s,%s,%d\n",keys[i],top3[i],rank++)
+ 		printf("%d,%s,%d\n",rank++,keys[i],top3[i])
 }

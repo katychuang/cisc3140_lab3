@@ -2,9 +2,9 @@
 
 This project parses structured data of CSV format using AWK, a scripting language commonly used to manipulate data and generate reports. 
 
-The scripts rank records based on scores provided in the dataset, and lists the top 3 cars for certain categories.
+The scripts rank records based on scores provided in the dataset, and lists the top 3 cars for certain categories as well as rank numbers.
 
-Data is stored in `data` folder, maintained by git submodule.
+Data is stored in `datalab3.csv` folder, maintained by git submodule.
 
 
 ### Dependencies 
