@@ -82,6 +82,7 @@ do
 			#prog4.awk gives placement ranks to each car and
 			#Displays all cars processed
 			awk -f proj3/prog4.awk ranksTmp
+			#cat ranksTmp
 			#Removes temp files to avoid cluttered directory
 			rm ranksTmp;;
 	
@@ -137,7 +138,6 @@ do
 				#Number of cars to be displayed is passed onto
 				#prog2.awk 
 				awk -v numCars="$numCars" -f proj3/prog2.awk top_3 > top_3Tmp
-				#cat headers top_3Tmp > top_3
 				#If maker name is 'a', prints the top N for all makers
 				if [ "$makerName" == "a" ] && \
 				[[ "$makerName" != [0-9] ]]; then
