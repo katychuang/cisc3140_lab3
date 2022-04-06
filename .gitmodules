@@ -1,3 +1,6 @@
 [submodule "data"]
 	path = data
 	url = https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.git
+[submodule "proj2/data"]
+	path = proj2/data
+	url = https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.git
