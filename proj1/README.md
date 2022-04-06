@@ -28,10 +28,15 @@ You must have the following installed. The linux commands to install necessary p
 
 To run proj1 make sure you are in the proper repository and run `make_(Insert User Option)`.
 
-	ex. 
-		"make mods" will return top 3 cars that are the highest ranking in the mods
+List of possible commands:
 
-
+	make rankedOverall
+	make racer
+	make engine 
+	make bodyFrame
+	make mods
+	make carOverall
+	make modsOverall
 
 ### Results
 info.csv sorts through the data and gets removed at the end of each user option.
