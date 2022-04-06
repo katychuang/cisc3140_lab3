@@ -26,6 +26,12 @@ p1:
         cat proj1/title Temp > Temp2
         grep -A3 "Make" Temp2 > Temp
         echo "Top Three For Racer" | cat Temp
+	awk -f proj1/Body_FrameProg.awk data/data.csv > Temp
+        sort -k2,2rn Temp > Temp2
+        awk -f proj1/Sorted.awk Temp2 > Temp
+        cat proj1/title Temp > Temp2
+        grep -A3 "Make" Temp2 > Temp
+        echo "Top Three For Body_Frame" | cat Temp
 
 	
 
