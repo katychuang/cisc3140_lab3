@@ -7,6 +7,7 @@ all: p1 p2 p3
 p1:
 	@echo "Running AWK Script proj1: "
 	awk -f proj1/awk/code.awk data/data.csv > proj1/output/output.csv
+	
 	@echo "Running AWK Sort script proj1: "
 	awk -f proj1/awk/sort.awk proj1/output/output.csv > proj1/output/sorted.csv
 p2:
@@ -17,14 +18,11 @@ p3:
 	@echo "Running AWK Script proj3: "
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
 	awk -f proj3/awk/prog1.awk data/data.csv
-<<<<<<< HEAD
 
 	#moved to proj3 directory
 	mv top_3 proj3
 	mv ranks proj3 
 	mv headers proj3
-=======
->>>>>>> 7a8db9276aa0d528bac935f23b6fc2e06fe21430
 
 	#sorts ranks in descending order via scores and placed in a 
 	#new file: sorted_ranks.
