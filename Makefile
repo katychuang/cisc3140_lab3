@@ -12,7 +12,11 @@ p1:
 	sort -k5,5 -k2,2rn proj1/ranking.txt > proj1/TempRanks2.txt
 	awk -f proj1/Top3.awk proj1/Temp2 > tmp
 	cat proj1/title tmp
-       #awk -f proj1/projCarOv.awk data/TempRanks.txt > displayCarOverall.txt
+      	awk -f proj1/projCarOv.awk data/data.csv > Temp
+	sort -k2, 2rn CarOverall.txt > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/tile Temp > Temp2
+	echo "Top Three For Engine" | cat Temp
        #cat proj1/displayCarOverall.txt
 	awk -f proj1/EngineProg.awk data/data.csv > Temp
 	sort -k2,2rn Temp > Temp2
@@ -21,12 +25,13 @@ p1:
 	grep -A3 "Make" Temp2 > Temp
 	echo "Top Three For Engine" | cat Temp
 	awk -f proj1/RacerProg.awk data/data.csv > Temp
-        sort -k2,2rn Temp > Temp2
-        awk -f proj1/Sorted.awk Temp2 > Temp
-        cat proj1/title Temp > Temp2
-        grep -A3 "Make" Temp2 > Temp
-        echo "Top Three For Racer" | cat Temp
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	grep -A3 "Make" Temp2 > Temp
+	echo "Top Three For Racer" | cat Temp
 	awk -f proj1/Body_FrameProg.awk data/data.csv > Temp
+<<<<<<< HEAD
         sort -k2,2rn Temp > Temp2
         awk -f proj1/Sorted.awk Temp2 > Temp
         cat proj1/title Temp > Temp2
@@ -38,6 +43,13 @@ p1:
         cat proj1/title Temp > Temp2
         grep -A3 "Make" Temp2 > Temp
         echo "Top Three For Mods" | cat Temp
+=======
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	grep -A3 "Make" Temp2 > Temp
+	echo "Top Three For Body_Frame" | cat Temp
+>>>>>>> 8b72adc90ed705ba69e273638f9ef44e0faa09db
 
 	
 
