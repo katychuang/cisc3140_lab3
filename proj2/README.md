@@ -6,7 +6,7 @@ Step 1: Copy data to local machine. The repo contains a single file named `data.
 git submodule add -f https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.git data
 ```
 
-Step 2: Data analysis 
+Step 2: Data analysis
 
 Description of prog.awk:
 Prints Total, car_ID, year, make, model, ranking, on the first row.
@@ -22,13 +22,17 @@ Temp fix: The model name will be replaced with "Model". Now, ranking will sort p
 contains the Make: Civic coupe (the only string that contains an empty space inbetween).
 
 -----------------------------------
-After running the script with: 
-`awk -f prog.awk data.csv  > report.csv`
+After running the script with:
+`awk -f prog.awk data/data.csv  > report.csv`
+//added data in front because it's in the data folder
 
 To sort the rankings by numeric order:
 `paste -d' ' <(cut -d' ' -f1-5 report.csv )  <(cut -d' ' -f6- report.csv |sort -n) >sortedreport.csv`
 
 Typing this in the terminal will cut out columns 1 to 5 of report.csv and print it.
+
+Use this to only print out the first 3 from greatest to least:
+  awk '{if ($6 <= 3) {print}}' sortedreport.csv > output.csv
 
 Then it will take out column 6 (the Ranking column) of report.csv and sort it in numerical order then
 print to sortedreport.csv
@@ -51,3 +55,19 @@ Counter++; // This counter will move on to next car make on 3.
 Now "skip" all car makes with the unique ID and restart until there is no more data in the .CSV.
 
 
+
+
+
+
+
+Racer folder:
+run the scripts with
+- awk -f racer/prog.awk data/data.csv > racer/report.csv      
+- `paste -d' ' <(cut -d' ' -f1-5 racer/report.csv )  <(cut -d' ' -f6- racer/report.csv |sort -n) > racer/sortedreport.csv`
+- awk '{if ($6 <= 3) {print}}' racer/sortedreport.csv > racer/output.csv
+
+
+Engine Folder:
+- awk -f engine/prog.awk data/data.csv > engine/report.csv      
+- `paste -d' ' <(cut -d' ' -f1-5 engine/report.csv )  <(cut -d' ' -f6- engine/report.csv |sort -n) > engine/sortedreport.csv`
+- awk '{if ($6 <= 3) {print}}' engine/sortedreport.csv > engine/output.csv

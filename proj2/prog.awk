@@ -17,5 +17,3 @@ if (NR!=1) print total,$7,$4,$5,"Model",rank++  | "sort -nrk1" #rank will be uns
 END{
 
 }
-
-
