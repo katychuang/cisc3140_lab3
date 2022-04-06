@@ -12,13 +12,13 @@ Contributor: Huang Yan, Mohammed Alam
 * Followed by the top three cars of each maker
 
 Group new featrues:
-* 1)Using `data.csv` file extract top 3 cars for each following new classes:
+* 1) Using `data.csv` file extract top 3 cars for each following new classes:
 * Racer
 * Caroverall
 * Engine
 * Bodyframe
 * Mods
-* 2)enable end user modified search for cars with dependencies:
+* 2) Enable end user modified search for cars with dependencies:
 * Brand
 * Year
 * Amount of cars for display
