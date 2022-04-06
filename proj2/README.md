@@ -72,3 +72,8 @@ How to Run Each Class:
 - `awk -f car_overall/car_overall.awk data/data.csv > car_overall/report.csv`      
 - `paste -d' ' <(cut -d' ' -f1-5 car_overall/report.csv )  <(cut -d' ' -f6- car_overall/report.csv |sort -n) > car_overall/sortedreport.csv`
 - `awk '{if ($6 <= 3) {print}}' car_overall/sortedreport.csv > car_overall/output.csv`
+
+### Additional Feature
+
+The new feature allows the report.csv file in which the parsed data gets exported to be modified and improved. The scripts added sorts the data further in the report.csv file and allows for the fields and output to be customized.
+
