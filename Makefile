@@ -14,12 +14,12 @@ p1:
 	cat proj1/title tmp
 	awk -f proj1/projCarOv.awk data/TempRanks.txt > displayCarOverall.txt
 	cat proj1/displayCarOverall.txt
-	awk -f proj1/Engine.awk data/data.csv > Temp
-	sort -k2, 2rn EngineRanks.txt > Temp2
+	awk -f proj1/EngineProg.awk data/data.csv > Temp
+	sort -k2,2rn Temp > Temp2
 	awk -f proj1/Sorted.awk Temp2 > Temp
 	cat proj1/title Temp > Temp2
 	grep -A3 "Make" Temp2 > Temp
-	echo "Top Three For Racer" | cat Temp
+	echo "Top Three For Engine" | cat Temp
 	
 	
 
