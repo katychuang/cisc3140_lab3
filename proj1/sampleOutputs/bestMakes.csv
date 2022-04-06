@@ -1,0 +1,117 @@
+Volvo                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2006              , Volvo             , S60r              , 100               , 22                , 6                 ,8                 , 6                 , 2                 , 0                 , 0                 , 115                
+
+Mitsu                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2010              , Mitsu             , Lancer            , 91                , 102               , 8                 ,24                , 24                , 38                , 6                 , 2                 , 10                 
+2                 , 1995              , Mitsu             , Evo8              , 140               , 44                , 8                 ,10                , 10                , 14                , 0                 , 2                 , 63                 
+3                 , 2014              , Mitsu             , Lancer            , 176               , 40                , 0                 ,2                 , 12                , 22                , 4                 , 0                 , 75                 
+
+Scion                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2015              , Scion             , Frs               , 57                , 80                , 16                ,20                , 14                , 22                , 4                 , 4                 , 21                 
+2                 , 2013              , Scion             , Frs               , 235               , 20                , 2                 ,2                 , 6                 , 8                 , 2                 , 0                 , 120                
+
+Mazda                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2007              , Mazda             , Speed 3           , 52                , 48                , 6                 ,10                , 8                 , 20                , 2                 , 2                 , 59                 
+2                 , 2015              , Mazda             , 6                 , 78                , 36                , 2                 ,6                 , 14                , 12                , 0                 , 2                 , 85                 
+3                 , 1993              , Mazda             , Miata             , 141               , 26                , 0                 ,0                 , 6                 , 18                , 2                 , 0                 , 104                
+
+Nissan               
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2010              , Nissan            , 370               , 228               , 92                , 14                ,20                , 16                , 34                , 4                 , 4                 , 12                 
+2                 , 2012              , Nissan            , 370z              , 161               , 84                , 4                 ,10                , 24                , 38                , 6                 , 2                 , 18                 
+3                 , 2011              , Nissan            , 370               , 3                 , 84                , 16                ,16                , 20                , 24                , 4                 , 4                 , 19                 
+
+Chevy                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2010              , Chevy             , Camaro            , 218               , 64                , 12                ,16                , 10                , 18                , 4                 , 4                 , 33                 
+2                 , 2014              , Chevy             , Cruze             , 170               , 50                , 0                 ,0                 , 18                , 28                , 4                 , 0                 , 55                 
+3                 , 2015              , Chevy             , Camaro            , 0                 , 0                 , 0                 ,0                 , 0                 , 0                 , 0                 , 0                 , 165                
+
+Acura                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2012              , Acura             , Tsx sportwagon    , 113               , 116               , 6                 ,30                , 30                , 42                , 6                 , 2                 , 4                  
+2                 , 2008              , Acura             , TL                , 112               , 110               , 4                 ,28                , 28                , 42                , 6                 , 2                 , 6                  
+3                 , 2015              , Acura             , TLX               , 50                , 102               , 14                ,18                , 28                , 34                , 6                 , 2                 , 8                  
+
+Dodge                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2001              , Dodge             , Viper             , 42                , 8                 , 0                 ,2                 , 2                 , 2                 , 0                 , 2                 , 148                
+
+Lexus                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2006              , Lexus             , Sc430             , 123               , 66                , 8                 ,18                , 10                , 26                , 4                 , 0                 , 31                 
+2                 , 2015              , Lexus             , Is250             , 222               , 40                , 0                 ,12                , 18                , 6                 , 4                 , 0                 , 73                 
+3                 , 1995              , Lexus             , Sc300             , 190               , 10                , 0                 ,0                 , 6                 , 4                 , 0                 , 0                 , 145                
+
+Mercedes             
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2012              , Mercedes          , C250              , 25                , 78                , 6                 ,16                , 22                , 26                , 4                 , 4                 , 22                 
+2                 , 2012              , Mercedes          , Cl63amg           , 84                , 70                , 12                ,16                , 14                , 22                , 2                 , 4                 , 28                 
+3                 , 2016              , Mercedes          , C43               , 17                , 34                , 6                 ,8                 , 2                 , 16                , 2                 , 0                 , 87                 
+
+Audi                 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2014              , Audi              , S4                , 15                , 120               , 12                ,26                , 28                , 46                , 6                 , 2                 , 3                  
+2                 , 2015              , Audi              , S3                , 18                , 38                , 4                 ,2                 , 10                , 18                , 2                 , 2                 , 82                 
+3                 , 2008              , Audi              , A4                , 116               , 28                , 0                 ,10                , 6                 , 6                 , 4                 , 2                 , 97                 
+
+Hyundai              
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2012              , Hyundai           , Celoster          , 30                , 66                , 4                 ,20                , 20                , 16                , 4                 , 2                 , 30                 
+2                 , 2017              , Hyundai           , Elantra sport     , 38                , 62                , 6                 ,16                , 14                , 22                , 0                 , 4                 , 40                 
+3                 , 2017              , Hyundai           , Elantra sport     , 92                , 30                , 2                 ,6                 , 14                , 8                 , 0                 , 0                 , 94                 
+
+Subaru               
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2016              , Subaru            , WRX               , 36                , 74                , 10                ,16                , 16                , 24                , 4                 , 4                 , 24                 
+2                 , 2015              , Subaru            , Sti               , 33                , 68                , 8                 ,12                , 14                , 26                , 4                 , 4                 , 29                 
+3                 , 2009              , Subaru            , WRX               , 21                , 62                , 6                 ,14                , 16                , 18                , 4                 , 4                 , 37                 
+
+Ford                 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2017              , Ford              , Focus rs          , 137               , 54                , 10                ,14                , 12                , 16                , 0                 , 2                 , 49                 
+2                 , 2014              , Ford              , Focus st          , 120               , 30                , 6                 ,4                 , 6                 , 10                , 2                 , 2                 , 93                 
+3                 , 2016              , Ford              , Focus rs          , 219               , 26                , 6                 ,6                 , 8                 , 4                 , 0                 , 2                 , 103                
+
+Jeep                 
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2015              , Jeep              , Wrangler          , 124               , 124               , 12                ,24                , 30                , 48                , 6                 , 4                 , 2                  
+
+Infiniti             
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2010              , Infiniti          , G37               , 128               , 128               , 18                ,26                , 26                , 48                , 6                 , 4                 , 1                  
+2                 , 2011              , Infiniti          , M37s              , 122               , 44                , 2                 ,8                 , 6                 , 24                , 4                 , 0                 , 67                 
+3                 , 2009              , Infiniti          , G37               , 20                , 38                , 6                 ,4                 , 10                , 16                , 2                 , 0                 , 78                 
+
+Volkswagen           
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2010              , Volkswagen        , Eos               , 126               , 92                , 0                 ,24                , 26                , 36                , 6                 , 0                 , 14                 
+2                 , 2011              , Volkswagen        , Gti               , 180               , 82                , 4                 ,16                , 26                , 30                , 4                 , 2                 , 20                 
+3                 , 2014              , Volkswagen        , Gli               , 156               , 56                , 0                 ,0                 , 24                , 28                , 4                 , 0                 , 45                 
+
+Honda                
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2014              , Honda             , Accord            , 83                , 112               , 12                ,24                , 28                , 36                , 6                 , 6                 , 5                  
+2                 , 2009              , Honda             , Fit               , 65                , 106               , 6                 ,26                , 22                , 42                , 6                 , 4                 , 7                  
+3                 , 2007              , Honda             , Fit               , 31                , 102               , 14                ,24                , 24                , 30                , 6                 , 4                 , 9                  
+
+Toyota               
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 1993              , Toyota            , Supra             , 142               , 58                , 4                 ,8                 , 10                , 26                , 6                 , 4                 , 43                 
+2                 , 2011              , Toyota            , Camry             , 110               , 58                , 0                 ,12                , 24                , 18                , 4                 , 0                 , 44                 
+3                 , 2011              , Toyota            , 4 Runner          , 43                , 54                , 2                 ,12                , 16                , 16                , 4                 , 4                 , 47                 
+
+Bmw                  
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2016              , Bmw               , M2                , 2                 , 24                , 2                 ,2                 , 6                 , 12                , 2                 , 0                 , 107                
+2                 , 2014              , Bmw               , 4                 , 172               , 22                , 4                 ,6                 , 4                 , 2                 , 0                 , 6                 , 116                
+3                 , 2007              , Bmw               , 328i              , 111               , 10                , 4                 ,0                 , 2                 , 0                 , 4                 , 0                 , 139                
+
+Chrystler            
+relative_ranking  , Year              , Make              , Model             , Car_ID            , total_score       , racer_score       ,engine_score      , body_frame_score  , mods_score        , mods_overall_score, car_overall_score , ranking            
+1                 , 2007              , Chrystler         , 300               , 216               , 96                , 16                ,20                , 20                , 32                , 4                 , 4                 , 11                 
+
