@@ -1,6 +1,6 @@
 BEGIN{FS=",";
-   printf "%-15s %-9s %-15s %-15s %-15s\n", \
-  "Total", "CarID", "Year", "Make", "Model" > "proj1/title"
+   printf "%-9s %-15s %-9s %-15s %-15s %-15s\n", \
+ "Placement", "Total", "CarID", "Year", "Make", "Model" > "proj1/title"
 }
 {
     if(NR==1){next}            

@@ -6,7 +6,7 @@ all: p1 p2 p3
 p1:
 	@echo "Running AWK Script proj1: "
 	awk -f proj1/prog.awk data/data.csv > proj1/ranking.txt
-	sort -k1,1rn proj1/ranking.txt > proj1/TempRanks.txt
+	sort -k2,2rn proj1/ranking.txt > proj1/TempRanks.txt
 	cat  proj1/title  proj1/TempRanks.txt
 p2:
 	@echo "Running AWK Script proj2: "
