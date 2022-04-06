@@ -5,7 +5,7 @@ all: p1 p2 p3
 
 p1:
 	@echo "Running AWK Script proj1: "
-	awk -f proj1/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	awk -f proj1/prog.awk data/data.csv > ranking.txt | sort -nrk5 | tee ranking.tx
 
 p2:
 	@echo "Running AWK Script proj2: "
@@ -19,7 +19,9 @@ p2:
 	awk -f proj2/awk_script/top3Mods_Overall.awk data/data.csv > proj2/output_file/top3Mods_Overall.csv
 	awk -f proj2/awk_script/Mods.awk data/data.csv > proj2/output_file/rankMods.csv
 	awk -f proj2/awk_script/Car_Overall.awk data/data.csv > proj2/output_file/rankCar_Overall.csv
+	awk -f proj2/awk_script/option.awk data/data.csv
 
 p3:
 	@echo "Running AWK Script proj3: "
+	#Runs shell script of menu
 	bash menu.sh

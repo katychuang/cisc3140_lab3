@@ -1,3 +1,8 @@
+# prog3.awk
+# Description: prog3.awk extracts the value of a selected class and sums 
+# all scores. With the new scoring system created, reevaluate each car's 
+# score. Data is unsorted, therefore, placement value is "Unf" by default
+
 BEGIN{FS = ",";
 	#UserInput will take command line input
 	#Array with Predefined strings of classes 
@@ -23,30 +28,24 @@ BEGIN{FS = ",";
 				#skips the index placement
 				false;
 			}
+			#index checks to see if predefined string matches
+			#current column header in record.
 			else if(index($n, carClass[userInput]) != 0){
 				idx[count] =  n;
 				#count adds another element into array
 				count++;
 			}
 		}
+		#Stops processing current record
 		next;
 	}
-	#If userInput is for Mods score, skips the last record in array
-	#to avoid
-	if(userInput == 5){
-		#Adds the value of all stored indexes for all records
-		for(i = 1; i <= length(idx); i++){
-			total = total + $idx[i];
-       		}
-        	printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \ 
-        	"Unf", total, $7, $4, $5, $6;
-	}
-        else{
-		for(i = 1; i <= length(idx); i++){
-        		total = total + $idx[i];
-        	}
-        	printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \ 
-		"Unf", total, $7, $4, $5, $6;
-	}
+	#Adds all the values stored in array of indexes
+	for(i = 1; i <= length(idx); i++){
+		total = total + $idx[i];
+       	}
+	#Ranks are unsorted, Placement value not available, Unf is used 
+	#as first column placeholder
+        printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \ 
+        "Unf", total, $7, $4, $5, $6;
 }
 END{}
