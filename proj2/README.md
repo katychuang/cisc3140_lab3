@@ -84,7 +84,7 @@ awk 'word!=$4{count=1;word=$4} count<=3{print; count++}' proj2/output_file/ranki
 - Copies Car_ID from data.csv to [rankCar_Overall.csv](output_file/rankCar_Overall.csv)
 - Then print out the top three Car_Overall with 1 2 3 ranks.
 
-11. Description of [Option.awk](Option.awk):
+11. Description of [option.awk](awk_script/option.awk):
 - Enable options during execution that would allow customize the report when running the provided scripts.
 
 ## Known bugs
