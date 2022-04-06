@@ -91,3 +91,6 @@ Thanks to the following peple who have contributed to this project:
 - [@ogre2](https://github.com/ogre2/)
 - [@kyong4](https://github.com/kyong4/)
 - [@tianye-chen](https://github.com/tianye-chen/)
+- [@bohuinong](https://github.com/bohuinong)
+- [@ayingtao11](https://github.com/ayingtao11)
+- [@shua14](https://github.com/shua14)
