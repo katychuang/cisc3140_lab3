@@ -1,4 +1,4 @@
-BEGIN{	
+BEGIN{FS = ","	
     cnt=1; 
     match="Year"
 }
@@ -8,7 +8,7 @@ BEGIN{
 	if(match!=$4){
 		cnt=1;
 		match=$5;
-                printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", 
+                printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \ 
                 cnt, $2, $3, $4, $5, $6;
 	}
 		
