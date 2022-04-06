@@ -42,16 +42,7 @@ p1:
         cat proj1/title Temp > Temp2
         grep -A3 "Make" Temp2 > Temp
         echo "Top Three For Mods" | cat Temp
-=======
-	sort -k2,2rn Temp > Temp2
-	awk -f proj1/Sorted.awk Temp2 > Temp
-	cat proj1/title Temp > Temp2
-	grep -A3 "Make" Temp2 > Temp
-	echo "Top Three For Body_Frame" | cat Temp
->>>>>>> 8b72adc90ed705ba69e273638f9ef44e0faa09db
-
-	
-
+=======	
 p2:
 	@echo "Running AWK Script proj2: "
 #	awk -f proj2/awk_script/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
