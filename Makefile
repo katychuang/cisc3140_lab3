@@ -15,33 +15,25 @@ p2:
 p3:
 	@echo "Running AWK Script proj3: "
 	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
-	awk -f proj3/awk/prog1.awk data/data2.csv
-
-	#moved to proj3 directory
-	mv top_3 proj3
-	mv ranks proj3 
-	mv headers proj3
+	awk -f proj3/awk/prog1.awk data/data.csv
 
 	#sorts ranks in descending order via scores and placed in a 
-	#new file: sorted_ranks. Sorts top_3 via maker first then ranks
-	sort -k5,5rn -t '|' proj3/ranks > "sorted_ranks"
-	sort -k3,3 -k5,5rn -t '|' proj3/top_3 > "top_3"
+	#new file: sorted_ranks.
+	sort -k5,5rn -t ',' proj3/ranks.csv > "proj3/Output/sorted_ranks.csv"
 
-	#moved to proj3 directory
-	mv sorted_ranks proj3 
-	mv top_3 proj3 
-	#awk file to only take top three cars for each maker
- #	awk -f proj3/top_3.awk proj3/top_3
+	# Sorts top_3 via make first then ranks, prints top 3 cars of each make
+	sort -k3,3 -k5,5rn -t ',' proj3/top_3.csv | awk -f proj3/awk/AddRanking.awk | \
+	awk -f proj3/awk/SortTotal.awk > "proj3/Output/top_3_by_make.csv" 
 
 	#Adding headers to final files
-	cat proj3/headers proj3/sorted_ranks > "sorted_ranks"
-	cat proj3/headers proj3/top_3 > "top_3"
+	cat proj3/headers.csv proj3/Output/sorted_ranks.csv > "sorted_ranks.csv"
+	cat proj3/headers.csv proj3/Output/top_3_by_make.csv > "top_3_by_make.csv"
 	#moved to proj3 directory
-	mv sorted_ranks proj3 
-	mv top_3 proj3
+	mv sorted_ranks.csv proj3/Output
+	mv top_3_by_make.csv proj3/Output
 
 	#Display the files
-	echo "\n\n"
-	cat proj3/sorted_ranks
-	echo "\n\n"
-	cat proj3/top_3
+	echo "\nSorted Ranks\n"
+	cat proj3/Output/sorted_ranks.csv
+	echo "\nTop 3 of each make\n"
+	cat proj3/Output/top_3_by_make.csv
