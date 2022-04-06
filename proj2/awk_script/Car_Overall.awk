@@ -1,11 +1,11 @@
 BEGIN {
         FS = ","
         OFS = ","
-        printf("%s,%s,%s\n", "Car_ID","Total","Rank")
+        printf("%s,%s,%s\n", "Car_ID","Car_Overall","Rank")
 	rank = 1
 }
 {
-        if(NR>1) {
+        if(NR>1 && $7 != "Showcar") {
         key = sprintf("%s", $7)
         value = $14
 

@@ -5,7 +5,7 @@ BEGIN {
 	rank = 1
 }
 {
-        if(NR>1) {
+        if(NR>1 && $7 != "Showcar") {
         key = sprintf("%s,%s,%s", $7, $2, $3)
         value = $34
 
