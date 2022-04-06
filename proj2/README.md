@@ -1,5 +1,10 @@
 # proj2
 
+Description:
+This project prints the total, car_ID, year, make, model, ranking, on the first row and then copies car_ID, year, make, model from data.csv to report.csv. From the terminal, there will be  several commands which will sort it based off of ranking and categorize top 3 cars of each class which will be output into sortedreport.csv and output.csv. (overall, make, racer score, mods, mods overall, car overall, body frame, engine)
+
+
+How to Execute the program:
 Step 1: Copy data to local machine. The repo contains a single file named `data.csv`
 
 ```sh
@@ -8,11 +13,7 @@ git submodule add -f https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.gi
 
 Step 2: Data analysis
 
-Description of prog.awk:
-Prints Total, car_ID, year, make, model, ranking, on the first row.
-Copies car_ID, year, make, model from data.csv to report.csv
-The data under Ranking will NOT be filled with the script.
-Creates a column called total that adds the results from column 8 to the last column of the file.
+Creates a column called total that adds the results based off the data you need to find.
 The program will sort report.csv based on the total, in descending order.
 
 Known bugs with awk script:
@@ -22,52 +23,52 @@ Temp fix: The model name will be replaced with "Model". Now, ranking will sort p
 contains the Make: Civic coupe (the only string that contains an empty space inbetween).
 
 -----------------------------------
-After running the script with:
+How to run prog.awk:
 `awk -f prog.awk data/data.csv  > report.csv`
-//added data in front because it's in the data folder
 
 To sort the rankings by numeric order:
 `paste -d' ' <(cut -d' ' -f1-5 report.csv )  <(cut -d' ' -f6- report.csv |sort -n) >sortedreport.csv`
 
-Typing this in the terminal will cut out columns 1 to 5 of report.csv and print it.
-
-Use this to only print out the first 3 from greatest to least:
-  awk '{if ($6 <= 3) {print}}' sortedreport.csv > output.csv
-
-Then it will take out column 6 (the Ranking column) of report.csv and sort it in numerical order then
+Typing this in the terminal will cut out columns 1 to 5 of report.csv and print it. Then it will take out column 6 (the Ranking column) of report.csv and sort it in numerical order then
 print to sortedreport.csv
 
+Print top three cars in descending order:
+`awk '{if ($6 <= 3) {print}}' sortedreport.csv > output.csv`
 
-Known bugs: The string "Ranking" would get sorted along the with numbers and would not remain on top.
-Temp fix: Attached "--Ranking" in the same column as Model.
------------------------
-
-Now, to create a new script that will search for unique name (by adding total string value we can get an unique ID)
-For each make with a unique name, print top three. Total is already sorted, so the program just needs to
-print the first three cars that matched the name. (Using a counter=0, when counter=3 move on next unique name. Use next;)
-
- touch topCarMakes.awk
-
-Looks at column 1. Takes carmake and set as string(To use for comparison later)
-Prints ranking, car_id, year, car make, car model, total score to new File.
-Counter++; // This counter will move on to next car make on 3.
-
-Now "skip" all car makes with the unique ID and restart until there is no more data in the .CSV.
+Takes the top three rows (excluding the header) from sortedreport.csv and then prints to output.csv
 
 
+-----------------------------------
+How to Run Each Class:
 
 
-
-
-
-Racer folder:
+[Racer folder:](proj2/racer)
 run the scripts with
-- awk -f racer/prog.awk data/data.csv > racer/report.csv      
+- `awk -f racer/prog.awk data/data.csv > racer/report.csv `     
 - `paste -d' ' <(cut -d' ' -f1-5 racer/report.csv )  <(cut -d' ' -f6- racer/report.csv |sort -n) > racer/sortedreport.csv`
-- awk '{if ($6 <= 3) {print}}' racer/sortedreport.csv > racer/output.csv
-
+- `awk '{if ($6 <= 3) {print}}' racer/sortedreport.csv > racer/output.csv`
 
 Engine Folder:
-- awk -f engine/prog.awk data/data.csv > engine/report.csv      
+- `awk -f engine/prog1.awk data/data.csv > engine/report.csv`      
 - `paste -d' ' <(cut -d' ' -f1-5 engine/report.csv )  <(cut -d' ' -f6- engine/report.csv |sort -n) > engine/sortedreport.csv`
-- awk '{if ($6 <= 3) {print}}' engine/sortedreport.csv > engine/output.csv
+- `awk '{if ($6 <= 3) {print}}' engine/sortedreport.csv > engine/output.csv`
+
+Body_Frame Folder:
+- `awk -f body_frame/prog2.awk data/data.csv > body_frame/report.csv`      
+- `paste -d' ' <(cut -d' ' -f1-5 body_frame/report.csv )  <(cut -d' ' -f6- body_frame/report.csv |sort -n) > body_frame/sortedreport.csv`
+- `awk '{if ($6 <= 3) {print}}' body_frame/sortedreport.csv > body_frame/output.csv`
+
+Mods Overall Folder:
+- `awk -f mods_overall/mods_overall.awk data/data.csv > mods_overall/report.csv`     
+- `paste -d' ' <(cut -d' ' -f1-5 mods_overall/report.csv )  <(cut -d' ' -f6- mods_overall/report.csv |sort -n) > mods_overall/sortedreport.csv`
+- `awk '{if ($6 <= 3) {print}}' mods_overall/sortedreport.csv > mods_overall/output.csv`
+
+Mods:
+- `awk -f mods/mods.awk data/data.csv > mods/report.csv`      
+- `paste -d' ' <(cut -d' ' -f1-5 mods/report.csv )  <(cut -d' ' -f6- mods/report.csv |sort -n) > mods/sortedreport.csv`
+- `awk '{if ($6 <= 3) {print}}' mods/sortedreport.csv > mods/output.csv`
+
+Car Overall:
+- `awk -f car_overall/car_overall.awk data/data.csv > car_overall/report.csv`      
+- `paste -d' ' <(cut -d' ' -f1-5 car_overall/report.csv )  <(cut -d' ' -f6- car_overall/report.csv |sort -n) > car_overall/sortedreport.csv`
+- `awk '{if ($6 <= 3) {print}}' car_overall/sortedreport.csv > car_overall/output.csv`
