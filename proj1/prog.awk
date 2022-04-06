@@ -10,6 +10,6 @@ BEGIN{FS=",";
            for(i=10;i<=NF;i++)
 	   sum= sum + $i
         }
-      printf "%-9s %-15s %-9s %-15s %-15s %-15s\n", "tmp", sum, $7, $4, $5, $6 
+      printf "%-6s %-6s %-6s %-6s %-12s %-12s\n", "tmp", sum, $7, $4, $5, $6 
   }
 
