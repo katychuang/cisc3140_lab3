@@ -42,6 +42,12 @@ p1:
         cat proj1/title Temp > Temp2
         grep -A3 "Make" Temp2 > Temp
         echo "Top Three For Mods" | cat Temp
+	awk -f proj1/Mods_OverallProg.awk data/data.csv > Temp
+        sort -k2,2rn Temp > Temp2
+        awk -f proj1/Sorted.awk Temp2 > Temp
+        cat proj1/title Temp > Temp2
+        grep -A3 "Make" Temp2 > Temp
+        echo "Top Three For Mods_Overall" | cat Temp
 =======	
 p2:
 	@echo "Running AWK Script proj2: "
