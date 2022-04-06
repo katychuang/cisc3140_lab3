@@ -7,7 +7,9 @@ p1:
 	@echo "Running AWK Script proj1: "
 	awk -f proj1/prog.awk data/data.csv > proj1/ranking.txt
 	sort -k2,2rn proj1/ranking.txt > proj1/TempRanks.txt
-	cat  proj1/title  proj1/TempRanks.txt
+	awk -f proj1/Sorted.awk proj1/TempPlacement.txt > proj1/displayRanks.txt 
+	cat proj1/title proj1/displayRanks.txt
+	
 p2:
 	@echo "Running AWK Script proj2: "
 #	awk -f proj2/awk_script/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
