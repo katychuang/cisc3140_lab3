@@ -4,6 +4,9 @@ BEGIN{
   OFS = "\t"
   ORS = "\n "
   rank = 1
+  for (i =1; i <= FNR; i++) {
+    arr[$i]=$8
+  }
   # print " Rank \t record \t car_id"
   # print "---    -------         -------"
 
@@ -28,18 +31,32 @@ FNR > 1{
   $39 = totalEngine
   $40 = totalScore
 
-  # for (i = 1; i <= 168; i++) {
-  #   arr[$36] = $i
+  n = split($36, array)
+
+  for (i = 1; i <= n; i++) {
+    print array[i]
+  }
+
+  w = asort(array, dest)
+  for (i = 1; i <= n; i++) {
+    print array[i]
+  }
+
+  # asort(array, dest)
+  # l = length(dest)
+  # for (i = 1; i <= l; i++) {
+  #   print dest[i], array[i]
   # }
+  #Sorting the array
+  #n = asort(arr, dest)
+}
 
-  arr[2]=3
-  arr[3]=6
-  arr[1]=11
-  arr[6]=1
-
-  n = asort(arr, dest)
+#To check each Make of cars
+$6 && !/Showcar/ && FNR > 1{
 
 }
+
+
 
 # !/Showcar/{
 #
@@ -48,5 +65,7 @@ FNR > 1{
 # }
 
 END{
-  print FILENAME "\nNum of Records " NR, "\nthis is the end\n"
+
+   print "Num of Records " NR, "\n this is the end\n"
+
 }
