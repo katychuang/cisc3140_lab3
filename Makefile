@@ -10,12 +10,12 @@ p1:
 	awk -f proj1/Sorted.awk proj1/TempRanks.txt > displayRanks.txt
 	cat proj1/title displayRanks.txt
 	sort -k5,5 -k2,2rn proj1/ranking.txt > proj1/TempRanks2.txt
-	awk -f proj1/Top3.awk proj1/Temp2 > tmp
+	awk -f proj1/Top3.awk proj1/TempRanks2.txt > tmp
 	cat proj1/title tmp
 	awk -f proj1/projCarOv.awk data/data.csv > Temp
-	sort -k2, 2rn CarOverall.txt > Temp2
+	sort -k2, 2rn Temp > Temp2
 	awk -f proj1/Sorted.awk Temp2 > Temp
-	cat proj1/tile Temp > Temp2
+	cat proj1/title Temp > Temp2
 	echo "Top Three For Engine" | cat Temp 
 	awk -f proj1/EngineProg.awk data/data.csv > Temp
 	sort -k2,2rn Temp > Temp2
