@@ -5,6 +5,7 @@
 * [Technology](#techology)
 * [Dependencies](#dependencies)
 * [Setup](#setup)
+* [Contributors](#contributors)
 ## Description
 This project is created to evaluate each of the three project's documentation and source code.
 Modify each of the project with the proposed changes. All three project will share the same data.csv and is based on that file.
@@ -38,3 +39,11 @@ The linux commands to run this project are shown below:
 ```
 $ make
 ```
+## Contributors
+Thanks to the following peple who have contributed to this project:
+- [@ogre2](https://github.com/ogre2/)
+- [@kyong4](https://github.com/kyong4/)
+- [@tianye-chen](https://github.com/tianye-chen/)
+- [@bohuinong](https://github.com/bohuinong)
+- [@ayingtao11](https://github.com/ayingtao11)
+- [@shua14](https://github.com/shua14)
