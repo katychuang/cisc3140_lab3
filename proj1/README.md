@@ -30,3 +30,8 @@ To run proj1 make sure you are in the root of the project repository and run `ma
 Results are stored in a `.txt` document labeled `ranking.txt`, that lists cars by highest points earned to lowest points earned. 
 
 Each entry is ordered by (Car ID, Year, Car Make, Car Model, Total Score).
+
+## Additional feature
+
+The new feature contains the AWK programs that selected the top three cars from the given classes: Racer, Engine, Body*Frame, Mods, Mods*Overall, Car*Overall.
+Each are separated and displayed neatly while also being documented well. Each rank for the top three cars are displayed in order as well.
