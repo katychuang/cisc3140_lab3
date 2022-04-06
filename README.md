@@ -1,5 +1,8 @@
 # cisc3140_lab3
-Authors: Huimin, Jiao Jiao, Naldy, Jinwei, Armando, Jiayi, Kamille
+
+## Overview:
+For this lab, our team was tasked with implementing new features onto the provided previous three labs. These initial labs correspond to the proj1, proj2, and proj3 sub-directories.
+We were also tasked with reviewing the initial code in various forms, including but not limited to: organization, readability, and implementation. 
 
 ## QuickStart:
 Run the first project:
@@ -24,6 +27,10 @@ Running make by itself will default to run all programs:
 ```
 $ make
 ```
+
+## Authors and Acknowledements
+
+Huimin, Jiao Jiao, Naldy, Jinwei, Armando, Jiayi, Kamille
 
 ## License:
 
