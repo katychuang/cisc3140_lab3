@@ -12,8 +12,8 @@ p1:
 	@echo "Running AWK Classes script proj1: "
 	awk -f proj1/awk/classes.awk data/data.csv > proj1/output/classes.csv
 p2:
-	@echo "Running AWK Script proj2: "
-	awk -f proj2/awk/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	@echo "Running AWK Program script proj2: "
+	awk -f proj2/awk/prog.awk data/data.csv > proj2/output/output.csv
 
 p3:
 	@echo "Running AWK Script proj3: "
