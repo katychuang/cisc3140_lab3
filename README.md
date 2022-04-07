@@ -27,3 +27,7 @@ The new feature for Project 3 includes the modification of the Makefile in root 
 Each projects were reviewed and sorted prior to adding in the modifications and new features. 
 Projects were each divided equally and done over Linux.
 
+Cisc 3140 Lab3
+Group Members: Andrew L., David, Kristy, Tahamina, Tenzin
+
+Project Description
