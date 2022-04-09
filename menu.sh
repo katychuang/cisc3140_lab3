@@ -120,7 +120,7 @@ do
 			fi;;
 		#Displays all top three cars for each Maker
 		3) 	#Displays selected menu option
-			echo "Top Three Cars for all Makers"
+			echo "Top Cars for all Makers"
 			#Request number of cars to be displayed (1-10)
 		  	echo -e "Enter # of cars to display (1-10): \c"
 			read numCars
