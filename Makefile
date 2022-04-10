@@ -57,7 +57,6 @@ p3:
 	awk '{print $0}' proj3/header.csv > CaroverallClassPermake.csv
 	awk -f proj3/Top3permake.awk sorted_Caroverall.csv >> CaroverallClassPermake.csv
 	echo Top 3 Caroverall cars per make:
-	echo Ranking,Score,CarId,Year,Make,Model
 	cat CaroverallClassPermake.csv
 	rm TotalCaroverall.csv
 	rm sorted_Caroverall.csv
