@@ -1,5 +1,5 @@
 .PHONY: all
-ORDER = -r
+ORDER = r
 LIMIT = 3
 
 # As default 'make' target, run all targets
@@ -25,10 +25,10 @@ p3:
 
 	#sorts ranks in descending order via scores and placed in a 
 	#new file: sorted_ranks.
-	sort -k5,5n $(ORDER) -t ',' proj3/ranks.csv | awk -f proj3/awk/AddRanking.awk > "proj3/Output/sorted_ranks.csv"
+	sort -k5,5$(ORDER)n -t ',' proj3/ranks.csv | awk -f proj3/awk/AddRanking.awk > "proj3/Output/sorted_ranks.csv"
 
 	# Sorts top_3 via make first then ranks, prints top LIMIT cars of each make
-	sort -k3,3 -k5,5n $(ORDER) -t ',' proj3/top_3.csv | awk -f proj3/awk/AddRanking.awk | \
+	sort -k3,3 -k5,5$(ORDER)n -t ',' proj3/top_3.csv | awk -f proj3/awk/AddRanking.awk | \
 	awk -v var="$(LIMIT)" -f  proj3/awk/SortTotal.awk > "proj3/Output/top_3_by_make.csv" 
 
 	# Gets top LIMIT of each category
