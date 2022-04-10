@@ -57,6 +57,7 @@ classHeaderDisplay(){
 	fi;
 }
 
+
 ###Main Shell Script Body###
 
 #Ignores ctrl+c as exit
@@ -85,7 +86,6 @@ do
 			#cat ranksTmp
 			#Removes temp files to avoid cluttered directory
 			rm ranksTmp;;
-	
 		#Displays Top cars overall, number displayed based on user 
 		#Input
 		2)	#Displays selected menu option
@@ -120,7 +120,7 @@ do
 			fi;;
 		#Displays all top three cars for each Maker
 		3) 	#Displays selected menu option
-			echo "Top Three Cars for all Makers"
+			echo "Top Cars for all Makers"
 			#Request number of cars to be displayed (1-10)
 		  	echo -e "Enter # of cars to display (1-10): \c"
 			read numCars

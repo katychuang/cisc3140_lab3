@@ -10,6 +10,7 @@ BEGIN{FS = ",";
 	carClass[1] = "Racer"; carClass[2] = "Engine"; 
 	carClass[3] = "Body_Frame"; carClass[4] = "Mods";
 	carClass[5] = "Mods_Overall"; carClass[6] = "Car_Overall";
+	recordCount = 0
 }
 #BODY
 {
@@ -47,5 +48,8 @@ BEGIN{FS = ",";
 	#as first column placeholder
         printf "%-6s %-6s %-6s %-8s %-12s %-15s\n", \
 	"Unf", total, $7, $4, $5, $6;
+	recordCount++
 }
-END{}
+END{
+	print "The total number of entries processed here is " recordCount
+}
