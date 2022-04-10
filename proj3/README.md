@@ -36,6 +36,15 @@ Group new featrues:
 `-- proj3/
     |-- data/
         data.csv
+    |-- sampleOP/
+        BodyframeClass.csv
+        CaroverallClass.csv
+        CaroverallClassPermake.csv
+        EngineClass.csv
+        ModsClass.csv
+        RacerClass.csv
+        result.csv
+    |-- header.csv
     |-- README.md
     |-- prog1.awk
     |-- prog2.awk
