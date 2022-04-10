@@ -1,54 +1,168 @@
-1,6,100,2006,Volvo,S60r
-1,12,179,2004,Volkswagen,R32
-2,6,Vip,2008,Volkswagen,Gli
-3,6,6,2016,Volkswagen,Golf r
-1,4,142,1993,Toyota,Supra
-2,2,43,2011,Toyota,4 Runner
-3,2,189,2012,Toyota,Fj cruiser
-1,10,36,2016,Subaru,WRX
-2,10,134,2013,Subaru,WRX
-3,8,53,2013,Subaru,WRX
-1,16,57,2015,Scion,Frs
-2,2,235,2013,Scion,Frs
-1,16,3,2011,Nissan,370
-2,14,228,2010,Nissan,370
-3,10,9,1996,Nissan,240
-1,8,91,2010,Mitsu,Lancer
-2,8,140,1995,Mitsu,Evo8
-3,6,19,2001,Mitsu,Evo7
-1,12,84,2012,Mercedes,Cl63amg
-2,6,25,2012,Mercedes,C250
-3,6,17,2016,Mercedes,C43
-1,6,52,2007,Mazda,Speed 3
-2,2,78,2015,Mazda,6
-3,0,79,1993,Mazda,Miata
-1,8,123,2006,Lexus,Sc430
-2,0,222,2015,Lexus,Is250
-3,0,212,2001,Lexus,Is300
-1,12,124,2015,Jeep,Wrangler
+Ranking,Score,Car_ID,Year,Make,Model
 1,18,128,2010,Infiniti,G37
-2,6,20,2009,Infiniti,G37
-3,2,122,2011,Infiniti,M37s
-1,6,38,2017,Hyundai,Elantra sport
-2,4,30,2012,Hyundai,Celoster
-3,2,92,2017,Hyundai,Elantra sport
-1,14,31,2007,Honda,Fit
-2,12,83,2014,Honda,Accord
-3,8,175,2006,Honda,Civic
-1,10,137,2017,Ford,Focus rs
-2,6,219,2016,Ford,Focus rs
-3,6,120,2014,Ford,Focus st
-1,0,42,2001,Dodge,Viper
-1,16,216,2007,Chrystler,300
-1,12,218,2010,Chevy,Camaro
-2,0,170,2014,Chevy,Cruze
-3,0,0,2015,Chevy,Camaro
-1,4,172,2014,Bmw,4
-2,4,111,2007,Bmw,328i
-3,2,2,2016,Bmw,M2
-1,12,15,2014,Audi,S4
-2,4,18,2015,Audi,S3
-3,4,108,2013,Audi,S4
-1,14,50,2015,Acura,TLX
-2,8,106,2007,Acura,Tl type s
-3,6,5,2003,Acura,Rsx
+2,16,57,2015,Scion,Frs
+3,16,3,2011,Nissan,370
+4,16,216,2007,Chrystler,300
+5,14,50,2015,Acura,TLX
+6,14,31,2007,Honda,Fit
+7,14,228,2010,Nissan,370
+8,12,84,2012,Mercedes,Cl63amg
+9,12,83,2014,Honda,Accord
+10,12,218,2010,Chevy,Camaro
+11,12,179,2004,Volkswagen,R32
+12,12,15,2014,Audi,S4
+13,12,124,2015,Jeep,Wrangler
+14,10,9,1996,Nissan,240
+15,10,36,2016,Subaru,WRX
+16,10,137,2017,Ford,Focus rs
+17,10,134,2013,Subaru,WRX
+18,8,91,2010,Mitsu,Lancer
+19,8,53,2013,Subaru,WRX
+20,8,33,2015,Subaru,Sti
+21,8,175,2006,Honda,Civic
+22,8,140,1995,Mitsu,Evo8
+23,8,123,2006,Lexus,Sc430
+24,8,106,2007,Acura,Tl type s
+25,6,Vip,2008,Volkswagen,Gli
+26,6,Showcar,2014,Nissan,Gtr
+27,6,8,1991,Nissan,Skyline
+28,6,65,2009,Honda,Fit
+29,6,6,2016,Volkswagen,Golf r
+30,6,52,2007,Mazda,Speed 3
+31,6,51,2015,Subaru,WRX
+32,6,5,2003,Acura,Rsx
+33,6,4341,1992,Nissan,Rps13
+34,6,39,2011,Honda,Civic
+35,6,38,2017,Hyundai,Elantra sport
+36,6,37,2015,Subaru,Sti
+37,6,25,2012,Mercedes,C250
+38,6,232,2018,Subaru,WRX
+39,6,219,2016,Ford,Focus rs
+40,6,21,2009,Subaru,WRX
+41,6,20,2009,Infiniti,G37
+42,6,19,2001,Mitsu,Evo7
+43,6,187,2007,Subaru,Legacy
+44,6,178,2009,Honda,Oddesy
+45,6,17,2016,Mercedes,C43
+46,6,145,1990,Volkswagen,Gti
+47,6,14,1990,Nissan,Skyline
+48,6,120,2014,Ford,Focus st
+49,6,113,2012,Acura,Tsx sportwagon
+50,6,1051,2006,Acura,Tsx
+51,6,104,2014,Honda,Civic si
+52,6,100,2006,Volvo,S60r
+53,4,99,2014,Honda,Civic si
+54,4,98,2012,Mercedes,C63
+55,4,81,2016,Volkswagen,GTI
+56,4,76,2005,Subaru,Sti
+57,4,7,2014,Nissan,Sentra
+58,4,63,2010,Honda,Civic
+59,4,59,2012,Volkswagen,Golf
+60,4,56,2009,Volkswagen,Jetta
+61,4,49,1997,Acura,Integra
+62,4,48,2015,Acura,TLX
+63,4,44,2018,Honda,Civic si
+64,4,41,2012,Acura,Tsx
+65,4,30,2012,Hyundai,Celoster
+66,4,207,1993,Honda,Civic eG
+67,4,183,2005,Volkswagen,Jetta
+68,4,182,2012,Volkswagen,Cc
+69,4,181,2003,Volkswagen,Gti
+70,4,180,2011,Volkswagen,Gti
+71,4,18,2015,Audi,S3
+72,4,172,2014,Bmw,4
+73,4,167,2016,Ford,Mystang
+74,4,163,2013,Mitsu,Ralliart
+75,4,162,2014,Nissan,370z
+76,4,161,2012,Nissan,370z
+77,4,158,2007,Nissan,350z
+78,4,142,1993,Toyota,Supra
+79,4,13,2016,Honda,Civic 1.5t
+80,4,127,2013,Acura,Tsx
+81,4,12,1990,Nissan,240
+82,4,118,1993,Honda,Civic
+83,4,112,2008,Acura,TL
+84,4,111,2007,Bmw,328i
+85,4,11,1991,Nissan,Skyline
+86,4,108,2013,Audi,S4
+87,2,96,2017,Volkswagen,Gti
+88,2,94,2004,Volkswagen,Gti
+89,2,93,2005,Acura,TL
+90,2,92,2017,Hyundai,Elantra sport
+91,2,89,2014,Honda,Civic si
+92,2,88,2008,Honda,Accord
+93,2,78,2015,Mazda,6
+94,2,67,2015,Subaru,Sti
+95,2,46,2008,Volkswagen,R32
+96,2,43,2011,Toyota,4 Runner
+97,2,35,2016,Honda,Civic
+98,2,24,2013,Subaru,BRZ
+99,2,235,2013,Scion,Frs
+100,2,23,1998,Subaru,Legacy
+101,2,2,2016,Bmw,M2
+102,2,189,2012,Toyota,Fj cruiser
+103,2,16,2008,Nissan,350z
+104,2,159,2013,Hyundai,Gen coupe
+105,2,130,2016,Honda,Civic si
+106,2,122,2011,Infiniti,M37s
+107,2,121,2012,Acura,TL
+108,2,114,2010,Volkswagen,Gti
+109,2,103,2010,Acura,Tsx
+110,2,10,2001,Nissan,S15
+111,2,1,2012,Subaru,WRX
+112,0,95,2004,Infiniti,G35
+113,0,86,1996,Volkswagen,Jetta
+114,0,85,2017,Honda,Accord
+115,0,79,1993,Mazda,Miata
+116,0,75,2012,Subaru,WRX
+117,0,74,2015,Honda,Accord
+118,0,72,2016,Honda,Civic si
+119,0,71,2008,Acura,TL
+120,0,70,2014,Honda,Civic
+121,0,69,2018,Subaru,WRX
+122,0,68,2013,Nissan,Altima
+123,0,66,2010,Volkswagen,Gti
+124,0,64,2004,Subaru,Forester
+125,0,45,2006,Acura,TL
+126,0,42,2001,Dodge,Viper
+127,0,40,2007,Subaru,Legacy
+128,0,4,2007,Honda,Civic
+129,0,34,2010,Honda,Fit
+130,0,28,1995,Bmw,318xi
+131,0,243,2008,Toyota,Matrix
+132,0,242,2014,Nissan,Maxima
+133,0,241,2007,Toyota,Camry
+134,0,238,1982,Volkswagen,Rabbit
+135,0,237,1987,Volkswagen,Jetta
+136,0,230,2004,Acura,Tsx
+137,0,226,2008,Honda,Accord
+138,0,225,2016,Acura,TLX
+139,0,222,2015,Lexus,Is250
+140,0,220,2004,Audi,A4
+141,0,22,2007,Honda,Civic
+142,0,212,2001,Lexus,Is300
+143,0,211,2004,Acura,Tsx
+144,0,200,2016,Subaru,WRX
+145,0,197,2010,Audi,A4
+146,0,193,2014,Nissan,Ssntra
+147,0,190,1995,Lexus,Sc300
+148,0,186,2012,Volkswagen,Gli
+149,0,185,2013,Volkswagen,Jett
+150,0,184,2010,Volkswagen,Cc
+151,0,177,2005,Volkswagen,Jetta gli
+152,0,176,2014,Mitsu,Lancer
+153,0,174,2006,Acura,Rsx
+154,0,170,2014,Chevy,Cruze
+155,0,156,2014,Volkswagen,Gli
+156,0,153,2017,Subaru,Brz
+157,0,150,2006,Nissan,350z
+158,0,144,2016,Volkswagen,Gti
+159,0,141,1993,Mazda,Miata
+160,0,138,1990,Mazda,Miata
+161,0,126,2010,Volkswagen,Eos
+162,0,116,2008,Audi,A4
+163,0,115,2001,Honda,Crv
+164,0,110,2011,Toyota,Camry
+165,0,102,2015,Honda,Accord
+166,0,101,2014,Honda,Civic
+167,0,0,2015,Chevy,Camaro
