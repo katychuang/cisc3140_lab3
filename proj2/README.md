@@ -1,53 +1,69 @@
-# proj2
+# Project 2
+This project parses structured data from a CSV file using GNU AWK, a scripting language commonly used to manipulate data and generate reports.
 
-Step 1: Copy data to local machine. The repo contains a single file named `data.csv`
+The GNU AWK scripts rank records of vehicles based on score values found in the dataset, and lists the top three cars across various categories.
 
-```sh
-git submodule add -f https://gist.github.com/d66a59b6db4e59c16efd4c42ad411f8e.git data
+This project explores the second iteration of the overall project objectives which can be found/read in the main **[README file](https://github.com/ogre2/cisc3140_lab3/blob/main/README.md)** document, located in the root of this repository. In this iteration, the primary output contains both the unsorted and sorted results, this will be discussed further in the results section of this document.
+
+Our revisions for this project attempted to continue off the base that was established from the original code. We tried to maintain similar naming conventions throughout, and interpret how the project could've continued.
+
+## Files and directory structure
+```
+cisc3140_lab3/proj2/
+|-- awk/
+    |-- prog.awk
+    |-- sort.awk
+    |-- classes.awk
+|-- output/
+    |-- output.csv
+    |-- classes.csv
+|-- README.md
 ```
 
-Step 2: Data analysis 
+## Prerequisites
+Before you begin, ensure that you have met the following requirements:
+- You have **Git v1.8.3.1** and above installed in your machine.
+- You have have **GNU AWK v4.0.2** and above installed in your machine.
+- You are running the project in a **Linux machine/environment**. This project is currently **only tested for Linux machines**.
+- You have read the main repo **[README file](https://github.com/ogre2/cisc3140_lab3/blob/main/README.md)**, located in the root of this repository.
 
-Description of prog.awk:
-Prints Total, car_ID, year, make, model, ranking, on the first row.
-Copies car_ID, year, make, model from data.csv to report.csv
-The data under Ranking will NOT be filled with the script.
-Creates a column called total that adds the results from column 8 to the last column of the file.
-The program will sort report.csv based on the total, in descending order.
+## Running the project
+To run the project scripts, follow these steps:
+```
+    cd cisc3140_lab3/
 
-Known bugs with awk script:
-Data from data.csv that contain a space is read into two different columns.
-For example, if Car-make is "Hello world", "Hello" is read into column n and "world" is read into column n+1.
-Temp fix: The model name will be replaced with "Model". Now, ranking will sort properly except for the column that
-contains the Make: Civic coupe (the only string that contains an empty space inbetween).
+    make p2
+```
 
------------------------------------
-After running the script with: 
-`awk -f prog.awk data.csv  > report.csv`
+When the GNU Make command is ran, you will be prompted with these messages in the terminal/CLI indicating that scripts have successfully executed and compiled our results.
+```
+Running AWK Program script proj2:
+awk -f proj2/awk/program.awk data/data.csv > proj2/output/output.csv
+```
 
-To sort the rankings by numeric order:
-`paste -d' ' <(cut -d' ' -f1-5 report.csv )  <(cut -d' ' -f6- report.csv |sort -n) >sortedreport.csv`
+## Results
+Results will be stored as a .csv file within the project output directory which you can navigate to by running this command once you're inside the
+main project directory.
+```
+cd proj2/output/
+```
 
-Typing this in the terminal will cut out columns 1 to 5 of report.csv and print it.
+## Explaining results
+Below, we will define the results of the data found in the output folder.
 
-Then it will take out column 6 (the Ranking column) of report.csv and sort it in numerical order then
-print to sortedreport.csv
+- The **newf.csv**, is the primary resulting output for the new feature after parsing the input dataset. We start by adding all values for the categories and hold the scores in respective ov__ arrays. We then store cars details in the **lines** array to use when we print the category rankings.
 
+- After executing the body of the program, the END segment specifies that the arrays should be traversed in descending order. The caterogires are then placed into three new arrays, **sorted(categoty)[]**, which tracks the respective rank of the category, **sortedL[]**, which holds the car details for that category, and **sortedO[]** which holds the score for that car entry. After all of the cars categories have been ranked, the top 3 rankings for each category are printed, along with headings specifying the values. 
 
-Known bugs: The string "Ranking" would get sorted along the with numbers and would not remain on top.
-Temp fix: Attached "--Ranking" in the same column as Model.
------------------------
+## Known bugs
+Current bugs that we're trying to fix are:
+- Grouping the sorted output into threes, and ranking from each group results from 1 to 3 (top to bottom)
 
-Now, to create a new script that will search for unique name (by adding total string value we can get an unique ID)
-For each make with a unique name, print top three. Total is already sorted, so the program just needs to
-print the first three cars that matched the name. (Using a counter=0, when counter=3 move on next unique name. Use next;)
-
- touch topCarMakes.awk
-
-Looks at column 1. Takes carmake and set as string(To use for comparison later)
-Prints ranking, car_id, year, car make, car model, total score to new File.
-Counter++; // This counter will move on to next car make on 3.
-
-Now "skip" all car makes with the unique ID and restart until there is no more data in the .CSV.
-
-
+## Contributors
+Thanks to the following peple who have contributed to this project:
+- [@ogre2](https://github.com/ogre2/)
+- [@kyong4](https://github.com/kyong4/)
+- [@tianye-chen](https://github.com/tianye-chen/)
+- [@bohuinong](https://github.com/bohuinong)
+- [@ayingtao11](https://github.com/ayingtao11)
+- [@shua14](https://github.com/shua14)
