@@ -52,64 +52,68 @@ p3:
 
 	#Racer class
 	awk -f proj3/TotalRacer.awk data/data.csv
-	sort -t, -k1 -r -n TotalRacer.csv > sorted_Racer.csv
-	#append ranking 
-	awk -f proj3/Ranking.awk sorted_Racer.csv > newClass.csv
-	echo Top 3 Racer cars:
+	sort -t, -k4,4 -r -k1nr,1  TotalRacer.csv > sorted_Racer.csv
+	#Top3 car per make
+	awk -f proj3/Top3permake.awk sorted_Racer.csv > RacerClass.csv
+	echo Top 3 Racer cars per make:
 	echo Ranking,Score,CarId,Year,Make,Model
-	head -3 newClass.csv
+	cat RacerClass.csv
 	rm TotalRacer.csv
 	rm sorted_Racer.csv
+	mv RacerClass.csv proj3/sampleOP
 	echo "\n"
 
-	#caroverall class
+	#Caroverall class
 	awk -f proj3/TotalCaroverall.awk data/data.csv
-	sort -t, -k1 -r -n TotalCaroverall.csv > sorted_Caroverall.csv
-	#append ranking 
-	awk -f proj3/Ranking.awk sorted_Caroverall.csv > newClass.csv
-	echo Top 3 Caroverall cars:
+	sort -t, -k4,4 -r -k1nr,1  TotalCaroverall.csv > sorted_Caroverall.csv
+	#Top3 car per make
+	awk -f proj3/Top3permake.awk sorted_Caroverall.csv > CaroverallClass.csv
+	echo Top 3 Caroverall cars per make:
 	echo Ranking,Score,CarId,Year,Make,Model
-	head -3 newClass.csv
+	cat CaroverallClass.csv
 	rm TotalCaroverall.csv
 	rm sorted_Caroverall.csv
+	mv CaroverallClass.csv proj3/sampleOP
 	echo "\n"
 
 	#Engine class
 	awk -f proj3/TotalEngine.awk data/data.csv
-	sort -t, -k1 -r -n TotalEngine.csv > sorted_Engine.csv
-	#append ranking 
-	awk -f proj3/Ranking.awk sorted_Engine.csv > newClass.csv
-	echo Top 3 Engine cars:
+	sort -t, -k4,4 -r -k1nr,1  TotalEngine.csv > sorted_Engine.csv
+	#Top3 car per make
+	awk -f proj3/Top3permake.awk sorted_Engine.csv > EngineClass.csv
+	echo Top 3 Engine cars per make:
 	echo Ranking,Score,CarId,Year,Make,Model
-	head -3 newClass.csv
+	cat EngineClass.csv
 	rm TotalEngine.csv
 	rm sorted_Engine.csv
+	mv EngineClass.csv proj3/sampleOP
 	echo "\n"
 
 	#Bodyframe class
 	awk -f proj3/TotalBodyframe.awk data/data.csv
-	sort -t, -k1 -r -n TotalBodyframe.csv > sorted_Bodyframe.csv
-	#append ranking 
-	awk -f proj3/Ranking.awk sorted_Bodyframe.csv > newClass.csv
-	echo Top 3 Bodyframe cars:
+	sort -t, -k4,4 -r -k1nr,1  TotalBodyframe.csv > sorted_Bodyframe.csv
+	#Top3 car per make
+	awk -f proj3/Top3permake.awk sorted_Bodyframe.csv > BodyframeClass.csv
+	echo Top 3 Bodyframe cars per make:
 	echo Ranking,Score,CarId,Year,Make,Model
-	head -3 newClass.csv
+	cat BodyframeClass.csv
 	rm TotalBodyframe.csv
 	rm sorted_Bodyframe.csv
+	mv BodyframeClass.csv proj3/sampleOP
 	echo "\n"
 
 	#Mods class
 	awk -f proj3/TotalMods.awk data/data.csv
-	sort -t, -k1 -r -n TotalMods.csv > sorted_Mods.csv
-	#append ranking 
-	awk -f proj3/Ranking.awk sorted_Mods.csv > newClass.csv
-	echo Top 3 Mods cars:
+	sort -t, -k4,4 -r -k1nr,1  TotalMods.csv > sorted_Mods.csv
+	#Top3 car per make
+	awk -f proj3/Top3permake.awk sorted_Mods.csv > ModsClass.csv
+	echo Top 3 Mods cars per make:
 	echo Ranking,Score,CarId,Year,Make,Model
-	head -3 newClass.csv
+	cat ModsClass.csv
 	rm TotalMods.csv
 	rm sorted_Mods.csv
+	mv ModsClass.csv proj3/sampleOP
 	echo "\n"
-
 
 
 	#Feature 2(end user defined search)
@@ -124,7 +128,7 @@ p3:
 	rm option.csv
 	rm Ranked_option.csv
 	rm sorted_option.csv
-	mv result.csv proj3
+	mv result.csv proj3/sampleOP
 
 	#Display the files 
 	echo "\n\n"
