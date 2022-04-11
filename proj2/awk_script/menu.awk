@@ -76,18 +76,25 @@ BEGIN	{
 		total = 0
 		# Start and End get from user input
 		for (i = start; i <= end; i++) {
-			total = total + $i
+			total +=  $i
 		}
 
        #ignore car_id which is Showcar or VIP
 	if($7 != "Showcar" || "Vip"){
+	   # Determine different input of make and cat year
+	   # 4 situation for toal
+	   # Display report By
+	   # total_score Car_ID Year Make Model
            if(car_year == "all" && car_make == "all"){
                print total,$7, $4, $5, $6 
-           }else if(car_make == $5 && car_year == "all"){
+           }
+	   else if(car_make == $5 && car_year == "all"){
                print total,$7, $4, $5, $6 
-           }else if(car_make == "all" && car_year ==$4){
+           }
+	   else if(car_make == "all" && car_year ==$4){
                print total,$7, $4, $5, $6 
-           }else if(car_make == $5 && car_year == $4){
+           }
+	   else if(car_make == $5 && car_year == $4){
                print total,$7, $4, $5, $6 
            }
 	}	
