@@ -4,7 +4,8 @@ BEGIN{FS = ","
 #BODY
 {
 	if (NR==1) 
-	{false}
+	{
+	}
 	else {
 		total = 0
 		for (i = 8; i <= NF; ++i) {
