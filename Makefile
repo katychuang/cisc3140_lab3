@@ -5,42 +5,72 @@ all: p1 p2 p3
 
 p1:
 	@echo "Running AWK Script proj1: "
-	awk -f proj1/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+	awk -f proj1/prog.awk data/data.csv > proj1/ranking.txt
+	sort -k2,2rn proj1/ranking.txt > proj1/TempRanks.txt
+	awk -f proj1/Sorted.awk proj1/TempRanks.txt > displayRanks.txt
+	cat proj1/title displayRanks.txt
+	sort -k5,5 -k2,2rn proj1/ranking.txt > proj1/TempRanks2.txt
+	awk -f proj1/Top3.awk proj1/TempRanks2.txt > tmp
+	cat proj1/title tmp
+	awk -f proj1/projCarOv.awk data/data.csv > Temp
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	echo "Top Three For Car Overall" | grep -A3 "Make" Temp2 
+	awk -f proj1/EngineProg.awk data/data.csv > Temp
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	grep -A3 "Make" Temp2 > Temp
+	echo "Top Three For Engine" | cat Temp
+	awk -f proj1/RacerProg.awk data/data.csv > Temp
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	grep -A3 "Make" Temp2 > Temp
+	echo "Top Three For Racer" | cat Temp
+	awk -f proj1/Body_FrameProg.awk data/data.csv > Temp
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	grep -A3 "Make" Temp2 > Temp
+	echo "Top Three For Body_Frame" | cat Temp
+	awk -f proj1/ModsProg.awk data/data.csv > Temp
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	grep -A3 "Make" Temp2 > Temp
+	echo "Top Three For Mods" | cat Temp
+	awk -f proj1/Mods_OverallProg.awk data/data.csv > Temp
+	sort -k2,2rn Temp > Temp2
+	awk -f proj1/Sorted.awk Temp2 > Temp
+	cat proj1/title Temp > Temp2
+	grep -A3 "Make" Temp2 > Temp
+	echo "Top Three For Mods_Overall" | cat Temp
+	#mv displayCarOverall.txt proj1
+	mv displayRanks.txt proj1
+	mv Temp proj1
+	mv Temp2 proj1
+	mv tmp proj1
+	#mv tmp2 proj1
+
 
 p2:
 	@echo "Running AWK Script proj2: "
-	awk -f proj2/prog.awk data/data.csv | sort -nrk5 | tee ranking.tx
+#	awk -f proj2/awk_script/prog.awk data/data.csv | sort -nrk5 |  tee  > proj2/ranking.txt
+	awk -f proj2/awk_script/prog.awk data/data.csv > proj2/output_file/report.csv
+	awk -f proj2/awk_script/ranking.awk proj2/output_file/report.csv > proj2/output_file/sortedreport.csv
+	awk -f proj2/awk_script/top3.awk proj2/output_file/sortedreport.csv > proj2/output_file/top3.csv
+	awk -f proj2/awk_script/rankingAndMake.awk proj2/output_file/sortedreport.csv > proj2/output_file/rankingAndMake.csv
+	awk -f proj2/awk_script/Racer.awk data/data.csv > proj2/output_file/rankRacer.csv
+	awk -f proj2/awk_script/Engine.awk data/data.csv > proj2/output_file/rankEngine.csv
+	awk -f proj2/awk_script/Body_Frame.awk data/data.csv > proj2/output_file/rankBody_Frame.csv
+	awk -f proj2/awk_script/top3Mods_Overall.awk data/data.csv > proj2/output_file/top3Mods_Overall.csv
+	awk -f proj2/awk_script/Mods.awk data/data.csv > proj2/output_file/rankMods.csv
+	awk -f proj2/awk_script/Car_Overall.awk data/data.csv > proj2/output_file/rankCar_Overall.csv
+	awk -f proj2/awk_script/menu.awk data/data.csv
 
 p3:
 	@echo "Running AWK Script proj3: "
-	#awk file produces three seperate files: top_3, ranks, and headers (headers added to the final files)
-	awk -f proj3/prog1.awk data/data.csv
-
-	#moved to proj3 directory
-	mv top_3 proj3
-	mv ranks proj3 
-	mv headers proj3
-
-	#sorts ranks in descending order via scores and placed in a 
-	#new file: sorted_ranks. Sorts top_3 via maker first then ranks
-	sort -k5,5rn -t '|' proj3/ranks > "sorted_ranks"
-	sort -k3,3 -k5,5rn -t '|' proj3/top_3 > "top_3"
-
-	#moved to proj3 directory
-	mv sorted_ranks proj3 
-	mv top_3 proj3 
-	#awk file to only take top three cars for each maker
- #	awk -f proj3/top_3.awk proj3/top_3
-
-	#Adding headers to final files
-	cat proj3/headers proj3/sorted_ranks > "sorted_ranks"
-	cat proj3/headers proj3/top_3 > "top_3"
-	#moved to proj3 directory
-	mv sorted_ranks proj3 
-	mv top_3 proj3
-
-	#Display the files
-	echo "\n\n"
-	cat proj3/sorted_ranks
-	echo "\n\n"
-	cat proj3/top_3
+	#Runs shell script of menu
+	bash menu.sh
