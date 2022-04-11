@@ -2,6 +2,8 @@ BEGIN 	{
 	#Set the field seperator and output field seperator to commas
 	FS=",";
 	OFS=",";
+	
+	print "Rank,Car_ID,Year,Make,Model,Total,Racer,Engine,BodyFrame,Mods,Car_Overall,Mods_Overall"
 	}
 	#Ignore the first line of csv (header)
 	NR==1 {next}
