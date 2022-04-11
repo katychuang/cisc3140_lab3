@@ -37,6 +37,7 @@ List of possible commands:
 	make mods
 	make carOverall
 	make modsOverall
+	make topThree
 
 ### Results
 info.csv sorts through the data and gets removed at the end of each user option.
