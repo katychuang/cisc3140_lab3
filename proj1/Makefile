@@ -63,3 +63,11 @@ modsOverall:
 	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > RankModsOverall.csv
 	@head -3 RankModsOverall.csv
 	@rm info.csv
+
+# Top 3 makes
+topThree:
+	@echo Top 3 Cars in Make
+	@awk -f prog.awk ../data/data.csv > info.csv
+	@sort -V -r -t"," -k3,3 -k5 -o info.csv info.csv
+	@awk -f top3.awk info.csv
+	@rm info.csv
