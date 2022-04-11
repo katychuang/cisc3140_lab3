@@ -1,4 +1,4 @@
-#1/bin/awk -f
+# Creates a column called total that adds the results from column 8 to the last column of the file
 BEGIN{
    FS=","
    print "Total","Car_ID","Year","Make","Model";
