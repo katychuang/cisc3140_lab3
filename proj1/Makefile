@@ -6,16 +6,16 @@ rankedOverall:
 	@echo Highest Ranked Overall
 	@awk -f prog.awk ../data/data.csv > info.csv
 	@sort -V -r -t"," -k5 -o info.csv info.csv
-	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/output.csv 
+	@awk -F, 'NR>1{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/output.csv 
 	@head -3 Sample_outputs/output.csv
 	@rm info.csv
 
 # Displays top 3 racers
 racer:
-	@echo Highest Racer i
+	@echo Highest Racer 
 	@awk -f prog.awk ../data/data.csv > info.csv
 	@sort -V -r -t"," -k6 -o info.csv info.csv
-	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankRacer.csv
+	@awk -F, 'NR>1{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankRacer.csv
 	@head -3 Sample_outputs/RankRacer.csv
 	@rm info.csv
 
@@ -24,7 +24,7 @@ engine:
 	@echo Highest Engine
 	@awk -f prog.awk ../data/data.csv > info.csv
 	@sort -V -r -t"," -k7 -o info.csv info.csv
-	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankEngine.csv
+	@awk -F, 'NR>1{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankEngine.csv
 	@head -3 Sample_outputs/RankEngine.csv 
 	@rm info.csv
 
@@ -33,7 +33,7 @@ bodyFrame:
 	@echo Highest Body Frame
 	@awk -f prog.awk ../data/data.csv > info.csv
 	@sort -V -r -t"," -k8 -o info.csv info.csv
-	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankBodyFrame.csv
+	@awk -F, 'NR>1{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankBodyFrame.csv
 	@head -3 Sample_outputs/RankBodyFrame.csv
 	@rm info.csv
 
@@ -42,7 +42,7 @@ mods:
 	@echo Highest Mods
 	@awk -f prog.awk ../data/data.csv > info.csv
 	@sort -V -r -t"," -k9 -o info.csv info.csv
-	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankMods.csv
+	@awk -F, 'NR>1{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankMods.csv
 	@head -3 Sample_outputs/RankMods.csv
 	@rm info.csv
 
@@ -51,7 +51,7 @@ carOverall:
 	@echo Highest Car Overall
 	@awk -f prog.awk ../data/data.csv > info.csv
 	@sort -V -r -t"," -k10 -o info.csv info.csv
-	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankCarOverall.csv
+	@awk -F, 'NR>1{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankCarOverall.csv
 	@head -3 Sample_outputs/RankCarOverall.csv
 	@rm info.csv
 
@@ -60,7 +60,7 @@ modsOverall:
 	@echo Highest Mods Overall
 	@awk -f prog.awk ../data/data.csv > info.csv
 	@sort -V -r -t"," -k11 -o info.csv info.csv
-	@awk -F, '{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankModsOverall.csv
+	@awk -F, 'NR>1{$$1=++i FS $$1;}1' OFS=, info.csv > Sample_outputs/RankModsOverall.csv
 	@head -3 Sample_outputs/RankModsOverall.csv
 	@rm info.csv
 

@@ -5,9 +5,9 @@ BEGIN 	{
 	
 	print "Rank,Car_ID,Year,Make,Model,Total,Racer,Engine,BodyFrame,Mods,Car_Overall,Mods_Overall"
 	}
-	#Ignore the first line of csv (header)
-	NR==1 {next}
-{
+        #Ignore the first line of csv (header)
+	NR==1 {next} 
+	{
 
 	#Variable Initialization
 	sum = 0;

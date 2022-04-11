@@ -4,6 +4,8 @@ FS = ","
 OFS = ","
 
 }
+
+NR == 1{next}
 {
 
 #resets count to 1 when theres a new car
