@@ -23,6 +23,8 @@ BEGIN 	{
 					else if (i >= 20 && i < 25) {bodyFrameSum = bodyFrameSum + $i;}
 					else if (i >= 25 && i < NF) {modsSum = modsSum + $i;}
 	};
+	
+	if ($7 == "Showcar") {next}
 
 	#Print out the Details of the car, and the totals for specified values
 	print $7, $4, $5, $6, sum, racerSum, engineSum, bodyFrameSum, modsSum, $14, $NF;

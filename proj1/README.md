@@ -42,16 +42,18 @@ List of possible commands:
 ### Results
 info.csv sorts through the data and gets removed at the end of each user option.
 
-**[output.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/output.csv)** sorts and ranks the data.
+**[output.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/output.csv)** sorts and ranks the data.
 
-**[RankBodyFrame.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankBodyFrame.csv)** outputs the cars ranked by Body Frames.
+**[RankBodyFrame.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/RankBodyFrame.csv)** outputs the cars ranked by Body Frames.
 
-**[RankCarOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankCarOverall.csv)** outputs the cars ranked by Highest Overall Car.
+**[RankCarOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/RankCarOverall.csv)** outputs the cars ranked by Highest Overall Car.
 
-**[RankEngine.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankEngine.csv)** outputs the cars ranked by Engine.
+**[RankEngine.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/RankEngine.csv)** outputs the cars ranked by Engine.
 
-**[RankMods.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankMods.csv)** outputs the cars ranked by Mods.
+**[RankMods.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/RankMods.csv)** outputs the cars ranked by Mods.
 
-**[RankModsOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankModsOverall.csv)** outputs the cars ranked by the Mods Overall.
+**[RankModsOverall.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/RankModsOverall.csv)** outputs the cars ranked by the Mods Overall.
 
-**[RankRacer.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/RankRacer.csv)** outputs the cars ranked by the Racer.
+**[RankRacer.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/RankRacer.csv)** outputs the cars ranked by the Racer.
+
+**[TopThree.csv](https://github.com/steven-yanh/cisc3140_lab3/blob/main/proj1/Sample_outputs/TopThree.csv)** outs the top 3 total cars of each make.
