@@ -29,7 +29,7 @@ To run proj1 make sure you are in the root of the project repository and run `ma
 
 Results are stored in a `.txt` document labeled `ranking.txt`, that lists cars by highest points earned to lowest points earned. 
 
-Each entry is ordered by (Car ID, Year, Car Make, Car Model, Total Score).
+Each entry is ordered by (Car ID, Car Make, Car Model, Total Score).
 
 ## Additional feature
 
