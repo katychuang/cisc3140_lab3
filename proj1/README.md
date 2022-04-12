@@ -25,6 +25,11 @@ You must have the following installed. The linux commands to install necessary p
 
 To run proj1 make sure you are in the root of the project repository and run `make proj1`. 
 
+To run the code type in this command into terminal:
+
+awk -f proj1/prog.awk data/data.csv > ranking.txt
+
+
 ### Results
 
 Results are stored in a `.txt` document labeled `ranking.txt`, that lists cars by highest points earned to lowest points earned. 
