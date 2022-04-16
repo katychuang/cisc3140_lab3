@@ -1,15 +1,17 @@
 BEGIN{
+  PROCINFO["sorted_in"] = "@ind_num_asc"
   print "this is the start"
   FS = ","
   OFS = "\t"
   ORS = "\n "
   rank = 1
   }
-  # print " Rank \t record \t car_id"
-  # print "---    -------         -------"
 
-}
+  # FNR == 1{
+  #    print "RANKING" OFS $7 OFS $5 OFS $4 OFS $6 OFS "SCORE"
+  # }
 
+#Skips first row and ignores Showcar
 FNR > 1 && !/Showcar/{
   #Gets all working totals
   modsOverall = $35
@@ -21,7 +23,6 @@ FNR > 1 && !/Showcar/{
   totalScore = $11 + $12 + $13 + $14 + $15 + $16 + $17 + $18 + $19 + $20 + $21
   + $22 + $23 + $24 + $25 + $26 + $27 + $28 + $29 + $30 + $31 + $32
 
-
   #Putting totals into separate columns
   $36 = totalBody
   $37 = totalRacer
@@ -29,327 +30,481 @@ FNR > 1 && !/Showcar/{
   $39 = totalEngine
   $40 = totalScore
 
+  #Fills array ARRAY with values in each field & sort
+  total[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(totals)
+
+  body[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $36
+  asort(body)
+
+  racer[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $37
+  asort(racer)
+
+  mod[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $38
+  asort(mods)
+
+  engine[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $39
+  asort(engine)
+
+
   #Puts each value of the total scores into an array
-  b = split($36, body)
-  r = split($37, racer)
-  m = split($38, mods)
-  e = split($39, engine)
-  ovmod = split($35, modov)
-  ovcar = split($15, carov)
+  # b = split($36, body)
+  # r = split($37, racer)
+  # m = split($38, mods)
+  # e = split($39, engine)
+  # ovmod = split($35, modov)
+  # ovcar = split($15, carov)
+
+
   #Uses sort function to rank scores
-  arr = sort(body)
-  arr1 = sort(racer)
-  arr2 = sort(mods)
-  arr3 = sort(engine)
-  arr4 = sort(modov)
-  arr5 = sort(carov)
+  # arr = asort(body)
+  # arr1 = asort(racer)
+  # arr2 = asort(mods)
+  # arr3 = asort(engine)
+  # arr4 = asort(modov)
+  # arr5 = asort(carov)
+}
+/Acura/{
+  acura[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(acura)
 }
 
-/Acura/{
-  ac = split($40, acu)
-  acura = sort(acu)
-}
 
 /Audi/{
-  au = split($40, aud)
-  audi = sort(aud)
+  audi[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(audi)
 }
 /Bmw/{
-  bb = split($40, bm)
-  bmw = sort(bm)
+  bmw[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(bmw)
 }
 /Chevy/{
-  che = split($40, chev)
-  chevy = sort(chev)
+  chevy[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(chevy)
 }
 /Chrystler/{
-  chr = split($40, chry)
-  chryst = sort(chry)
+  chrystler[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(chrystler)
 }
 /Dodge/{
-  dod = split($40, dodg)
-  dodge = sort(dodg)
+  dodge[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(dodge)
 }
 /Ford/{
-  ff = split($40, fo)
-  ford = sort(fo)
+  ford[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(ford)
 }
 /Honda/{
-  ho = split($40, hon)
-  honda = sort(hon)
+  honda[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(honda)
 }
 /Hyundai/{
-  hy = split($40, hyu)
-  hyundai = sort(hyu)
+  hyundai[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(hyundai)
 }
 /Infiniti/{
-  inf = split($40, infi)
-  infiniti = sort(infi)
+  infiniti[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(infiniti)
 }
 /Jeep/{
-  je = split($40, jee)
-  jeep = sort(jee)
+  jeep[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(jeep)
 }
 /Lexus/{
-  le = split($40, lex)
-  lexus = sort(lex)
+  lexus[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(lexus)
 }
 /Mazda/{
-  ma = split($40, maz)
-  mazda = sort(maz)
+  mazda[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(mazda)
 }
 /Mercedes/{
-  me = split($40, mer)
-  mercedes = sort(mer)
+  mercedes[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(mercedes)
 }
 /Mitsu/{
-  mi = split($40, mit)
-  mitsu = sort(mit)
+  mitsu[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(mitsu)
 }
 /Nissan/{
-  ni = split($40, nis)
-  nissan = sort(nis)
+  nissan[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(nissan)
 }
 /Scion/{
-  sc = split($40, sci)
-  scion = sort(sci)
+  scion[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(scion)
 }
 /Subaru/{
-  su = split($40, suba)
-  subaru = sort(suba)
+  subaru[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(subaru)
 }
 /Toyota/{
-  toy = split($40, toyo)
-  toyota = sort(toyo)
+  toyota[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(toyota)
 }
 /Volkswagen/{
-  vo = split($40, volk)
-  volks = sort(volk)
+  volks[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(volks)
 }
 /Volvo/{
-  v = split($40, volv)
-  volvo = sort(volv)
-}
-END && !/Showcar/{
-    #prints top 3 cars
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, arr[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 racers
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, arr1[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 mods
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, arr2[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 engine
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, arr3[i]
-      rank++
-    }
-
-    rank = 1  #resets ranks
-
-    #prints top 3 modsOverall
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, arr4[i]
-      rank++
-    }
-
-    rank = 1  #resets ranks
-
-    #prints top 3 carOveral
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, arr5[i]
-      rank++
-    }
-
-    rank = 1  #resets ranks
-
-    #prints top 3 acura
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, acura[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 audi
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, audi[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 bmw
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, bmw[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 chevy
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, chevy[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 Chrystler
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, chryst[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 dodge
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, dodge[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 ford
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, ford[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 honda
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, honda[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 hyundai
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, hyundai[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 infiniti
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, infiniti[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 jeep
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, jeep[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 lexus
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, lexus[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 mazda
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, mazda[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 mercedes
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, mercedes[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 mitsu
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, mitsu[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 nissan
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, nissan[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 scion
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, scion[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 subaru
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, subaru[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 toyota
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, toyota[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    #prints top 3 Volkswagen
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, volks[i]
-      rank++
-    }
-
-    #prints top 3 volvo
-    for (i =1; i <= 3; i++) {
-      print rank, $8, $5, $6, volvo[i]
-      rank++
-    }
-
-    rank = 1  #resets rank variable
-
-    rank = 1  #resets rank variable
-    print "This is the end"
+  volvo[FNR] = $7 OFS $4 OFS $5 OFS $6 OFS $40;
+  asort(volvo)
 }
 
+
+END{
+  print "Top cars"
+  #Gets the top 3
+  for (i = 1; i <= 3; i++) {
+    totals[i] = total[i]
+  }
+  #prints top 3
+  for (i in totals){
+    print  rank, totals[i];
+    rank++
+ }
+ #resets rank
+ rank = 1
+ print "\nTop engines"
+
+  #Gets the top 3
+  for (i = 1; i <= 3; i++) {
+    engines[i] = engine[i]
+  }
+  #prints top 3
+  for (i in engines){
+    print  rank, engines[i];
+    rank++
+ }
+ #resets rank
+ rank = 1
+ print "\nTop racers"
+ #Gets the top 3
+ for (i = 1; i <= 3; i++) {
+   racers[i] = racer[i]
+ }
+ #prints top 3
+ for (i in racers){
+   print rank, racers[i];
+   rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop mods"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  mods[i] = mod[i]
+}
+#prints top 3
+for (i in mods){
+  print rank, mods[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop body"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  bodys[i] = body[i]
+}
+#prints top 3
+for (i in bodys){
+  print rank, bodys[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop acura"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  acuras[i] = acura[i]
+}
+#prints top 3
+for (i in acuras){
+  print rank, acuras[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop audi"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  audis[i] = audi[i]
+}
+#prints top 3
+for (i in audis){
+  print rank, audis[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop bmw"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  bmws[i] = bmw[i]
+}
+#prints top 3
+for (i in bmws){
+  print rank, bmws[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop chevy"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  chevys[i] = chevy[i]
+}
+#prints top 3
+for (i in chevys){
+  print rank, chevys[i];
+  rank++
+}
+#resets rank
+rank=1
+print "\nTop chrystler"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  chrystlers[i] = chrystler[i]
+}
+#prints top 3
+for (i in chrystlers){
+  print rank, chrystlers[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop dodge"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  dodges[i] = dodge[i]
+}
+#prints top 3
+for (i in dodges){
+  print rank, dodges[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop ford"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  fords[i] = ford[i]
+}
+#prints top 3
+for (i in fords){
+  print rank, fords[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop honda"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  hondas[i] = honda[i]
+}
+#prints top 3
+for (i in hondas){
+  print rank, hondas[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop hyundai"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  hyundais[i] = hyundai[i]
+}
+#prints top 3
+for (i in hyundais){
+  print rank, hyundais[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop infiniti"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  infinitis[i] = infiniti[i]
+}
+#prints top 3
+for (i in infinitis){
+  print rank, infinitis[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop jeep"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  jeeps[i] = jeep[i]
+}
+#prints top 3
+for (i in jeeps){
+  print rank, jeeps[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop lexus"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  lexuss[i] = lexus[i]
+}
+#prints top 3
+for (i in lexuss){
+  print rank, lexuss[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop mazda"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  mazdas[i] = mazda[i]
+}
+#prints top 3
+for (i in mazdas){
+  print rank, mazdas[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop mercedes"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  mercedess[i] = mercedes[i]
+}
+#prints top 3
+for (i in mercedess){
+  print rank, mercedess[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop mitsu"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  mitsus[i] = mitsu[i]
+}
+#prints top 3
+for (i in mitsus){
+  print rank, mitsus[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop nissan"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  nissans[i] = nissan[i]
+}
+#prints top 3
+for (i in nissans){
+  print rank, nissans[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop scion"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  scions[i] = scion[i]
+}
+#prints top 3
+for (i in scions){
+  print rank, scions[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop subaru"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  subarus[i] = subaru[i]
+}
+#prints top 3
+for (i in subarus){
+  print rank, subarus[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop toyota"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  toyotas[i] = toyota[i]
+}
+#prints top 3
+for (i in toyotas){
+  print rank, toyotas[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop Volkswagen"
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  volkss[i] = volks[i]
+}
+#prints top 3
+for (i in volkss){
+  print rank, volkss[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\nTop volvo"
+
+#Gets the top 3
+for (i = 1; i <= 3; i++) {
+  volvos[i] = volvo[i]
+}
+#prints top 3
+for (i in volvos){
+  print rank, volvos[i];
+  rank++
+}
+
+#resets rank
+rank = 1
+print "\n"
+}
 function sort(arr) {
+
     for (i = 1; i > length(arr); i++) {
       if (arr[i] < arr[i++]) {
         temp = arr[i]
@@ -357,5 +512,4 @@ function sort(arr) {
         arr[i]= temp
       }
     }
-    return arr
 }
