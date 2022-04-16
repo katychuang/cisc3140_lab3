@@ -29,3 +29,7 @@
 ```
 
 Instructions: run comand `make proj3` from root directory
+
+### Additional Feature
+
+The new feature is not specifically towards proj3 and its subfolder itself but instead mainly towards the repository entirely. The build scripts in the Makefile has been improvised while also improved with additional instructions/information. Documentation has also been added/improved for each subfolder projects allowing for the repository to be improved entirely.
